@@ -19,9 +19,9 @@
   - **Contrast Enhancement**: Contrast Limited Adaptive Histogram Equalization (CLAHE) & Histogram Equalization.
   - **Binarization**: Otsu, Adaptive Gaussian/Mean, and Global thresholding.
   - **Sharpening**: Unsharp masking for faint fonts.
-- **Extensible Provider Pattern (`IOcrProvider`)**: Reference implementation with native Tesseract 4.x LSTM; designed for future drop-in neural backends (ONNX, TensorRT, PaddleOCR, custom EDMO models).
+- **Extensible Provider Pattern (`IOcrProvider`)**: Reference implementation with native Tesseract 4.x LSTM; designed for future drop-in neural backends (ONNX, TensorRT, PaddleOCR, custom OCR models).
 - **Complete Document Graph Hierarchy**: `Document -> Page -> Block -> Line -> Token` with normalized confidence scores (0.0 to 1.0) and pixel bounding boxes (top-left origin).
-- **Deterministic JSON Output**: Compliant with EDMO schema v0.1 supporting `full-json`, `compact-json`, and `text` output modes.
+- **Deterministic JSON Output**: Compliant with OCR schema v0.1 supporting `full-json`, `compact-json`, and `text` output modes.
 - **Batch Processing**: Directory processing with aggregate summary statistics and fault tolerance.
 - **Production CLI & Clean C++ Library API**: Direct library embedding or command-line execution.
 - **Performance Benchmarking & Synthetic Fixtures**: Synthetic test generator producing realistic academic transcripts, test suite, and latency benchmark suite.
@@ -32,7 +32,7 @@
 ## Repository Structure
 
 ```text
-edmo-di-ocr/
+ocr-core/
 ├── CMakeLists.txt
 ├── CMakePresets.json
 ├── README.md
@@ -44,7 +44,7 @@ edmo-di-ocr/
 │   ├── Dependencies.cmake
 │   └── CompilerWarnings.cmake
 │
-├── include/edmo/ocr/
+├── include/ocr/
 │   ├── OcrEngine.hpp          # Primary C++ Library API
 │   ├── OcrConfig.hpp          # Configuration & Profiles
 │   ├── OcrResult.hpp          # Result Hierarchy & Timings
@@ -73,7 +73,7 @@ edmo-di-ocr/
 │   ├── logging/               # spdlog Integration
 │   └── utils/                 # FileUtils, ImageUtils, Timer
 │
-├── apps/edmo-ocr/             # CLI Application
+├── apps/ocr-engine/           # CLI Application
 ├── benchmarks/                # Performance Benchmark Tool
 ├── examples/                  # Basic and Batch C++ API Examples
 ├── configs/                   # Default & Transcript Profile Configurations
@@ -129,8 +129,8 @@ sudo apt-get update && sudo apt-get install -y \
 
 ```text
 Usage:
-  edmo-ocr <input-file> [options]
-  edmo-ocr <input-dir> --batch [options]
+  ocr-engine <input-file> [options]
+  ocr-engine <input-dir> --batch [options]
 
 Options:
   -i, --input <path>               Input image/PDF file or directory
@@ -200,10 +200,10 @@ int main() {
 
 ```bash
 # Build production image
-docker build -t edmo-di-ocr -f docker/Dockerfile .
+docker build -t ocr-engine -f docker/Dockerfile .
 
 # Process document via container
-docker run --rm -v $(pwd)/tests/fixtures:/data edmo-di-ocr /data/transcript-like.pdf
+docker run --rm -v $(pwd)/tests/fixtures:/data ocr-engine /data/transcript-like.pdf
 ```
 
 ---

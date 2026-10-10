@@ -1,4 +1,4 @@
-# EDMO Document Representation (EDR) Schemas
+# OCR Document Representation (EDR) Schemas
 
 ## 1. Full EDR Schema (`<stem>_edr_full.json`)
 

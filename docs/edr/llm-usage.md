@@ -1,4 +1,4 @@
-# LLM Usage & Integration Guide for EDMO EDR
+# LLM Usage & Integration Guide for OCR EDR
 
 ## 1. CLI Usage
 

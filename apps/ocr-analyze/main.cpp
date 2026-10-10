@@ -153,7 +153,7 @@ int main(int argc, char* argv[]) {
     }
 
     std::cout << "\n======================================================================\n"
-              << "     EDMO Document Representation & Loss-Aware Context Analysis       \n"
+              << "     OCR Document Representation & Loss-Aware Context Analysis       \n"
               << "======================================================================\n"
               << "Document ID          : " << doc.metadata.id << "\n"
               << "Document Type        : " << doc.documentType << "\n"

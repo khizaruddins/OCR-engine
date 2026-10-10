@@ -1,8 +1,8 @@
-# EDMO Document Representation (EDR) Architecture
+# OCR Engine Document Representation (EDR) Architecture
 
 ## 1. Overview & System Purpose
 
-The **EDMO Document Representation (EDR) Layer** is a deterministic C++20 subsystem situated directly between raw OCR extraction (Token/Line/Block/BBox/Confidence) and downstream Large Language Model (LLM) consumers.
+The **OCR Engine Document Representation (EDR) Layer** is a deterministic C++20 subsystem situated directly between raw OCR extraction (Token/Line/Block/BBox/Confidence) and downstream Large Language Model (LLM) consumers.
 
 Raw OCR JSON engines produce exhaustive character/word coordinates that can span thousands of lines (e.g. 8,800+ lines of JSON for a 2-page academic transcript, consuming ~27,000+ tokens). EDR transforms this raw data into:
 1. **Full Semantic Document Model (`edr_full.json`)**: An exhaustive, structured representation preserving bounding boxes, OCR IDs, reading order, semantic sections, and confidence summaries.
@@ -23,7 +23,7 @@ Raw OCR JSON engines produce exhaustive character/word coordinates that can span
                               |
                               v [Lossless OCR Model & JSON]
 +-----------------------------------------------------------------------------------------+
-|                      EDMO Document Representation Engine (EDR)                          |
+|                      OCR Document Representation Engine (EDR)                          |
 |                                                                                         |
 |  +-----------------------+     +-----------------------+     +-----------------------+  |
 |  |   Text Normalizer     | --> |     Noise Reducer     | --> |   Reading Order Sort  |  |

@@ -1,4 +1,4 @@
-# EDMO EDR Algorithms & Heuristics Reference
+# OCR Engine EDR Algorithms & Heuristics Reference
 
 ## 1. Reading Order & Spatial Sorting
 - **Header / Body / Footer Segmentation**:

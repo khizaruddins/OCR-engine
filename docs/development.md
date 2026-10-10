@@ -41,7 +41,7 @@ cmake --build build -j$(nproc)
 
 ## 4. How to Add a New OCR Provider Backend
 
-To implement a new OCR provider (e.g. `OnnxOcrProvider`, `PaddleOcrProvider`, or custom `EdmoOcrProvider`):
+To implement a new OCR provider (e.g. `OnnxOcrProvider`, `PaddleOcrProvider`, or custom `OcrProvider`):
 
 1. **Implement `IOcrProvider` interface**:
    Create `src/ocr/OnnxOcrProvider.hpp` and implement:

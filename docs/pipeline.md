@@ -73,5 +73,5 @@ Configurable preprocessing transformations:
 - Coordinate system: Origin `(0, 0)` is top-left, X increases right, Y increases down.
 
 ### Stage 8: Serialization & Reporting
-- Emits deterministic JSON conforming to EDMO schema v0.1.
+- Emits deterministic JSON conforming to OCR schema v0.1.
 - Tracks granular latency metrics: rendering time, preprocessing time, OCR time, serialization time, total end-to-end time.

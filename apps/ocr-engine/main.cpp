@@ -23,13 +23,13 @@
 namespace {
 
 void printVersion() {
-    std::cout << "EDMO Document Processing & OCR Engine v0.2.0\n"
-              << "Copyright (C) 2026 EDMO Team\n"
+    std::cout << "OCR Document Processing & OCR Engine v0.2.0\n"
+              << "Copyright (C) 2026 OCR Team\n"
               << "Core Architecture: Document Preflight | Page Classification | Native Text & Tesseract OCR | EDR v0.2\n";
 }
 
 void printHelp(const char* progName) {
-    std::cout << "EDMO Document Processing & OCR Engine v0.2.0\n\n"
+    std::cout << "OCR Document Processing & OCR Engine v0.2.0\n\n"
               << "Usage:\n"
               << "  " << progName << " <input-file> [options]\n"
               << "  " << progName << " <input-dir> --batch [options]\n\n"
@@ -277,7 +277,7 @@ int main(int argc, char* argv[]) {
         std::filesystem::create_directories(baseOutputDir, ec);
 
         std::cout << "========================================\n"
-                  << "EDMO Document Processing & OCR Batch Execution\n"
+                  << "OCR Document Processing & OCR Batch Execution\n"
                   << "Total Files: " << files.size() << "\n"
                   << "========================================\n";
 
@@ -360,7 +360,7 @@ int main(int argc, char* argv[]) {
         }
 
         std::cout << "======================================================================\n"
-                  << "EDMO Document Processing & OCR Engine v0.2.0 Summary\n"
+                  << "OCR Document Processing & OCR Engine v0.2.0 Summary\n"
                   << "======================================================================\n"
                   << "Document Directory    : " << written.documentDirectory.string() << "\n"
                   << "Document Classification: " << res.documentClassification << " (Strategy: " << res.strategy << ")\n"
