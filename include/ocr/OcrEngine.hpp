@@ -1,20 +1,20 @@
 #pragma once
 
-#include <edmo/ocr/Document.hpp>
-#include <edmo/ocr/IOcrProvider.hpp>
-#include <edmo/ocr/IPdfRenderer.hpp>
-#include <edmo/ocr/IPreprocessor.hpp>
-#include <edmo/ocr/OcrConfig.hpp>
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Document.hpp>
+#include <ocr/IOcrProvider.hpp>
+#include <ocr/IPdfRenderer.hpp>
+#include <ocr/IPreprocessor.hpp>
+#include <ocr/OcrConfig.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/Result.hpp>
 
 #include <filesystem>
 #include <memory>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
- * @brief Main pipeline orchestrator and public C++ library API for EDMO OCR Engine.
+ * @brief Main pipeline orchestrator and public C++ library API for OCR Engine.
  */
 class OcrEngine {
 public:
@@ -83,4 +83,4 @@ private:
     void initializeComponents();
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

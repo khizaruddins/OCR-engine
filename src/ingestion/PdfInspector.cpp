@@ -1,5 +1,5 @@
-#include <edmo/ocr/ingestion/PdfInspector.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ingestion/PdfInspector.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 #include "../utils/FileUtils.hpp"
 #include "../utils/ImageUtils.hpp"
@@ -11,7 +11,7 @@
 #include <poppler-document.h>
 #include <poppler-page.h>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 PdfInspector::PdfInspector(IngestionConfig config)
     : config_(config) {}
@@ -348,4 +348,4 @@ Result<PreflightSummary> PdfInspector::inspectImage(const std::filesystem::path&
     return Result<PreflightSummary>::success(std::move(summary));
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

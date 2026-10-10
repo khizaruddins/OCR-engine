@@ -1,20 +1,20 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../../src/output/JsonSerializer.hpp"
 
 #include <filesystem>
 
-using namespace edmo::ocr;
+using namespace ocr;
 
-#ifndef EDMO_TEST_FIXTURES_DIR
-#define EDMO_TEST_FIXTURES_DIR "tests/fixtures"
+#ifndef OCR_TEST_FIXTURES_DIR
+#define OCR_TEST_FIXTURES_DIR "tests/fixtures"
 #endif
 
 class TranscriptTests : public ::testing::Test {
 protected:
     void SetUp() override {
-        fixturesDir_ = std::filesystem::path(EDMO_TEST_FIXTURES_DIR);
+        fixturesDir_ = std::filesystem::path(OCR_TEST_FIXTURES_DIR);
     }
 
     std::filesystem::path fixturesDir_;
@@ -33,7 +33,7 @@ TEST_F(TranscriptTests, ProcessOfficialAcademicTranscript) {
 
     const auto& result = res.value();
     EXPECT_EQ(result.schemaVersion, "0.1");
-    EXPECT_EQ(result.engine.name, "edmo-ocr");
+    EXPECT_EQ(result.engine.name, "ocr-engine");
     EXPECT_EQ(result.document.type, "pdf");
     EXPECT_EQ(result.pages.size(), 2);
     EXPECT_GT(result.confidence, 0.75f);

@@ -1,4 +1,4 @@
-# EDMO DI-OCR Developer Guide
+# OCR-DI Developer Guide
 
 ## 1. Development Prerequisites
 
@@ -46,9 +46,9 @@ To implement a new OCR provider (e.g. `OnnxOcrProvider`, `PaddleOcrProvider`, or
 1. **Implement `IOcrProvider` interface**:
    Create `src/ocr/OnnxOcrProvider.hpp` and implement:
    ```cpp
-   #include <edmo/ocr/IOcrProvider.hpp>
+   #include <ocr/IOcrProvider.hpp>
 
-   namespace edmo::ocr {
+   namespace ocr {
 
    class OnnxOcrProvider : public IOcrProvider {
    public:

@@ -7,7 +7,7 @@
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 struct PageCoverageReport {
     int detected = 0;
@@ -260,4 +260,4 @@ struct LlmContextReport {
     }
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

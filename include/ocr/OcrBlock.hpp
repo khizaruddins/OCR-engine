@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
-#include <edmo/ocr/OcrLine.hpp>
+#include <ocr/BoundingBox.hpp>
+#include <ocr/OcrLine.hpp>
 
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents a recognized block/paragraph of text consisting of lines.
@@ -50,4 +50,4 @@ struct OcrBlock {
     }
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

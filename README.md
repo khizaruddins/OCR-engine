@@ -1,10 +1,10 @@
-# EDMO DI-OCR — C++ OCR Engine v0.1
+# OCR-DI — C++ OCR Engine v0.1
 
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B20)
 [![CMake](https://img.shields.io/badge/CMake-3.22%2B-brightgreen.svg)](https://cmake.org/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-**EDMO DI-OCR** is an education-focused Document Intelligence platform. This repository contains the standalone, high-performance **C++ OCR Engine v0.1**, designed to ingest multi-page academic transcripts, marksheets, degree certificates, syllabi, and educational forms, returning deterministic, structured OCR JSON with full geometry and confidence metrics.
+**OCR-DI** is an education-focused Document Intelligence platform. This repository contains the standalone, high-performance **C++ OCR Engine v0.1**, designed to ingest multi-page academic transcripts, marksheets, degree certificates, syllabi, and educational forms, returning deterministic, structured OCR JSON with full geometry and confidence metrics.
 
 ---
 
@@ -108,10 +108,10 @@ sudo apt-get update && sudo apt-get install -y \
 
 ```bash
 # Process image or PDF with full JSON output
-./build/apps/edmo-ocr/edmo-ocr tests/fixtures/simple-text.png --format full-json
+./build/apps/ocr-engine/ocr-engine tests/fixtures/simple-text.png --format full-json
 
 # Process academic transcript PDF and save output to result.json
-./build/apps/edmo-ocr/edmo-ocr tests/fixtures/transcript-like.pdf \
+./build/apps/ocr-engine/ocr-engine tests/fixtures/transcript-like.pdf \
     --preprocess-profile transcript \
     --dpi 300 \
     --output result.json
@@ -120,7 +120,7 @@ sudo apt-get update && sudo apt-get install -y \
 ### 4. Run Batch Processing
 
 ```bash
-./build/apps/edmo-ocr/edmo-ocr ./tests/fixtures --batch --output ./results
+./build/apps/ocr-engine/ocr-engine ./tests/fixtures --batch --output ./results
 ```
 
 ---
@@ -159,13 +159,13 @@ Options:
 ## C++ Library API
 
 ```cpp
-#include <edmo/ocr/OcrEngine.hpp>
+#include <ocr/OcrEngine.hpp>
 #include <iostream>
 
 int main() {
     // Load transcript-optimized configuration profile
-    edmo::ocr::OcrConfig config = edmo::ocr::OcrConfig::getProfile("transcript");
-    edmo::ocr::OcrEngine engine(config);
+    ocr::OcrConfig config = ocr::OcrConfig::getProfile("transcript");
+    ocr::OcrEngine engine(config);
 
     // Process document
     auto result = engine.process("transcript.pdf");
@@ -173,7 +173,7 @@ int main() {
     if (result) {
         std::cout << "Success! Confidence: " << (result->confidence * 100.0f) << "%\n";
         std::cout << "Total Time: " << result->timing.totalTimeMs << " ms\n";
-        std::cout << result->toJson(edmo::ocr::OutputFormat::FullJson).dump(2) << "\n";
+        std::cout << result->toJson(ocr::OutputFormat::FullJson).dump(2) << "\n";
     } else {
         std::cerr << "Error: " << result.error().toString() << "\n";
     }

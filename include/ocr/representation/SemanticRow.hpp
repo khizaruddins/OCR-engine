@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/representation/SemanticCell.hpp>
-#include <edmo/ocr/representation/SourceReference.hpp>
+#include <ocr/representation/SemanticCell.hpp>
+#include <ocr/representation/SourceReference.hpp>
 
 #include <map>
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Represents a row in a SemanticTable with cells and canonical field mappings.
@@ -54,4 +54,4 @@ struct SemanticRow {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

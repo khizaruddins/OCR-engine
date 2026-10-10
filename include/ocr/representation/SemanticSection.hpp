@@ -1,17 +1,17 @@
 #pragma once
 
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
-#include <edmo/ocr/representation/DocumentRepresentation.hpp>
-#include <edmo/ocr/representation/RepresentationBlock.hpp>
-#include <edmo/ocr/representation/SemanticTable.hpp>
-#include <edmo/ocr/representation/SourceReference.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/DocumentRepresentation.hpp>
+#include <ocr/representation/RepresentationBlock.hpp>
+#include <ocr/representation/SemanticTable.hpp>
+#include <ocr/representation/SourceReference.hpp>
 
 #include <map>
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Represents a semantic document section (e.g. Student Information, Course History).
@@ -80,4 +80,4 @@ struct SemanticSection {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

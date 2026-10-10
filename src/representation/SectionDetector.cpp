@@ -3,7 +3,7 @@
 
 #include <algorithm>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 SectionType SectionDetector::classifySectionFromText(const std::string& text) {
     std::string upper = TextNormalizer::toUpper(text);
@@ -245,4 +245,4 @@ void SectionDetector::extractGlobalEntities(
     }
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

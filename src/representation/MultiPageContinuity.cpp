@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 bool MultiPageContinuity::canMerge(const SemanticTable& a, const SemanticTable& b) {
     if (a.tableType != b.tableType) return false;
@@ -58,4 +58,4 @@ std::vector<SemanticTable> MultiPageContinuity::mergeContinuousTables(
     return merged;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

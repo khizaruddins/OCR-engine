@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/context/LlmContextBuilder.hpp>
+#include <ocr/context/LlmContextBuilder.hpp>
 #include "../../src/context/SemanticChunker.hpp"
 #include "../../src/context/SemanticInventoryBuilder.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::context;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::context;
+using namespace ocr::representation;
 
 TEST(ChunkingTests, ChunksTableWhilePreservingRowAndCellIntegrity) {
     LlmContext context;

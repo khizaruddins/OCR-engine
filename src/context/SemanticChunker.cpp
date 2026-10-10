@@ -1,6 +1,6 @@
 #include "SemanticChunker.hpp"
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 size_t SemanticChunker::estimateJsonTokens(const nlohmann::json& j) {
     std::string dumped = j.dump();
@@ -130,4 +130,4 @@ void SemanticChunker::applyBudgetAndChunking(
     }
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

@@ -3,7 +3,7 @@
 #include <fstream>
 #include <iomanip>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 nlohmann::json LlmContextSerializer::toJson(
     const LlmContext& context,
@@ -42,4 +42,4 @@ bool LlmContextSerializer::saveToFile(
     return file.good();
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

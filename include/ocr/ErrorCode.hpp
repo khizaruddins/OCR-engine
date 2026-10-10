@@ -4,7 +4,7 @@
 #include <string>
 #include <string_view>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Structured error codes for all failure modes in the OCR engine.
@@ -99,4 +99,4 @@ struct OcrError {
     }
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

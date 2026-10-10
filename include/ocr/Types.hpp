@@ -4,7 +4,7 @@
 #include <string>
 #include <string_view>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents the high-level category of an input document.
@@ -93,4 +93,4 @@ inline std::string_view outputFormatToString(OutputFormat format) noexcept {
     }
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

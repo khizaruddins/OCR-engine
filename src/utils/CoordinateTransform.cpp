@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-namespace edmo::ocr {
+namespace ocr {
 
 BoundingBox CoordinateTransform::invertBoundingBox(
     const BoundingBox& rotatedBox,
@@ -100,4 +100,4 @@ void CoordinateTransform::invertPageCoordinates(
     }
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/ingestion/IngestionConfig.hpp>
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/ingestion/IngestionConfig.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
 
 #include <vector>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Deterministic page classifier and document-level type aggregator.
@@ -32,4 +32,4 @@ private:
     IngestionConfig config_;
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

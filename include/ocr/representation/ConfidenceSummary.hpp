@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Statistical summary of OCR confidence metrics at a given structural hierarchy level.
@@ -76,4 +76,4 @@ struct ConfidenceSummary {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

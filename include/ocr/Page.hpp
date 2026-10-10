@@ -1,10 +1,10 @@
 #pragma once
 
-#include <edmo/ocr/Image.hpp>
+#include <ocr/Image.hpp>
 
 #include <optional>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents a single page within a document.
@@ -19,4 +19,4 @@ struct Page {
     double detectedSkewDegrees = 0.0;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

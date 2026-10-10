@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/OcrBlock.hpp>
-#include <edmo/ocr/OcrLine.hpp>
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
+#include <ocr/OcrBlock.hpp>
+#include <ocr/OcrLine.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
 
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 struct ReadingRegion {
     int id = 0;
@@ -41,4 +41,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

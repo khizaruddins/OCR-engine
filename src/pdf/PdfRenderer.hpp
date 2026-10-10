@@ -1,8 +1,8 @@
 #pragma once
 
-#include <edmo/ocr/IPdfRenderer.hpp>
+#include <ocr/IPdfRenderer.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 class PdfRenderer : public IPdfRenderer {
 public:
@@ -19,4 +19,4 @@ public:
     ) override;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

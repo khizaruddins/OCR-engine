@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "../../src/representation/LineGrouper.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(LineGroupingTests, BuildLineFromTokens) {
     std::vector<OcrToken> tokens = {

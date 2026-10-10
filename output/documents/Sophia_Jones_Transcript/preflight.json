@@ -62,5 +62,5 @@
     "slowest_page_ms": 0.0,
     "total_ms": 0.0
   },
-  "schema_version": "edmo-preflight-0.2"
+  "schema_version": "ocr-preflight-0.2"
 }

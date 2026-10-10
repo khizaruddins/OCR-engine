@@ -1,10 +1,10 @@
 #include "Contrast.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 
 #include <opencv2/imgproc.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 cv::Mat Contrast::applyContrast(
     const cv::Mat& src,
@@ -55,4 +55,4 @@ Result<Image> Contrast::process(
     return Result<Image>::success(Image(std::move(enhanced)));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

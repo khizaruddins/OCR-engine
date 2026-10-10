@@ -1,16 +1,16 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
-#include <edmo/ocr/OcrLine.hpp>
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
-#include <edmo/ocr/representation/DocumentRepresentation.hpp>
-#include <edmo/ocr/representation/SourceReference.hpp>
+#include <ocr/BoundingBox.hpp>
+#include <ocr/OcrLine.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/DocumentRepresentation.hpp>
+#include <ocr/representation/SourceReference.hpp>
 
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Represents a reconstructed semantic block of text (Heading, Paragraph, LabelValue, etc.)
@@ -63,4 +63,4 @@ struct RepresentationBlock {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

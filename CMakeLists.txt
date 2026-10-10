@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(edmo-di-ocr
+project(ocr-di
     VERSION 0.1.0
     DESCRIPTION "Education Document Intelligence C++ OCR Engine v0.1"
     LANGUAGES CXX C
@@ -17,12 +17,12 @@ include(cmake/CompilerWarnings.cmake)
 include(cmake/Dependencies.cmake)
 
 # Options
-option(EDMO_BUILD_TESTING "Build test suite" ON)
-option(EDMO_BUILD_BENCHMARKS "Build benchmarks" ON)
-option(EDMO_BUILD_EXAMPLES "Build examples" ON)
+option(OCR_BUILD_TESTING "Build test suite" ON)
+option(OCR_BUILD_BENCHMARKS "Build benchmarks" ON)
+option(OCR_BUILD_EXAMPLES "Build examples" ON)
 
 # Core Library Sources
-set(EDMO_OCR_CORE_SOURCES
+set(OCR_CORE_SOURCES
     src/core/Document.cpp
     src/core/OcrConfig.cpp
     src/core/OcrEngine.cpp
@@ -74,10 +74,10 @@ set(EDMO_OCR_CORE_SOURCES
     src/utils/Timer.cpp
 )
 
-add_library(edmo_ocr_core STATIC ${EDMO_OCR_CORE_SOURCES})
-add_library(edmo::ocr::core ALIAS edmo_ocr_core)
+add_library(ocr_core STATIC ${OCR_CORE_SOURCES})
+add_library(ocr::core ALIAS ocr_core)
 
-target_include_directories(edmo_ocr_core
+target_include_directories(ocr_core
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
@@ -85,47 +85,47 @@ target_include_directories(edmo_ocr_core
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-target_link_libraries(edmo_ocr_core
+target_link_libraries(ocr_core
     PUBLIC
-        edmo_external_deps
+        ocr_external_deps
 )
 
-set_project_warnings(edmo_ocr_core)
+set_project_warnings(ocr_core)
 
 # CLI Applications
-add_executable(edmo-ocr apps/edmo-ocr/main.cpp)
-target_link_libraries(edmo-ocr PRIVATE edmo_ocr_core)
-set_project_warnings(edmo-ocr)
-set_target_properties(edmo-ocr PROPERTIES OUTPUT_NAME "edmo-ocr")
+add_executable(ocr-engine apps/ocr-engine/main.cpp)
+target_link_libraries(ocr-engine PRIVATE ocr_core)
+set_project_warnings(ocr-engine)
+set_target_properties(ocr-engine PROPERTIES OUTPUT_NAME "ocr-engine")
 
-add_executable(edmo-ocr-analyze apps/edmo-ocr-analyze/main.cpp)
-target_link_libraries(edmo-ocr-analyze PRIVATE edmo_ocr_core)
-set_project_warnings(edmo-ocr-analyze)
-set_target_properties(edmo-ocr-analyze PROPERTIES OUTPUT_NAME "edmo-ocr-analyze")
+add_executable(ocr-analyze apps/ocr-analyze/main.cpp)
+target_link_libraries(ocr-analyze PRIVATE ocr_core)
+set_project_warnings(ocr-analyze)
+set_target_properties(ocr-analyze PROPERTIES OUTPUT_NAME "ocr-analyze")
 
 # Examples
-if(EDMO_BUILD_EXAMPLES)
-    add_executable(edmo_ocr_example_basic examples/basic.cpp)
-    target_link_libraries(edmo_ocr_example_basic PRIVATE edmo_ocr_core)
-    set_project_warnings(edmo_ocr_example_basic)
+if(OCR_BUILD_EXAMPLES)
+    add_executable(ocr_example_basic examples/basic.cpp)
+    target_link_libraries(ocr_example_basic PRIVATE ocr_core)
+    set_project_warnings(ocr_example_basic)
 
-    add_executable(edmo_ocr_example_batch examples/batch.cpp)
-    target_link_libraries(edmo_ocr_example_batch PRIVATE edmo_ocr_core)
-    set_project_warnings(edmo_ocr_example_batch)
+    add_executable(ocr_example_batch examples/batch.cpp)
+    target_link_libraries(ocr_example_batch PRIVATE ocr_core)
+    set_project_warnings(ocr_example_batch)
 endif()
 
 # Benchmarks
-if(EDMO_BUILD_BENCHMARKS)
-    add_executable(edmo_ocr_benchmark benchmarks/OcrBenchmark.cpp)
-    target_link_libraries(edmo_ocr_benchmark PRIVATE edmo_ocr_core)
-    set_project_warnings(edmo_ocr_benchmark)
+if(OCR_BUILD_BENCHMARKS)
+    add_executable(ocr_benchmark benchmarks/OcrBenchmark.cpp)
+    target_link_libraries(ocr_benchmark PRIVATE ocr_core)
+    set_project_warnings(ocr_benchmark)
 endif()
 
 # Tests
-if(EDMO_BUILD_TESTING)
+if(OCR_BUILD_TESTING)
     enable_testing()
 
-    set(EDMO_TEST_SOURCES
+    set(OCR_TEST_SOURCES
         tests/unit/BoundingBoxTests.cpp
         tests/unit/OrientationTests.cpp
         tests/unit/PreprocessingTests.cpp
@@ -157,25 +157,25 @@ if(EDMO_BUILD_TESTING)
         tests/integration/TranscriptTests.cpp
     )
 
-    add_executable(edmo_ocr_tests ${EDMO_TEST_SOURCES})
-    target_link_libraries(edmo_ocr_tests
+    add_executable(ocr_tests ${OCR_TEST_SOURCES})
+    target_link_libraries(ocr_tests
         PRIVATE
-            edmo_ocr_core
+            ocr_core
             GTest::gtest_main
     )
-    set_project_warnings(edmo_ocr_tests)
-    target_compile_definitions(edmo_ocr_tests PRIVATE
-        EDMO_TEST_FIXTURES_DIR="${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures"
+    set_project_warnings(ocr_tests)
+    target_compile_definitions(ocr_tests PRIVATE
+        OCR_TEST_FIXTURES_DIR="${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures"
     )
 
     include(GoogleTest)
-    gtest_discover_tests(edmo_ocr_tests)
-endif() # EDMO_BUILD_TESTING
+    gtest_discover_tests(ocr_tests)
+endif() # OCR_BUILD_TESTING
 
 # Installation rules
 include(GNUInstallDirs)
-install(TARGETS edmo_ocr_core edmo-ocr edmo-ocr-analyze
-    EXPORT EdmoOcrTargets
+install(TARGETS ocr_core ocr-engine ocr-analyze
+    EXPORT OcrTargets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

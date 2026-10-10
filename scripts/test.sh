@@ -11,5 +11,5 @@ python3 "${ROOT_DIR}/tests/fixtures/generate_fixtures.py"
 echo "=== Building targets ==="
 cmake --build "${BUILD_DIR}" -j"$(nproc)"
 
-echo "=== Running EDMO DI-OCR Test Suite ==="
+echo "=== Running OCR-DI Test Suite ==="
 ctest --test-dir "${BUILD_DIR}" --output-on-failure

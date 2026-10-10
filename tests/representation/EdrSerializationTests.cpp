@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 
-using namespace edmo::ocr::representation;
+using namespace ocr::representation;
 
 TEST(EdrSerializationTests, SchemaCompliance) {
     SemanticDocument doc;

@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Request-level parameters passed into the OCR provider.
@@ -17,4 +17,4 @@ struct OcrOptions {
     float confidenceThreshold = 0.0f;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
+#include <ocr/BoundingBox.hpp>
 
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents an individual OCR token (word / symbol).
@@ -34,4 +34,4 @@ struct OcrToken {
     }
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

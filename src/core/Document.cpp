@@ -1,9 +1,9 @@
-#include <edmo/ocr/Document.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/Document.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../utils/FileUtils.hpp"
 #include "../utils/ImageUtils.hpp"
 
-namespace edmo::ocr {
+namespace ocr {
 
 Result<Document> Document::load(
     const std::filesystem::path& filePath,
@@ -42,4 +42,4 @@ Result<Document> Document::load(
     return Result<Document>::success(std::move(doc));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

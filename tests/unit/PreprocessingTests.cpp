@@ -1,17 +1,17 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/OcrConfig.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/OcrConfig.hpp>
 #include "../../src/preprocessing/Binarization.hpp"
 #include "../../src/preprocessing/Contrast.hpp"
 #include "../../src/preprocessing/Denoise.hpp"
 #include "../../src/preprocessing/Deskew.hpp"
 #include "../../src/preprocessing/ImagePreprocessor.hpp"
 #include "../../src/preprocessing/Sharpen.hpp"
-#include <edmo/ocr/preprocessing/TableGridDetector.hpp>
+#include <ocr/preprocessing/TableGridDetector.hpp>
 
 #include <opencv2/imgproc.hpp>
 
-using namespace edmo::ocr;
+using namespace ocr;
 
 class PreprocessingTests : public ::testing::Test {
 protected:

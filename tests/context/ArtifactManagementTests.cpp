@@ -1,15 +1,15 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/context/ArtifactManager.hpp>
-#include <edmo/ocr/context/ArtifactPaths.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/context/ArtifactManager.hpp>
+#include <ocr/context/ArtifactPaths.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 
 #include <filesystem>
 #include <set>
 #include <string>
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::context;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::context;
+using namespace ocr::representation;
 
 TEST(ArtifactManagementTests, SanitizesComplexFilenamesCorrectly) {
     EXPECT_EQ(ArtifactPaths::sanitizeDocumentName("International transcript-IND_Redacted compressed.pdf"),
@@ -44,7 +44,7 @@ TEST(ArtifactManagementTests, JsonFilesAreNotTreatedAsDocuments) {
 }
 
 TEST(ArtifactManagementTests, SingleDocumentProducesExactlyFourCanonicalArtifacts) {
-    std::filesystem::path testBaseDir = std::filesystem::temp_directory_path() / "edmo_artifact_test_single";
+    std::filesystem::path testBaseDir = std::filesystem::temp_directory_path() / "ocr_artifact_test_single";
     std::error_code ec;
     std::filesystem::remove_all(testBaseDir, ec);
 
@@ -100,7 +100,7 @@ TEST(ArtifactManagementTests, SingleDocumentProducesExactlyFourCanonicalArtifact
 }
 
 TEST(ArtifactManagementTests, ReRunOverwritesCleanlyWithoutDuplicates) {
-    std::filesystem::path testBaseDir = std::filesystem::temp_directory_path() / "edmo_artifact_test_rerun";
+    std::filesystem::path testBaseDir = std::filesystem::temp_directory_path() / "ocr_artifact_test_rerun";
     std::error_code ec;
     std::filesystem::remove_all(testBaseDir, ec);
 
@@ -131,7 +131,7 @@ TEST(ArtifactManagementTests, ReRunOverwritesCleanlyWithoutDuplicates) {
 }
 
 TEST(ArtifactManagementTests, MultipleDocumentsAreIsolatedInSeparateDirectories) {
-    std::filesystem::path testBaseDir = std::filesystem::temp_directory_path() / "edmo_artifact_test_multi";
+    std::filesystem::path testBaseDir = std::filesystem::temp_directory_path() / "ocr_artifact_test_multi";
     std::error_code ec;
     std::filesystem::remove_all(testBaseDir, ec);
 

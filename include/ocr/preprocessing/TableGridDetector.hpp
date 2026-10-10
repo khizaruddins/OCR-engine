@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/BoundingBox.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/Result.hpp>
 
 #include <opencv2/core.hpp>
 #include <vector>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents a single isolated cell within a detected table grid.
@@ -67,4 +67,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

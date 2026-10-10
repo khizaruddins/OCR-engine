@@ -1,5 +1,5 @@
 #include "ImagePreprocessor.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "Binarization.hpp"
 #include "Contrast.hpp"
 #include "Denoise.hpp"
@@ -9,7 +9,7 @@
 
 #include <opencv2/imgproc.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 ImagePreprocessor::ImagePreprocessor()
     : orientationDetector_(std::make_unique<OrientationDetector>()) {}
@@ -145,4 +145,4 @@ Result<PreprocessResult> ImagePreprocessor::process(
     return Result<PreprocessResult>::success(std::move(result));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

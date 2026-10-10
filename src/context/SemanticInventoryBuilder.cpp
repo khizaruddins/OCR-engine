@@ -1,6 +1,6 @@
 #include "SemanticInventoryBuilder.hpp"
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 SemanticInventory SemanticInventoryBuilder::build(const representation::SemanticDocument& doc) {
     SemanticInventory inv;
@@ -113,4 +113,4 @@ SemanticInventory SemanticInventoryBuilder::build(const representation::Semantic
     return inv;
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

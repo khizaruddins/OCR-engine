@@ -48,8 +48,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy binaries and configurations
-COPY --from=builder /workspace/build/apps/edmo-ocr/edmo-ocr /usr/local/bin/edmo-ocr
-COPY --from=builder /workspace/build/benchmarks/edmo_ocr_benchmark /usr/local/bin/edmo_ocr_benchmark
+COPY --from=builder /workspace/build/apps/ocr-engine/ocr-engine /usr/local/bin/edmo-ocr
+COPY --from=builder /workspace/build/benchmarks/ocr_benchmark /usr/local/bin/ocr_benchmark
 COPY --from=builder /workspace/configs /app/configs
 
 ENTRYPOINT ["/usr/local/bin/edmo-ocr"]

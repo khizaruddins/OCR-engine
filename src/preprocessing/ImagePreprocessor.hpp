@@ -1,10 +1,10 @@
 #pragma once
 
-#include <edmo/ocr/IPreprocessor.hpp>
+#include <ocr/IPreprocessor.hpp>
 #include "Deskew.hpp"
 #include "OrientationDetector.hpp"
 
-namespace edmo::ocr {
+namespace ocr {
 
 class ImagePreprocessor : public IPreprocessor {
 public:
@@ -27,4 +27,4 @@ private:
     );
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 
 #include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
 
-using namespace edmo::ocr::representation;
+using namespace ocr::representation;
 
 TEST(GoldenTranscriptTests, ProcessBostonTranscriptRawJson) {
     std::vector<std::filesystem::path> candidatePaths = {

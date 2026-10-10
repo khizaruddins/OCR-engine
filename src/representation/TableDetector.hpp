@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/OcrLine.hpp>
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
+#include <ocr/OcrLine.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
 
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 struct TableRegionCandidate {
     int startLineIndex = 0;
@@ -46,4 +46,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

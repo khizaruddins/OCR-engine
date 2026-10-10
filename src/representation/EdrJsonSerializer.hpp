@@ -1,12 +1,12 @@
 #pragma once
 
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 
 #include <filesystem>
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class EdrJsonSerializer {
 public:
@@ -37,4 +37,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

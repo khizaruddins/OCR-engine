@@ -1,6 +1,6 @@
-#include <edmo/ocr/ingestion/PageClassifier.hpp>
+#include <ocr/ingestion/PageClassifier.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 PageClassifier::PageClassifier(IngestionConfig config)
     : config_(config) {}
@@ -93,4 +93,4 @@ DocumentLevelType PageClassifier::classifyDocument(const std::vector<PageInspect
     return DocumentLevelType::Mixed;
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

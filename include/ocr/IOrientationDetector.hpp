@@ -1,9 +1,9 @@
 #pragma once
 
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/Result.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Result of orientation detection.
@@ -31,4 +31,4 @@ public:
     ) = 0;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

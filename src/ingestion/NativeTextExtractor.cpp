@@ -1,5 +1,5 @@
-#include <edmo/ocr/ingestion/NativeTextExtractor.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ingestion/NativeTextExtractor.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 #include "../utils/Timer.hpp"
 
@@ -8,7 +8,7 @@
 #include <poppler-document.h>
 #include <poppler-page.h>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 NativeTextExtractor::NativeTextExtractor(IngestionConfig config)
     : config_(config) {}
@@ -260,4 +260,4 @@ Result<OcrPageResult> NativeTextExtractor::extractPage(
     return Result<OcrPageResult>::success(std::move(pageResult));
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

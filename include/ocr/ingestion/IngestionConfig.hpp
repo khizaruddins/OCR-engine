@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Configuration parameters and thresholds for document ingestion and preflight.
@@ -72,4 +72,4 @@ struct IngestionConfig {
     }
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

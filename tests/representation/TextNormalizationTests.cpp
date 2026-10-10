@@ -2,8 +2,8 @@
 #include "../../src/representation/TextNormalizer.hpp"
 #include "../../src/representation/NoiseReducer.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(TextNormalizationTests, BasicTrimmingAndCollapsing) {
     EXPECT_EQ(TextNormalizer::trim("   CS101   "), "CS101");

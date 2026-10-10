@@ -1,10 +1,10 @@
 #include "Sharpen.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 
 #include <opencv2/imgproc.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 cv::Mat Sharpen::applySharpen(const cv::Mat& src, double strength) {
     if (src.empty() || strength <= 0.0) return src.clone();
@@ -33,4 +33,4 @@ Result<Image> Sharpen::process(
     return Result<Image>::success(Image(std::move(sharpened)));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

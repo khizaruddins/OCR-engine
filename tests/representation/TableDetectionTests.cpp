@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "../../src/representation/TableDetector.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(TableDetectionTests, CourseCodePatterns) {
     EXPECT_TRUE(TableDetector::isCourseCode("CS101"));

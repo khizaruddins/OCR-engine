@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include "../../src/representation/SemanticCompressor.hpp"
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(CompressionTests, ComputeMetricsAndTokenEstimate) {
     OcrResult ocr;

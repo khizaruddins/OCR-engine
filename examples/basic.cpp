@@ -1,4 +1,4 @@
-#include <edmo/ocr/OcrEngine.hpp>
+#include <ocr/OcrEngine.hpp>
 #include "../src/output/JsonSerializer.hpp"
 
 #include <iostream>
@@ -6,10 +6,10 @@
 int main(int argc, char* argv[]) {
     std::string inputPath = (argc > 1) ? argv[1] : "sample.png";
 
-    std::cout << "Running EDMO OCR Engine basic example on: " << inputPath << "\n";
+    std::cout << "Running OCR Engine basic example on: " << inputPath << "\n";
 
-    edmo::ocr::OcrConfig config = edmo::ocr::OcrConfig::getProfile("transcript");
-    edmo::ocr::OcrEngine engine(config);
+    ocr::OcrConfig config = ocr::OcrConfig::getProfile("transcript");
+    ocr::OcrEngine engine(config);
 
     auto result = engine.process(inputPath);
     if (!result) {
@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
               << "Average confidence: " << (result.value().confidence * 100.0f) << "%\n\n";
 
     std::cout << "JSON Output:\n"
-              << edmo::ocr::JsonSerializer::serialize(result.value(), edmo::ocr::OutputFormat::FullJson, true)
+              << ocr::JsonSerializer::serialize(result.value(), ocr::OutputFormat::FullJson, true)
               << "\n";
 
     return 0;

@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <cmath>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 void ReadingOrder::sortTokensInLine(OcrLine& line) {
     if (line.tokens.size() <= 1) return;
@@ -186,4 +186,4 @@ std::vector<OcrBlock> ReadingOrder::sortBlocks(
     return sorted;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

@@ -16,7 +16,7 @@ Raw OCR JSON engines produce exhaustive character/word coordinates that can span
                               |
                               v
 +-------------------------------------------------------------+
-|                    EDMO OCR Core Engine                     |
+|                    OCR Core Engine                     |
 |           (Poppler PDF Render -> OpenCV Preprocessing       |
 |               -> Tesseract Multi-Page OCR)                  |
 +-------------------------------------------------------------+

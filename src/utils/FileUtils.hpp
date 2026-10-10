@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/Types.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/Types.hpp>
 
 #include <filesystem>
 #include <string>
 #include <vector>
 
-namespace edmo::ocr {
+namespace ocr {
 
 class FileUtils {
 public:
@@ -29,4 +29,4 @@ public:
     static std::string generateProcessingId();
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

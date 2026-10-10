@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# EDMO DI-OCR - Cleanup Legacy Output Artifacts
+# OCR-DI - Cleanup Legacy Output Artifacts
 # This script safely cleans legacy flat outputs while preserving source documents.
 
 set -euo pipefail
@@ -9,7 +9,7 @@ WORKSPACE_ROOT="$(dirname "$SCRIPT_DIR")"
 RAW_JSON_DIR="${WORKSPACE_ROOT}/output/raw_json"
 
 echo "================================================="
-echo "EDMO DI-OCR Legacy Artifact Cleanup Utility"
+echo "OCR-DI Legacy Artifact Cleanup Utility"
 echo "================================================="
 
 if [ -d "${RAW_JSON_DIR}" ]; then

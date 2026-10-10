@@ -1,5 +1,5 @@
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/ErrorCode.hpp>
 
 #include "BlockGrouper.hpp"
 #include "ConfidenceAggregator.hpp"
@@ -16,7 +16,7 @@
 
 #include <fstream>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 struct DocumentRepresentationEngine::Impl {
     RepresentationConfig config;
@@ -260,5 +260,5 @@ nlohmann::json DocumentRepresentationEngine::toLlmJson(const SemanticDocument& d
     return EdrJsonSerializer::toLlmJson(doc, includeSource);
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation
 

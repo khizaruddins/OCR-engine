@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/context/LlmContextBuilder.hpp>
+#include <ocr/context/LlmContextBuilder.hpp>
 
 #include <filesystem>
 #include <fstream>
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::context;
+using namespace ocr;
+using namespace ocr::context;
 
 TEST(SevenPageTranscriptRegressionTests, PreservesAllSevenPagesAndCoursesWithoutLoss) {
     std::vector<std::filesystem::path> candidates = {

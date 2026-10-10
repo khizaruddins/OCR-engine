@@ -6,7 +6,7 @@
 #include <random>
 #include <sstream>
 
-namespace edmo::ocr {
+namespace ocr {
 
 static std::string toLower(std::string str) {
     std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) {
@@ -147,4 +147,4 @@ std::string FileUtils::generateProcessingId() {
     return "proc_" + std::to_string(now) + "_" + generateRandomHex(6);
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

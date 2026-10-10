@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents an axis-aligned rectangular bounding box.
@@ -98,4 +98,4 @@ struct BoundingBox {
     }
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

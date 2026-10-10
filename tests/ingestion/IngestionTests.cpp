@@ -1,31 +1,31 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
-#include <edmo/ocr/ingestion/DocumentIngestor.hpp>
-#include <edmo/ocr/ingestion/NativeTextExtractor.hpp>
-#include <edmo/ocr/ingestion/PageClassifier.hpp>
-#include <edmo/ocr/ingestion/PageComplexityAnalyzer.hpp>
-#include <edmo/ocr/ingestion/PdfInspector.hpp>
-#include <edmo/ocr/ingestion/PreflightReport.hpp>
-#include <edmo/ocr/ingestion/ProcessingStrategy.hpp>
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/ErrorCode.hpp>
+#include <ocr/ingestion/DocumentIngestor.hpp>
+#include <ocr/ingestion/NativeTextExtractor.hpp>
+#include <ocr/ingestion/PageClassifier.hpp>
+#include <ocr/ingestion/PageComplexityAnalyzer.hpp>
+#include <ocr/ingestion/PdfInspector.hpp>
+#include <ocr/ingestion/PreflightReport.hpp>
+#include <ocr/ingestion/ProcessingStrategy.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 
 #include <filesystem>
 #include <fstream>
 #include <nlohmann/json.hpp>
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::ingestion;
+using namespace ocr;
+using namespace ocr::ingestion;
 
-#ifndef EDMO_TEST_FIXTURES_DIR
-#define EDMO_TEST_FIXTURES_DIR "tests/fixtures"
+#ifndef OCR_TEST_FIXTURES_DIR
+#define OCR_TEST_FIXTURES_DIR "tests/fixtures"
 #endif
 
 class IngestionTests : public ::testing::Test {
 protected:
     void SetUp() override {
-        fixturesDir_ = std::filesystem::path(EDMO_TEST_FIXTURES_DIR);
+        fixturesDir_ = std::filesystem::path(OCR_TEST_FIXTURES_DIR);
     }
 
     std::filesystem::path fixturesDir_;
@@ -40,7 +40,7 @@ TEST_F(IngestionTests, PdfInspectorValidatesAndInspectsPdf) {
     ASSERT_TRUE(res.has_value()) << res.error().toString();
 
     const auto& summary = res.value();
-    EXPECT_EQ(summary.schemaVersion, "edmo-preflight-0.2");
+    EXPECT_EQ(summary.schemaVersion, "ocr-preflight-0.2");
     EXPECT_EQ(summary.format, "PDF");
     EXPECT_EQ(summary.pageCount, 2);
     EXPECT_GT(summary.fileSizeBytes, 0);
@@ -187,7 +187,7 @@ TEST_F(IngestionTests, PageComplexityAnalyzerCalculatesScores) {
 
 TEST_F(IngestionTests, PreflightReportSerializesAndRoundtrips) {
     PreflightSummary summary;
-    summary.schemaVersion = "edmo-preflight-0.2";
+    summary.schemaVersion = "ocr-preflight-0.2";
     summary.fileName = "test.pdf";
     summary.format = "PDF";
     summary.fileSizeBytes = 4096;
@@ -210,7 +210,7 @@ TEST_F(IngestionTests, PreflightReportSerializesAndRoundtrips) {
     ASSERT_FALSE(jsonStr.empty());
 
     nlohmann::json j = nlohmann::json::parse(jsonStr);
-    EXPECT_EQ(j["schema_version"], "edmo-preflight-0.2");
+    EXPECT_EQ(j["schema_version"], "ocr-preflight-0.2");
     EXPECT_EQ(j["document"]["page_count"], 1);
     EXPECT_EQ(j["classification"]["document_type"], "DIGITAL_TEXT");
     EXPECT_EQ(j["pages"][0]["processing_strategy"], "NATIVE_TEXT");
@@ -251,7 +251,7 @@ TEST_F(IngestionTests, EndToEndAdaptivePipelinePopulatesManifestAndMetadata) {
     nlohmann::json edrJson = representation::EdrJsonSerializer::toFullJson(reprRes.value());
     EXPECT_EQ(edrJson["schema_version"], "edr-0.2");
     ASSERT_TRUE(edrJson.contains("processing_manifest"));
-    EXPECT_EQ(edrJson["processing_manifest"]["engine"], "edmo-ocr");
+    EXPECT_EQ(edrJson["processing_manifest"]["engine"], "ocr-engine");
     EXPECT_EQ(edrJson["processing_manifest"]["version"], "0.2.0");
     EXPECT_EQ(edrJson["processing_manifest"]["document"]["pages"], 2);
 }

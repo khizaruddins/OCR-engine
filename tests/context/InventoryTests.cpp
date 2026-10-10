@@ -1,10 +1,10 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 #include "../../src/context/SemanticInventoryBuilder.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::context;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::context;
+using namespace ocr::representation;
 
 TEST(InventoryTests, CatalogsBlocksAndAssignsFates) {
     SemanticDocument doc;

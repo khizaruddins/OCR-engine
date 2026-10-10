@@ -1,12 +1,12 @@
 #include "ImageUtils.hpp"
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/ErrorCode.hpp>
 
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 #include <vector>
 
-namespace edmo::ocr {
+namespace ocr {
 
 bool Image::save(const std::filesystem::path& outputPath) const {
     if (empty()) return false;
@@ -147,4 +147,4 @@ bool ImageUtils::saveMat(
     return cv::imwrite(path.string(), mat);
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

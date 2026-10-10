@@ -1,4 +1,4 @@
-#include <edmo/ocr/context/LlmContextBuilder.hpp>
+#include <ocr/context/LlmContextBuilder.hpp>
 #include "../utils/Timer.hpp"
 
 #include "LossAnalyzer.hpp"
@@ -11,7 +11,7 @@
 
 #include <fstream>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 struct LlmContextBuilder::Impl {
     LlmContextConfig config;
@@ -351,4 +351,4 @@ bool LlmContextBuilder::saveToDirectory(
     return ok1 && ok2;
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

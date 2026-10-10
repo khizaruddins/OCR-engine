@@ -1,9 +1,9 @@
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/context/ArtifactPaths.hpp>
-#include <edmo/ocr/context/LlmContextBuilder.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/context/ArtifactPaths.hpp>
+#include <ocr/context/LlmContextBuilder.hpp>
 #include "../../src/context/LlmContextSerializer.hpp"
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 
 #include <cstdlib>
 #include <filesystem>
@@ -16,7 +16,7 @@
 namespace {
 
 void printHelp(const char* prog) {
-    std::cout << "EDMO DI-OCR Document Representation & Context Analyzer v0.1.0\n\n"
+    std::cout << "OCR-DI Document Representation & Context Analyzer v0.1.0\n\n"
               << "Usage:\n"
               << "  " << prog << " --raw <raw-ocr.json> [options]\n"
               << "  " << prog << " --raw <raw-ocr.json> --output-dir results/\n\n"
@@ -98,8 +98,8 @@ int main(int argc, char* argv[]) {
     }
 
     // 2. Transform using EDR Engine
-    edmo::ocr::representation::RepresentationConfig config;
-    edmo::ocr::representation::DocumentRepresentationEngine engine(config);
+    ocr::representation::RepresentationConfig config;
+    ocr::representation::DocumentRepresentationEngine engine(config);
 
     auto transformRes = engine.transform(rawJson);
     if (!transformRes) {
@@ -108,13 +108,13 @@ int main(int argc, char* argv[]) {
     }
 
     const auto& doc = transformRes.value();
-    nlohmann::json fullJson = edmo::ocr::representation::EdrJsonSerializer::toFullJson(doc);
-    nlohmann::json legacyLlmJson = edmo::ocr::representation::EdrJsonSerializer::toLlmJson(doc, false);
+    nlohmann::json fullJson = ocr::representation::EdrJsonSerializer::toFullJson(doc);
+    nlohmann::json legacyLlmJson = ocr::representation::EdrJsonSerializer::toLlmJson(doc, false);
 
     // 3. Build Loss-Aware LLM Context and Report
-    edmo::ocr::context::LlmContextConfig ctxConfig;
+    ocr::context::LlmContextConfig ctxConfig;
     ctxConfig.tokenBudget = tokenBudget;
-    edmo::ocr::context::LlmContextBuilder ctxBuilder(ctxConfig);
+    ocr::context::LlmContextBuilder ctxBuilder(ctxConfig);
 
     auto ctxRes = ctxBuilder.build(fullJson, &rawJson);
     if (!ctxRes) {
@@ -129,27 +129,27 @@ int main(int argc, char* argv[]) {
 
     // Save outputs if requested
     if (!fullPath.empty()) {
-        edmo::ocr::representation::EdrJsonSerializer::saveToFile(fullPath, fullJson);
+        ocr::representation::EdrJsonSerializer::saveToFile(fullPath, fullJson);
     }
     if (!llmPath.empty()) {
-        edmo::ocr::representation::EdrJsonSerializer::saveToFile(llmPath, legacyLlmJson);
+        ocr::representation::EdrJsonSerializer::saveToFile(llmPath, legacyLlmJson);
     }
     if (!contextPath.empty()) {
-        edmo::ocr::context::LlmContextSerializer::saveToFile(contextPath, contextJson);
+        ocr::context::LlmContextSerializer::saveToFile(contextPath, contextJson);
     }
     if (!reportPath.empty()) {
-        edmo::ocr::context::LlmContextSerializer::saveToFile(reportPath, reportJson);
+        ocr::context::LlmContextSerializer::saveToFile(reportPath, reportJson);
     }
 
     if (!outDir.empty()) {
-        std::filesystem::path docDir = edmo::ocr::context::ArtifactPaths::getDocumentDirectory(outDir, rawFilePath);
+        std::filesystem::path docDir = ocr::context::ArtifactPaths::getDocumentDirectory(outDir, rawFilePath);
         std::error_code ec;
         std::filesystem::create_directories(docDir, ec);
 
-        edmo::ocr::representation::EdrJsonSerializer::saveToFile(edmo::ocr::context::ArtifactPaths::rawOcrPath(docDir), rawJson);
-        edmo::ocr::representation::EdrJsonSerializer::saveToFile(edmo::ocr::context::ArtifactPaths::edrFullPath(docDir), fullJson);
-        edmo::ocr::context::LlmContextSerializer::saveToFile(edmo::ocr::context::ArtifactPaths::llmContextPath(docDir), contextJson);
-        edmo::ocr::context::LlmContextSerializer::saveToFile(edmo::ocr::context::ArtifactPaths::llmContextReportPath(docDir), reportJson);
+        ocr::representation::EdrJsonSerializer::saveToFile(ocr::context::ArtifactPaths::rawOcrPath(docDir), rawJson);
+        ocr::representation::EdrJsonSerializer::saveToFile(ocr::context::ArtifactPaths::edrFullPath(docDir), fullJson);
+        ocr::context::LlmContextSerializer::saveToFile(ocr::context::ArtifactPaths::llmContextPath(docDir), contextJson);
+        ocr::context::LlmContextSerializer::saveToFile(ocr::context::ArtifactPaths::llmContextReportPath(docDir), reportJson);
     }
 
     std::cout << "\n======================================================================\n"

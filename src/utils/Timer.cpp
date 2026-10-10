@@ -1,5 +1,5 @@
 #include "Timer.hpp"
 
-namespace edmo::ocr {
+namespace ocr {
 // Inlined in header, translation unit for compilation consistency.
 }

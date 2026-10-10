@@ -1,19 +1,19 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/ErrorCode.hpp>
 
 #include <filesystem>
 
-using namespace edmo::ocr;
+using namespace ocr;
 
-#ifndef EDMO_TEST_FIXTURES_DIR
-#define EDMO_TEST_FIXTURES_DIR "tests/fixtures"
+#ifndef OCR_TEST_FIXTURES_DIR
+#define OCR_TEST_FIXTURES_DIR "tests/fixtures"
 #endif
 
 class PdfTests : public ::testing::Test {
 protected:
     void SetUp() override {
-        fixturesDir_ = std::filesystem::path(EDMO_TEST_FIXTURES_DIR);
+        fixturesDir_ = std::filesystem::path(OCR_TEST_FIXTURES_DIR);
     }
 
     std::filesystem::path fixturesDir_;

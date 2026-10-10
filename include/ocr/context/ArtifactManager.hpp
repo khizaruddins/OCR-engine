@@ -1,17 +1,17 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/context/ArtifactPaths.hpp>
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/context/LlmContextReport.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/context/ArtifactPaths.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/context/LlmContextReport.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 
 #include <filesystem>
 #include <fstream>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 struct WrittenArtifacts {
     std::filesystem::path documentDirectory;
@@ -77,4 +77,4 @@ public:
     }
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

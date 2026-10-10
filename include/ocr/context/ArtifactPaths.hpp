@@ -7,7 +7,7 @@
 #include <string_view>
 #include <vector>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 /**
  * @brief Centralized artifact naming, directory resolution, and path sanitization.
@@ -162,4 +162,4 @@ public:
     }
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

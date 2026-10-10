@@ -1,9 +1,9 @@
 #pragma once
 
-#include <edmo/ocr/ingestion/IngestionConfig.hpp>
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/ingestion/IngestionConfig.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Strategy engine determining the cheapest correct processing path for each page.
@@ -28,4 +28,4 @@ private:
     IngestionConfig config_;
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

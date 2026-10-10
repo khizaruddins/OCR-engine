@@ -1,5 +1,5 @@
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../src/output/JsonSerializer.hpp"
 #include "../src/utils/Timer.hpp"
 
@@ -20,15 +20,15 @@ int main(int argc, char* argv[]) {
     }
 
     std::cout << "============================================================\n"
-              << " EDMO DI-OCR Engine v0.1 — Performance Benchmark\n"
+              << " OCR-DI Engine v0.1 — Performance Benchmark\n"
               << "============================================================\n"
               << " Target Document : " << testPath << "\n"
               << " Iterations      : " << iterations << "\n"
               << " Backend         : Tesseract OCR (CPU)\n"
               << "============================================================\n";
 
-    edmo::ocr::OcrConfig config = edmo::ocr::OcrConfig::getProfile("transcript");
-    edmo::ocr::OcrEngine engine(config);
+    ocr::OcrConfig config = ocr::OcrConfig::getProfile("transcript");
+    ocr::OcrEngine engine(config);
 
     std::vector<double> renderTimes;
     std::vector<double> prepTimes;
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
     std::cout << "Done.\n\nRunning benchmark iterations...\n";
 
     for (int i = 1; i <= iterations; ++i) {
-        edmo::ocr::Timer iterTimer;
+        ocr::Timer iterTimer;
         auto result = engine.process(testPath);
         if (!result) {
             std::cerr << "Iteration " << i << " failed: " << result.error().toString() << "\n";
@@ -57,8 +57,8 @@ int main(int argc, char* argv[]) {
         const auto& r = result.value();
         totalPagesProcessed += r.pages.size();
 
-        edmo::ocr::Timer serTimer;
-        std::string jsonStr = edmo::ocr::JsonSerializer::serialize(r, edmo::ocr::OutputFormat::FullJson, false);
+        ocr::Timer serTimer;
+        std::string jsonStr = ocr::JsonSerializer::serialize(r, ocr::OutputFormat::FullJson, false);
         double serTime = serTimer.elapsedMs();
 
         renderTimes.push_back(r.timing.pdfRenderTimeMs);

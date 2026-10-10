@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/representation/SourceReference.hpp>
+#include <ocr/representation/SourceReference.hpp>
 
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Represents an individual cell within a SemanticRow / SemanticTable.
@@ -40,4 +40,4 @@ struct SemanticCell {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

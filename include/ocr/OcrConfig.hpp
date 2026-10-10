@@ -1,15 +1,15 @@
 #pragma once
 
-#include <edmo/ocr/OcrOptions.hpp>
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/Types.hpp>
-#include <edmo/ocr/ingestion/IngestionConfig.hpp>
+#include <ocr/OcrOptions.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/Types.hpp>
+#include <ocr/ingestion/IngestionConfig.hpp>
 
 #include <filesystem>
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 struct OcrBackendConfig {
     std::string provider = "tesseract"; // tesseract, onnx, paddleocr, edmo
@@ -82,7 +82,7 @@ struct DebugConfig {
 };
 
 /**
- * @brief Top-level configuration object for the EDMO OCR Engine.
+ * @brief Top-level configuration object for the OCR Engine.
  */
 struct OcrConfig {
     OcrBackendConfig ocr;
@@ -120,4 +120,4 @@ struct OcrConfig {
     [[nodiscard]] OcrOptions toOcrOptions() const;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

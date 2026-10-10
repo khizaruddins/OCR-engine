@@ -1,11 +1,11 @@
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
-#include <edmo/ocr/context/ArtifactManager.hpp>
-#include <edmo/ocr/context/ArtifactPaths.hpp>
-#include <edmo/ocr/context/LlmContextBuilder.hpp>
-#include <edmo/ocr/ingestion/PreflightReport.hpp>
-#include <edmo/ocr/representation/DocumentRepresentationEngine.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/ErrorCode.hpp>
+#include <ocr/context/ArtifactManager.hpp>
+#include <ocr/context/ArtifactPaths.hpp>
+#include <ocr/context/LlmContextBuilder.hpp>
+#include <ocr/ingestion/PreflightReport.hpp>
+#include <ocr/representation/DocumentRepresentationEngine.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 #include "../../src/context/LlmContextSerializer.hpp"
 #include "../../src/output/JsonSerializer.hpp"
 #include "../../src/utils/FileUtils.hpp"
@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
     std::string docType = "auto";
     bool includeSource = false;
     size_t llmTokenBudget = 12000;
-    edmo::ocr::OutputFormat format = edmo::ocr::OutputFormat::FullJson;
+    ocr::OutputFormat format = ocr::OutputFormat::FullJson;
     bool isBatch = false;
     bool verbose = false;
     bool quiet = false;
@@ -98,7 +98,7 @@ int main(int argc, char* argv[]) {
     bool parallelPages = false;
     bool benchmark = false;
 
-    edmo::ocr::OcrConfig config;
+    ocr::OcrConfig config;
     bool customDpi = false;
     int dpiValue = 300;
     bool customLang = false;
@@ -135,11 +135,11 @@ int main(int argc, char* argv[]) {
         } else if ((arg == "-f" || arg == "--format") && i + 1 < argc) {
             std::string fmtStr = argv[++i];
             if (fmtStr == "full-json" || fmtStr == "json") {
-                format = edmo::ocr::OutputFormat::FullJson;
+                format = ocr::OutputFormat::FullJson;
             } else if (fmtStr == "compact-json" || fmtStr == "compact") {
-                format = edmo::ocr::OutputFormat::CompactJson;
+                format = ocr::OutputFormat::CompactJson;
             } else if (fmtStr == "text" || fmtStr == "txt") {
-                format = edmo::ocr::OutputFormat::PlainText;
+                format = ocr::OutputFormat::PlainText;
             }
         } else if ((arg == "-r" || arg == "--representation") && i + 1 < argc) {
             reprMode = argv[++i];
@@ -207,15 +207,15 @@ int main(int argc, char* argv[]) {
     }
 
     if (quiet) {
-        edmo::ocr::Logger::setLevel(edmo::ocr::LogLevel::Off);
+        ocr::Logger::setLevel(ocr::LogLevel::Off);
     } else if (verbose) {
-        edmo::ocr::Logger::setLevel(edmo::ocr::LogLevel::Debug);
+        ocr::Logger::setLevel(ocr::LogLevel::Debug);
     } else {
-        edmo::ocr::Logger::setLevel(edmo::ocr::LogLevel::Info);
+        ocr::Logger::setLevel(ocr::LogLevel::Info);
     }
 
     if (!configPath.empty()) {
-        auto cfgRes = edmo::ocr::OcrConfig::fromFile(configPath);
+        auto cfgRes = ocr::OcrConfig::fromFile(configPath);
         if (cfgRes) config = cfgRes.value();
     }
 
@@ -234,7 +234,7 @@ int main(int argc, char* argv[]) {
     if (forceNativeText) config.ingestion.forceNativeText = true;
     if (parallelPages) config.ingestion.enablePageParallelism = true;
 
-    edmo::ocr::OcrEngine engine(config);
+    ocr::OcrEngine engine(config);
 
     // Preflight Only Mode
     if (preflightOnly) {
@@ -244,13 +244,13 @@ int main(int argc, char* argv[]) {
             return 1;
         }
 
-        std::string reportJson = edmo::ocr::ingestion::PreflightReport::serialize(preflightRes.value(), true);
+        std::string reportJson = ocr::ingestion::PreflightReport::serialize(preflightRes.value(), true);
         if (!preflightOutputPath.empty()) {
-            if (edmo::ocr::ingestion::PreflightReport::saveToFile(preflightOutputPath, preflightRes.value(), true)) {
+            if (ocr::ingestion::PreflightReport::saveToFile(preflightOutputPath, preflightRes.value(), true)) {
                 std::cout << "Preflight report written to: " << preflightOutputPath << "\n";
             }
         } else if (!outputPath.empty()) {
-            if (edmo::ocr::ingestion::PreflightReport::saveToFile(outputPath, preflightRes.value(), true)) {
+            if (ocr::ingestion::PreflightReport::saveToFile(outputPath, preflightRes.value(), true)) {
                 std::cout << "Preflight report written to: " << outputPath << "\n";
             }
         } else {
@@ -259,15 +259,15 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 
-    edmo::ocr::representation::RepresentationConfig reprConfig;
+    ocr::representation::RepresentationConfig reprConfig;
     reprConfig.documentType = docType;
     reprConfig.sourceReferences.llmEdr = includeSource;
-    edmo::ocr::representation::DocumentRepresentationEngine reprEngine(reprConfig);
+    ocr::representation::DocumentRepresentationEngine reprEngine(reprConfig);
 
     std::filesystem::path baseOutputDir = !outputDir.empty() ? outputDir : "output/documents";
 
     if (isBatch || std::filesystem::is_directory(inputPath)) {
-        auto files = edmo::ocr::FileUtils::listSupportedFiles(inputPath, true);
+        auto files = ocr::FileUtils::listSupportedFiles(inputPath, true);
         if (files.empty()) {
             std::cout << "No supported documents found in: " << inputPath << "\n";
             return 0;
@@ -286,18 +286,18 @@ int main(int argc, char* argv[]) {
             if (result) {
                 if (reprMode == "none") {
                     std::string stem = file.stem().string();
-                    std::string ext = (format == edmo::ocr::OutputFormat::PlainText) ? ".txt" : ".json";
-                    edmo::ocr::JsonSerializer::saveToFile(baseOutputDir / (stem + ext), result.value(), format, true);
+                    std::string ext = (format == ocr::OutputFormat::PlainText) ? ".txt" : ".json";
+                    ocr::JsonSerializer::saveToFile(baseOutputDir / (stem + ext), result.value(), format, true);
                 } else {
                     auto reprRes = reprEngine.transform(result.value());
                     if (reprRes) {
-                        edmo::ocr::context::LlmContextConfig ctxCfg;
+                        ocr::context::LlmContextConfig ctxCfg;
                         ctxCfg.tokenBudget = llmTokenBudget;
-                        if (reprMode == "llm-traceable") ctxCfg.mode = edmo::ocr::context::ContextMode::Traceable;
-                        edmo::ocr::context::LlmContextBuilder ctxBuilder(ctxCfg);
+                        if (reprMode == "llm-traceable") ctxCfg.mode = ocr::context::ContextMode::Traceable;
+                        ocr::context::LlmContextBuilder ctxBuilder(ctxCfg);
                         auto ctxRes = ctxBuilder.build(reprRes.value(), &result.value());
                         if (ctxRes) {
-                            edmo::ocr::context::ArtifactManager::writeAll(baseOutputDir, file.filename().string(), &result.value(), reprRes.value(), ctxRes.value().context, ctxRes.value().report, true);
+                            ocr::context::ArtifactManager::writeAll(baseOutputDir, file.filename().string(), &result.value(), reprRes.value(), ctxRes.value().context, ctxRes.value().report, true);
                         }
                     }
                 }
@@ -317,8 +317,8 @@ int main(int argc, char* argv[]) {
         }
 
         if (reprMode == "none") {
-            if (!outputPath.empty()) edmo::ocr::JsonSerializer::saveToFile(outputPath, result.value(), format, true);
-            else std::cout << edmo::ocr::JsonSerializer::serialize(result.value(), format, true) << "\n";
+            if (!outputPath.empty()) ocr::JsonSerializer::saveToFile(outputPath, result.value(), format, true);
+            else std::cout << ocr::JsonSerializer::serialize(result.value(), format, true) << "\n";
             return 0;
         }
 
@@ -327,26 +327,26 @@ int main(int argc, char* argv[]) {
             reprRes.value().metadata.id = customDocumentId;
         }
 
-        edmo::ocr::context::LlmContextConfig ctxCfg;
+        ocr::context::LlmContextConfig ctxCfg;
         ctxCfg.tokenBudget = llmTokenBudget;
-        if (reprMode == "llm-traceable") ctxCfg.mode = edmo::ocr::context::ContextMode::Traceable;
-        edmo::ocr::context::LlmContextBuilder ctxBuilder(ctxCfg);
+        if (reprMode == "llm-traceable") ctxCfg.mode = ocr::context::ContextMode::Traceable;
+        ocr::context::LlmContextBuilder ctxBuilder(ctxCfg);
         auto ctxRes = ctxBuilder.build(reprRes.value(), &result.value());
         if (!customDocumentId.empty() && ctxRes) {
             ctxRes.value().report.documentId = customDocumentId;
         }
 
-        auto written = edmo::ocr::context::ArtifactManager::writeAll(baseOutputDir, inPath.filename().string(), &result.value(), reprRes.value(), ctxRes.value().context, ctxRes.value().report, true);
+        auto written = ocr::context::ArtifactManager::writeAll(baseOutputDir, inPath.filename().string(), &result.value(), reprRes.value(), ctxRes.value().context, ctxRes.value().report, true);
 
         if (!preflightOutputPath.empty()) {
-            (void)edmo::ocr::ingestion::PreflightReport::saveToFile(preflightOutputPath, result.value().preflight, true);
+            (void)ocr::ingestion::PreflightReport::saveToFile(preflightOutputPath, result.value().preflight, true);
         } else if (includePreflight) {
-            (void)edmo::ocr::ingestion::PreflightReport::saveToFile(written.documentDirectory / "preflight.json", result.value().preflight, true);
+            (void)ocr::ingestion::PreflightReport::saveToFile(written.documentDirectory / "preflight.json", result.value().preflight, true);
         }
 
         if (!outputPath.empty()) {
-            if (reprMode == "edr") edmo::ocr::representation::EdrJsonSerializer::saveToFile(outputPath, edmo::ocr::representation::EdrJsonSerializer::toFullJson(reprRes.value()));
-            else edmo::ocr::context::LlmContextSerializer::saveToFile(outputPath, ctxRes.value().context.toJson(reprMode == "llm-traceable"));
+            if (reprMode == "edr") ocr::representation::EdrJsonSerializer::saveToFile(outputPath, ocr::representation::EdrJsonSerializer::toFullJson(reprRes.value()));
+            else ocr::context::LlmContextSerializer::saveToFile(outputPath, ctxRes.value().context.toJson(reprMode == "llm-traceable"));
         }
 
         const auto& rep = ctxRes.value().report;
@@ -366,10 +366,10 @@ int main(int argc, char* argv[]) {
                   << "Document Classification: " << res.documentClassification << " (Strategy: " << res.strategy << ")\n"
                   << "Page Processing Split : Native Text: " << nativePages << " | OCR: " << ocrPages << "\n"
                   << "Artifacts Generated   :\n"
-                  << "  • Raw OCR JSON      : " << edmo::ocr::context::ArtifactPaths::kRawOcrFilename << "\n"
-                  << "  • Full EDR JSON     : " << edmo::ocr::context::ArtifactPaths::kEdrFullFilename << "\n"
-                  << "  • LLM Context JSON  : " << edmo::ocr::context::ArtifactPaths::kLlmContextFilename << "\n"
-                  << "  • LLM Context Report: " << edmo::ocr::context::ArtifactPaths::kLlmContextReportFilename << "\n";
+                  << "  • Raw OCR JSON      : " << ocr::context::ArtifactPaths::kRawOcrFilename << "\n"
+                  << "  • Full EDR JSON     : " << ocr::context::ArtifactPaths::kEdrFullFilename << "\n"
+                  << "  • LLM Context JSON  : " << ocr::context::ArtifactPaths::kLlmContextFilename << "\n"
+                  << "  • LLM Context Report: " << ocr::context::ArtifactPaths::kLlmContextReportFilename << "\n";
 
         if (benchmark) {
             std::cout << "----------------------------------------------------------------------\n"

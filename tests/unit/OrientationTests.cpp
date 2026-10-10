@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/BoundingBox.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/BoundingBox.hpp>
 #include "../../src/preprocessing/OrientationDetector.hpp"
 #include "../../src/utils/CoordinateTransform.hpp"
 
@@ -8,7 +8,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
 
-using namespace edmo::ocr;
+using namespace ocr;
 
 class OrientationTests : public ::testing::Test {
 protected:

@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/context/LlmContextConfig.hpp>
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/context/LlmContextReport.hpp>
+#include <ocr/context/LlmContextConfig.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/context/LlmContextReport.hpp>
 
 #include <filesystem>
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 class LlmContextSerializer {
 public:
@@ -28,4 +28,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

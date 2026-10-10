@@ -1,12 +1,12 @@
-#include <edmo/ocr/preprocessing/TableGridDetector.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/preprocessing/TableGridDetector.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 
 #include <opencv2/imgproc.hpp>
 #include <algorithm>
 #include <cmath>
 
-namespace edmo::ocr {
+namespace ocr {
 
 Result<std::vector<DetectedTableGrid>> TableGridDetector::detect(
     const Image& image,
@@ -235,4 +235,4 @@ cv::Mat TableGridDetector::renderDebugVisualization(
     return visual;
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

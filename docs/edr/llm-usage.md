@@ -4,7 +4,7 @@
 
 ### Default Processing Workflow (Stores Raw JSON -> Creates EDR JSONs)
 ```bash
-./build/bin/edmo-ocr "/path/to/transcript.pdf" --output-dir "output/"
+./build/bin/ocr-engine "/path/to/transcript.pdf" --output-dir "output/"
 ```
 This automatically executes the full two-stage pipeline:
 1. Performs OCR and **stores the Raw OCR JSON** to `output/<stem>_raw_ocr.json`.
@@ -20,7 +20,7 @@ This automatically executes the full two-stage pipeline:
 
 ### Analyze & Benchmark Existing Raw OCR JSON
 ```bash
-./build/bin/edmo-ocr-analyze \
+./build/bin/ocr-engine-analyze \
   --raw "output/raw_json/boston_transcript.json" \
   --edr-full "/tmp/boston_results/boston_transcript_edr_full.json" \
   --edr-llm "/tmp/boston_results/boston_transcript_edr_llm.json"

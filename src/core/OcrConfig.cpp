@@ -1,10 +1,10 @@
-#include <edmo/ocr/OcrConfig.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/OcrConfig.hpp>
+#include <ocr/ErrorCode.hpp>
 
 #include <fstream>
 #include <sstream>
 
-namespace edmo::ocr {
+namespace ocr {
 
 OcrConfig OcrConfig::getProfile(const std::string& profileName) {
     OcrConfig config;
@@ -311,4 +311,4 @@ OcrOptions OcrConfig::toOcrOptions() const {
     return opt;
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

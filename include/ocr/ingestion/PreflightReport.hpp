@@ -1,12 +1,12 @@
 #pragma once
 
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
 
 #include <filesystem>
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Serializer and formatter for preflight reports.
@@ -33,4 +33,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

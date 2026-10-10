@@ -1,4 +1,4 @@
-# EDMO DI-OCR Test Fixtures
+# OCR-DI Test Fixtures
 
 This directory contains synthetic, copyright-free educational test documents designed specifically for testing and benchmarking the EDMO C++ OCR Engine v0.1.
 

@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/ingestion/IngestionConfig.hpp>
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/ingestion/IngestionConfig.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
 
 #include <filesystem>
 #include <memory>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Fast, non-OCR PDF and image inspector. Performs validation and extracts metadata & text/image metrics.
@@ -37,4 +37,4 @@ private:
     [[nodiscard]] Result<PreflightSummary> inspectImage(const std::filesystem::path& imagePath) const;
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

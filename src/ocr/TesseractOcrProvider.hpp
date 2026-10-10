@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/IOcrProvider.hpp>
+#include <ocr/IOcrProvider.hpp>
 #include <memory>
 
 namespace tesseract {
 class TessBaseAPI;
 }
 
-namespace edmo::ocr {
+namespace ocr {
 
 class TesseractOcrProvider : public IOcrProvider {
 public:
@@ -46,4 +46,4 @@ private:
     std::string currentTessdataDir_;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -1,5 +1,5 @@
 #include "PdfRenderer.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 #include "../utils/ImageUtils.hpp"
 
@@ -7,7 +7,7 @@
 #include <poppler-page.h>
 #include <poppler-page-renderer.h>
 
-namespace edmo::ocr {
+namespace ocr {
 
 Result<int> PdfRenderer::getPageCount(const std::filesystem::path& pdfPath) {
     std::unique_ptr<poppler::document> doc(poppler::document::load_from_file(pdfPath.string()));
@@ -129,4 +129,4 @@ Result<std::vector<Page>> PdfRenderer::render(
     return Result<std::vector<Page>>::success(std::move(pages));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

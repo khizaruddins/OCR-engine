@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Synthetic Educational Document Fixture Generator for EDMO DI-OCR Engine.
+Synthetic Educational Document Fixture Generator for OCR-DI Engine.
 Generates clean, rotated, skewed, tabular images and multi-page transcript PDFs.
 """
 

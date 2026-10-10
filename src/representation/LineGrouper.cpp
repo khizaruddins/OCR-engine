@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <cmath>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 OcrLine LineGrouper::buildLineFromTokens(std::vector<OcrToken> tokens) {
     OcrLine line;
@@ -102,4 +102,4 @@ std::vector<OcrLine> LineGrouper::groupTokensIntoLines(
     return ReadingOrder::sortLines(resultLines);
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

@@ -8,7 +8,7 @@
     "type": "pdf"
   },
   "engine": {
-    "name": "edmo-ocr",
+    "name": "ocr-engine",
     "provider": "tesseract",
     "version": "0.2.0"
   },

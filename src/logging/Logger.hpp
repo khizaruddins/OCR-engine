@@ -4,7 +4,7 @@
 #include <string>
 #include <spdlog/spdlog.h>
 
-namespace edmo::ocr {
+namespace ocr {
 
 enum class LogLevel {
     Trace,
@@ -23,11 +23,11 @@ public:
     static std::shared_ptr<spdlog::logger>& getLogger();
 };
 
-#define EDMO_LOG_TRACE(...) SPDLOG_LOGGER_TRACE(::edmo::ocr::Logger::getLogger(), __VA_ARGS__)
-#define EDMO_LOG_DEBUG(...) SPDLOG_LOGGER_DEBUG(::edmo::ocr::Logger::getLogger(), __VA_ARGS__)
-#define EDMO_LOG_INFO(...)  SPDLOG_LOGGER_INFO(::edmo::ocr::Logger::getLogger(), __VA_ARGS__)
-#define EDMO_LOG_WARN(...)  SPDLOG_LOGGER_WARN(::edmo::ocr::Logger::getLogger(), __VA_ARGS__)
-#define EDMO_LOG_ERROR(...) SPDLOG_LOGGER_ERROR(::edmo::ocr::Logger::getLogger(), __VA_ARGS__)
-#define EDMO_LOG_CRITICAL(...) SPDLOG_LOGGER_CRITICAL(::edmo::ocr::Logger::getLogger(), __VA_ARGS__)
+#define EDMO_LOG_TRACE(...) SPDLOG_LOGGER_TRACE(::ocr::Logger::getLogger(), __VA_ARGS__)
+#define EDMO_LOG_DEBUG(...) SPDLOG_LOGGER_DEBUG(::ocr::Logger::getLogger(), __VA_ARGS__)
+#define EDMO_LOG_INFO(...)  SPDLOG_LOGGER_INFO(::ocr::Logger::getLogger(), __VA_ARGS__)
+#define EDMO_LOG_WARN(...)  SPDLOG_LOGGER_WARN(::ocr::Logger::getLogger(), __VA_ARGS__)
+#define EDMO_LOG_ERROR(...) SPDLOG_LOGGER_ERROR(::ocr::Logger::getLogger(), __VA_ARGS__)
+#define EDMO_LOG_CRITICAL(...) SPDLOG_LOGGER_CRITICAL(::ocr::Logger::getLogger(), __VA_ARGS__)
 
-} // namespace edmo::ocr
+} // namespace ocr

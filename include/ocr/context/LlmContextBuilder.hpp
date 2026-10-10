@@ -1,16 +1,16 @@
 #pragma once
 
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/context/LlmContextConfig.hpp>
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/context/LlmContextReport.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/context/LlmContextConfig.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/context/LlmContextReport.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 
 #include <filesystem>
 #include <memory>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 /**
  * @brief Output container holding both the generated LLM Context and its audit report.
@@ -79,4 +79,4 @@ private:
     std::unique_ptr<Impl> pimpl_;
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

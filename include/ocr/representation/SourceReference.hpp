@@ -1,12 +1,12 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
+#include <ocr/BoundingBox.hpp>
 
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Traceability metadata linking an EDR semantic entity back to original OCR tokens / page geometry.
@@ -46,4 +46,4 @@ struct SourceReference {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

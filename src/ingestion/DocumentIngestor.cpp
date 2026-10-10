@@ -1,7 +1,7 @@
-#include <edmo/ocr/ingestion/DocumentIngestor.hpp>
+#include <ocr/ingestion/DocumentIngestor.hpp>
 #include "../logging/Logger.hpp"
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 DocumentIngestor::DocumentIngestor(IngestionConfig config)
     : config_(config),
@@ -49,4 +49,4 @@ Result<PreflightSummary> DocumentIngestor::ingest(const std::filesystem::path& d
     return Result<PreflightSummary>::success(std::move(summary));
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

@@ -1,5 +1,5 @@
 #include "OrientationDetector.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 #include "../utils/ImageUtils.hpp"
 
@@ -10,7 +10,7 @@
 #include <opencv2/imgproc.hpp>
 #include <tesseract/baseapi.h>
 
-namespace edmo::ocr {
+namespace ocr {
 
 static std::string resolveTessdataDir(const std::string& customDir) {
     if (!customDir.empty() && std::filesystem::exists(customDir)) {
@@ -226,4 +226,4 @@ Result<OrientationResult> OrientationDetector::detect(
     return Result<OrientationResult>::success(result);
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

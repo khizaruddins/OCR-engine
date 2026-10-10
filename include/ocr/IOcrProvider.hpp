@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/OcrOptions.hpp>
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/OcrOptions.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/Result.hpp>
 
 #include <memory>
 #include <string>
 
-namespace edmo::ocr {
+namespace ocr {
 
 struct OcrConfig;
 
@@ -63,4 +63,4 @@ public:
  */
 std::unique_ptr<IOcrProvider> createOcrProvider(const OcrConfig& config);
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -8,7 +8,7 @@
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 /**
  * @brief Explicit disposition assigned to every item from Full EDR.
@@ -338,4 +338,4 @@ struct LlmContext {
     }
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

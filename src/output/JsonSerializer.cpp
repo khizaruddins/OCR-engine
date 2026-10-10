@@ -1,10 +1,10 @@
 #include "JsonSerializer.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 
 #include <fstream>
 
-namespace edmo::ocr {
+namespace ocr {
 
 std::string JsonSerializer::serialize(
     const OcrResult& result,
@@ -52,4 +52,4 @@ Result<void> JsonSerializer::saveToFile(
     return Result<void>::success();
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

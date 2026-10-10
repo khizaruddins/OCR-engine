@@ -4,13 +4,13 @@
 #include <spdlog/sinks/basic_file_sink.h>
 #include <vector>
 
-namespace edmo::ocr {
+namespace ocr {
 
 static std::shared_ptr<spdlog::logger> s_logger;
 
 void Logger::init(LogLevel level, const std::string& logFile) {
-    if (spdlog::get("edmo-ocr")) {
-        spdlog::drop("edmo-ocr");
+    if (spdlog::get("ocr-engine")) {
+        spdlog::drop("ocr-engine");
     }
     std::vector<spdlog::sink_ptr> sinks;
     auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
@@ -23,7 +23,7 @@ void Logger::init(LogLevel level, const std::string& logFile) {
         sinks.push_back(file_sink);
     }
 
-    s_logger = std::make_shared<spdlog::logger>("edmo-ocr", sinks.begin(), sinks.end());
+    s_logger = std::make_shared<spdlog::logger>("ocr-engine", sinks.begin(), sinks.end());
     spdlog::register_logger(s_logger);
     setLevel(level);
 }
@@ -66,4 +66,4 @@ std::shared_ptr<spdlog::logger>& Logger::getLogger() {
     return s_logger;
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

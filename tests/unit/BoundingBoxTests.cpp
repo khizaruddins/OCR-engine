@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/BoundingBox.hpp>
+#include <ocr/BoundingBox.hpp>
 
-using namespace edmo::ocr;
+using namespace ocr;
 
 TEST(BoundingBoxTests, DefaultConstructor) {
     BoundingBox bbox;

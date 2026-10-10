@@ -1,6 +1,6 @@
-# EDMO OCR Output Schema v0.1 Specification
+# OCR Output Schema v0.1 Specification
 
-This document defines the deterministic JSON schema returned by the EDMO DI-OCR engine.
+This document defines the deterministic JSON schema returned by the OCR-DI engine.
 
 ## 1. Top-Level Schema Structure
 
@@ -9,7 +9,7 @@ This document defines the deterministic JSON schema returned by the EDMO DI-OCR 
   "schema_version": "0.1",
   "id": "proc_1724063920123_a1b2c3",
   "engine": {
-    "name": "edmo-ocr",
+    "name": "ocr-engine",
     "version": "0.1.0",
     "provider": "tesseract"
   },

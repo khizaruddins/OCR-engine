@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <string>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 /**
  * @brief Context output formatting mode.
@@ -55,4 +55,4 @@ struct LlmContextConfig {
     bool prettyPrint = true;                ///< Pretty-print JSON outputs
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

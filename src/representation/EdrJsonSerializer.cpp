@@ -2,7 +2,7 @@
 
 #include <fstream>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 nlohmann::json EdrJsonSerializer::toFullJson(const SemanticDocument& doc) {
     int nativePagesCount = 0;
@@ -27,7 +27,7 @@ nlohmann::json EdrJsonSerializer::toFullJson(const SemanticDocument& doc) {
         }},
         {"engine", doc.engine.toJson()},
         {"processing_manifest", {
-            {"engine", "edmo-ocr"},
+            {"engine", "ocr-engine"},
             {"version", "0.2.0"},
             {"document", {
                 {"type", doc.documentClassification.empty() ? doc.documentType : doc.documentClassification},
@@ -218,4 +218,4 @@ bool EdrJsonSerializer::saveToFile(
     return out.good();
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

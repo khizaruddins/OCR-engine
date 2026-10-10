@@ -1,6 +1,6 @@
-#include <edmo/ocr/ingestion/ProcessingStrategy.hpp>
+#include <ocr/ingestion/ProcessingStrategy.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 ProcessingStrategy::ProcessingStrategy(IngestionConfig config)
     : config_(config) {}
@@ -56,4 +56,4 @@ ProcessingStrategyType ProcessingStrategy::determineStrategy(
     return ProcessingStrategyType::Ocr;
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

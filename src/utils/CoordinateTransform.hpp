@@ -1,9 +1,9 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
-#include <edmo/ocr/OcrResult.hpp>
+#include <ocr/BoundingBox.hpp>
+#include <ocr/OcrResult.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 class CoordinateTransform {
 public:
@@ -32,4 +32,4 @@ public:
     ) noexcept;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

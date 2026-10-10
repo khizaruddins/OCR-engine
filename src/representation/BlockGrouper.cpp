@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <cctype>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 bool BlockGrouper::parseLabelValue(
     const std::string& lineText,
@@ -176,4 +176,4 @@ std::vector<RepresentationBlock> BlockGrouper::groupLines(
     return blocks;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

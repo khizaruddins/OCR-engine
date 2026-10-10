@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "../../src/representation/TableReconstructor.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(TableReconstructionTests, ParseCourseRowSophiaStyle) {
     OcrLine line;

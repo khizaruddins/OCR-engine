@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
-#include <edmo/ocr/representation/SemanticRow.hpp>
-#include <edmo/ocr/representation/SourceReference.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/SemanticRow.hpp>
+#include <ocr/representation/SourceReference.hpp>
 
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Represents a column descriptor in a SemanticTable.
@@ -92,4 +92,4 @@ struct SemanticTable {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

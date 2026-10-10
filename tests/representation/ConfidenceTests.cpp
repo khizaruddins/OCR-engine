@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
 #include "../../src/representation/ConfidenceAggregator.hpp"
 
-using namespace edmo::ocr::representation;
+using namespace ocr::representation;
 
 TEST(ConfidenceTests, SummaryCalculation) {
     ConfidenceSummary cs;

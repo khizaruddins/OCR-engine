@@ -1,15 +1,15 @@
 #pragma once
 
-#include <edmo/ocr/OcrBlock.hpp>
-#include <edmo/ocr/OcrLine.hpp>
-#include <edmo/ocr/OcrToken.hpp>
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
+#include <ocr/OcrBlock.hpp>
+#include <ocr/OcrLine.hpp>
+#include <ocr/OcrToken.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
 
 #include <string>
 #include <string_view>
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class NoiseReducer {
 public:
@@ -39,4 +39,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

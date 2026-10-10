@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/OcrBlock.hpp>
-#include <edmo/ocr/Types.hpp>
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/OcrBlock.hpp>
+#include <ocr/Types.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
 
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Timing performance breakdown for processing stages.
@@ -50,7 +50,7 @@ struct TimingBreakdown {
  * @brief OCR Engine metadata.
  */
 struct EngineInfo {
-    std::string name = "edmo-ocr";
+    std::string name = "ocr-engine";
     std::string version = "0.2.0";
     std::string provider = "tesseract";
 
@@ -64,7 +64,7 @@ struct EngineInfo {
 
     static EngineInfo fromJson(const nlohmann::json& j) {
         EngineInfo info;
-        info.name = j.value("name", "edmo-ocr");
+        info.name = j.value("name", "ocr-engine");
         info.version = j.value("version", "0.2.0");
         info.provider = j.value("provider", "tesseract");
         return info;
@@ -293,4 +293,4 @@ struct OcrResult {
     }
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief High-precision timer utility for latency tracking across pipeline stages.
@@ -29,4 +29,4 @@ private:
     std::chrono::time_point<std::chrono::high_resolution_clock> start_;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

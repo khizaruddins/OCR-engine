@@ -1,18 +1,18 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
-#include <edmo/ocr/representation/DocumentRepresentation.hpp>
-#include <edmo/ocr/representation/RepresentationBlock.hpp>
-#include <edmo/ocr/representation/SemanticSection.hpp>
-#include <edmo/ocr/representation/SemanticTable.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/DocumentRepresentation.hpp>
+#include <ocr/representation/RepresentationBlock.hpp>
+#include <ocr/representation/SemanticSection.hpp>
+#include <ocr/representation/SemanticTable.hpp>
 
 #include <map>
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Represents a single page at the representation layer.
@@ -102,4 +102,4 @@ struct SemanticDocument {
     CompressionMetrics compression;
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

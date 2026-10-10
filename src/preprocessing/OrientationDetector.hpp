@@ -1,8 +1,8 @@
 #pragma once
 
-#include <edmo/ocr/IOrientationDetector.hpp>
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/IOrientationDetector.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/Result.hpp>
 #include <memory>
 #include <optional>
 
@@ -10,7 +10,7 @@ namespace tesseract {
 class TessBaseAPI;
 }
 
-namespace edmo::ocr {
+namespace ocr {
 
 class OrientationDetector : public IOrientationDetector {
 public:
@@ -49,4 +49,4 @@ private:
     float documentPriorConfidence_ = 0.0f;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

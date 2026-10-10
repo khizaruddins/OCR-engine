@@ -2,8 +2,8 @@
 #include "../../src/representation/SectionDetector.hpp"
 #include "../../src/representation/BlockGrouper.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(SectionDetectionTests, SectionClassification) {
     EXPECT_EQ(SectionDetector::classifySectionFromText("STUDENT INFORMATION"), SectionType::StudentInformation);

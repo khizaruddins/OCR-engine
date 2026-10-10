@@ -1,7 +1,7 @@
 #include "TableCompactor.hpp"
 #include "../representation/TextNormalizer.hpp"
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 LlmContextTable TableCompactor::compactTable(
     const representation::SemanticTable& table,
@@ -122,4 +122,4 @@ std::vector<LlmContextTable> TableCompactor::compactTables(
     return res;
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

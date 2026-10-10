@@ -1,9 +1,9 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Lightweight layout complexity analyzer for extracted page content.
@@ -19,4 +19,4 @@ public:
     [[nodiscard]] PageComplexity analyze(const OcrPageResult& pageResult) const noexcept;
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

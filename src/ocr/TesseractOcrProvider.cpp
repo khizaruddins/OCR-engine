@@ -1,5 +1,5 @@
 #include "TesseractOcrProvider.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 #include "../utils/ImageUtils.hpp"
 #include "../utils/Timer.hpp"
@@ -10,7 +10,7 @@
 #include <tesseract/baseapi.h>
 #include <tesseract/ocrclass.h>
 
-namespace edmo::ocr {
+namespace ocr {
 
 TesseractOcrProvider::TesseractOcrProvider()
     : api_(std::make_unique<tesseract::TessBaseAPI>()) {}
@@ -386,4 +386,4 @@ Result<std::string> TesseractOcrProvider::processCell(
     return Result<std::string>::success(std::move(text));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

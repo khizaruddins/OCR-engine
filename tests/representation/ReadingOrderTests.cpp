@@ -1,10 +1,10 @@
 #include <gtest/gtest.h>
 #include "../../src/representation/ReadingOrder.hpp"
-#include <edmo/ocr/OcrBlock.hpp>
-#include <edmo/ocr/OcrLine.hpp>
+#include <ocr/OcrBlock.hpp>
+#include <ocr/OcrLine.hpp>
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(ReadingOrderTests, TokenSortingInLine) {
     OcrLine line;

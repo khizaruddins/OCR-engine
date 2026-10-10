@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include "../../src/representation/BlockGrouper.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::representation;
 
 TEST(BlockGroupingTests, ParseLabelValue) {
     std::string label, value;

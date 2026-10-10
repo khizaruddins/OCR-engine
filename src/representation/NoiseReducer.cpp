@@ -3,7 +3,7 @@
 
 #include <cctype>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 bool NoiseReducer::isNoiseToken(
     const OcrToken& token,
@@ -144,4 +144,4 @@ std::vector<OcrBlock> NoiseReducer::filterBlocks(
     return filtered;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

@@ -1,8 +1,8 @@
-#include <edmo/ocr/ingestion/PageComplexityAnalyzer.hpp>
+#include <ocr/ingestion/PageComplexityAnalyzer.hpp>
 
 #include <algorithm>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 PageComplexity PageComplexityAnalyzer::analyze(const OcrPageResult& pageResult) const noexcept {
     int totalTokens = 0;
@@ -51,4 +51,4 @@ PageComplexity PageComplexityAnalyzer::analyze(const OcrPageResult& pageResult) 
     return complexity;
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

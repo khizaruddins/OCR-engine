@@ -1,12 +1,12 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/ingestion/IngestionConfig.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/ingestion/IngestionConfig.hpp>
 
 #include <filesystem>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief High-performance native PDF text extractor producing fully compatible OcrPageResult structures in milliseconds.
@@ -32,4 +32,4 @@ private:
     IngestionConfig config_;
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

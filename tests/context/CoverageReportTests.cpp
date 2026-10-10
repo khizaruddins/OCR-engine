@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/context/LlmContextBuilder.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/context/LlmContextBuilder.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 #include "../../src/context/LossAnalyzer.hpp"
 #include "../../src/context/SemanticInventoryBuilder.hpp"
 
-using namespace edmo::ocr;
-using namespace edmo::ocr::context;
-using namespace edmo::ocr::representation;
+using namespace ocr;
+using namespace ocr::context;
+using namespace ocr::representation;
 
 TEST(CoverageReportTests, VerifiesZeroUnaccountedLossAndQualityScore) {
     SemanticDocument doc;

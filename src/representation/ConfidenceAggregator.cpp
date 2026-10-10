@@ -1,6 +1,6 @@
 #include "ConfidenceAggregator.hpp"
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 ConfidenceSummary ConfidenceAggregator::aggregateDocumentConfidence(
     const SemanticDocument& doc
@@ -59,4 +59,4 @@ std::vector<LowConfidenceWarning> ConfidenceAggregator::findLowConfidenceRegions
     return warnings;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/context/LlmContextConfig.hpp>
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/representation/SemanticTable.hpp>
+#include <ocr/context/LlmContextConfig.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/representation/SemanticTable.hpp>
 #include "SemanticInventoryBuilder.hpp"
 
 #include <vector>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 class TableCompactor {
 public:
@@ -24,4 +24,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

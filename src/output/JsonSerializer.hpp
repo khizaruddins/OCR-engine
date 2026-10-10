@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/Types.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/Types.hpp>
 
 #include <filesystem>
 #include <string>
 
-namespace edmo::ocr {
+namespace ocr {
 
 class JsonSerializer {
 public:
@@ -25,4 +25,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

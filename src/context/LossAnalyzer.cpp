@@ -1,12 +1,12 @@
 #include "LossAnalyzer.hpp"
 #include "../representation/TextNormalizer.hpp"
-#include <edmo/ocr/representation/EdrJsonSerializer.hpp>
+#include <ocr/representation/EdrJsonSerializer.hpp>
 
 #include <algorithm>
 #include <set>
 #include <sstream>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 LlmContextReport LossAnalyzer::analyze(
     const representation::SemanticDocument& doc,
@@ -326,4 +326,4 @@ LlmContextReport LossAnalyzer::analyze(
     return report;
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

@@ -61,9 +61,9 @@ endif()
 find_package(OpenCV QUIET COMPONENTS core imgproc imgcodecs)
 if(OpenCV_FOUND)
     message(STATUS "Found OpenCV: ${OpenCV_VERSION}")
-    add_library(edmo_opencv INTERFACE)
-    target_link_libraries(edmo_opencv INTERFACE ${OpenCV_LIBS})
-    target_include_directories(edmo_opencv INTERFACE ${OpenCV_INCLUDE_DIRS})
+    add_library(ocr_opencv INTERFACE)
+    target_link_libraries(ocr_opencv INTERFACE ${OpenCV_LIBS})
+    target_include_directories(ocr_opencv INTERFACE ${OpenCV_INCLUDE_DIRS})
 else()
     message(STATUS "Fetching minimal OpenCV via FetchContent...")
     set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
@@ -106,9 +106,9 @@ else()
     )
     FetchContent_MakeAvailable(opencv)
 
-    add_library(edmo_opencv INTERFACE)
-    target_link_libraries(edmo_opencv INTERFACE opencv_core opencv_imgproc opencv_imgcodecs)
-    target_include_directories(edmo_opencv INTERFACE
+    add_library(ocr_opencv INTERFACE)
+    target_link_libraries(ocr_opencv INTERFACE opencv_core opencv_imgproc opencv_imgcodecs)
+    target_include_directories(ocr_opencv INTERFACE
         ${opencv_SOURCE_DIR}/include
         ${opencv_SOURCE_DIR}/modules/core/include
         ${opencv_SOURCE_DIR}/modules/imgproc/include
@@ -119,16 +119,16 @@ else()
 endif()
 
 # Consolidated dependency target for easy linkage
-add_library(edmo_external_deps INTERFACE)
-target_link_libraries(edmo_external_deps INTERFACE
-    edmo_opencv
+add_library(ocr_external_deps INTERFACE)
+target_link_libraries(ocr_external_deps INTERFACE
+    ocr_opencv
     nlohmann_json::nlohmann_json
     spdlog::spdlog
     ${Tesseract_LIBRARIES}
     ${Leptonica_LIBRARIES}
     ${PopplerCpp_LIBRARIES}
 )
-target_include_directories(edmo_external_deps INTERFACE
+target_include_directories(ocr_external_deps INTERFACE
     ${Tesseract_INCLUDE_DIRS}
     ${Leptonica_INCLUDE_DIRS}
     ${PopplerCpp_INCLUDE_DIRS}

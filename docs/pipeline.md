@@ -1,6 +1,6 @@
-# EDMO DI-OCR Processing Pipeline
+# OCR-DI Processing Pipeline
 
-The EDMO OCR processing pipeline consists of 8 sequential stages designed for deterministic execution, high accuracy on educational documents, and low latency.
+The OCR processing pipeline consists of 8 sequential stages designed for deterministic execution, high accuracy on educational documents, and low latency.
 
 ```text
 Input Path / Bytes

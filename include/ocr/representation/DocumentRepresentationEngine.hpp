@@ -1,15 +1,15 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 
 #include <filesystem>
 #include <memory>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Main engine transforming raw OCR result or raw OCR JSON into a structured, semantic SemanticDocument.
@@ -79,4 +79,4 @@ private:
     std::unique_ptr<Impl> pimpl_;
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

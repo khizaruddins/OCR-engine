@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/Result.hpp>
 
 #include <filesystem>
 #include <leptonica/allheaders.h>
 #include <opencv2/core.hpp>
 #include <poppler-image.h>
 
-namespace edmo::ocr {
+namespace ocr {
 
 class ImageUtils {
 public:
@@ -45,4 +45,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

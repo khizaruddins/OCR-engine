@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 
 #include <stdexcept>
 #include <type_traits>
 #include <utility>
 #include <variant>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Modern, value-or-error container providing explicit error handling.
@@ -139,4 +139,4 @@ private:
     E error_{};
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

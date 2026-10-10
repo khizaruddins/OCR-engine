@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
 
 #include <string>
 #include <string_view>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class TextNormalizer {
 public:
@@ -33,4 +33,4 @@ public:
     static std::string extractAlphanumeric(std::string_view str);
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

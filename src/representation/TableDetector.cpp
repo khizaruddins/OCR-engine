@@ -3,7 +3,7 @@
 
 #include <cctype>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 bool TableDetector::isCourseCode(std::string_view token) {
     std::string clean = TextNormalizer::trim(token);
@@ -260,4 +260,4 @@ std::vector<TableRegionCandidate> TableDetector::detectTableRegions(
     return candidates;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

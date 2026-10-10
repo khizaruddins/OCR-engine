@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/Page.hpp>
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/Types.hpp>
+#include <ocr/Page.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/Types.hpp>
 
 #include <filesystem>
 #include <string>
 #include <vector>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Represents a loaded document containing one or more pages.
@@ -39,4 +39,4 @@ struct Document {
     );
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

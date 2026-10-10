@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/OcrConfig.hpp>
+#include <ocr/OcrConfig.hpp>
 
-using namespace edmo::ocr;
+using namespace ocr;
 
 TEST(ConfigTests, ProfileLoading) {
     auto defaultConf = OcrConfig::getProfile("default");

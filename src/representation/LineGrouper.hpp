@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/OcrLine.hpp>
-#include <edmo/ocr/OcrToken.hpp>
+#include <ocr/OcrLine.hpp>
+#include <ocr/OcrToken.hpp>
 
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class LineGrouper {
 public:
@@ -19,4 +19,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Result.hpp>
 
 #include <filesystem>
 #include <string>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 struct ReadingOrderConfig {
     bool enabled = true;
@@ -153,4 +153,4 @@ struct RepresentationConfig {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

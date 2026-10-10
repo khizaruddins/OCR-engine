@@ -1,12 +1,12 @@
 #pragma once
 
-#include <edmo/ocr/context/LlmContextConfig.hpp>
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/context/LlmContextReport.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/context/LlmContextConfig.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/context/LlmContextReport.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 #include "SemanticInventoryBuilder.hpp"
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 class LossAnalyzer {
 public:
@@ -18,4 +18,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

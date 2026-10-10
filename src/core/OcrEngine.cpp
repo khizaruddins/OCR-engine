@@ -1,8 +1,8 @@
-#include <edmo/ocr/OcrEngine.hpp>
-#include <edmo/ocr/ErrorCode.hpp>
-#include <edmo/ocr/ingestion/DocumentIngestor.hpp>
-#include <edmo/ocr/ingestion/NativeTextExtractor.hpp>
-#include <edmo/ocr/ingestion/PageComplexityAnalyzer.hpp>
+#include <ocr/OcrEngine.hpp>
+#include <ocr/ErrorCode.hpp>
+#include <ocr/ingestion/DocumentIngestor.hpp>
+#include <ocr/ingestion/NativeTextExtractor.hpp>
+#include <ocr/ingestion/PageComplexityAnalyzer.hpp>
 #include "../logging/Logger.hpp"
 #include "../ocr/TesseractOcrProvider.hpp"
 #include "../pdf/PdfRenderer.hpp"
@@ -16,7 +16,7 @@
 #include <poppler-page.h>
 #include <poppler-page-renderer.h>
 
-namespace edmo::ocr {
+namespace ocr {
 
 OcrEngine::OcrEngine(OcrConfig config)
     : config_(std::move(config)) {
@@ -167,7 +167,7 @@ Result<OcrResult> OcrEngine::process(const std::filesystem::path& documentPath) 
     OcrResult result;
     result.id = FileUtils::generateProcessingId();
     result.schemaVersion = "0.1";
-    result.engine.name = "edmo-ocr";
+    result.engine.name = "ocr-engine";
     result.engine.version = "0.2.0";
     result.engine.provider = provider_ ? provider_->name() : "tesseract";
 
@@ -385,7 +385,7 @@ Result<OcrResult> OcrEngine::process(const Document& document) {
     OcrResult result;
     result.id = FileUtils::generateProcessingId();
     result.schemaVersion = "0.2";
-    result.engine.name = "edmo-ocr";
+    result.engine.name = "ocr-engine";
     result.engine.version = "0.2.0";
     result.engine.provider = provider_ ? provider_->name() : "unknown";
 
@@ -431,4 +431,4 @@ Result<OcrResult> OcrEngine::process(const Document& document) {
     return Result<OcrResult>::success(std::move(result));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -1,5 +1,5 @@
 #include "Deskew.hpp"
-#include <edmo/ocr/ErrorCode.hpp>
+#include <ocr/ErrorCode.hpp>
 #include "../logging/Logger.hpp"
 
 #include <cmath>
@@ -11,7 +11,7 @@
 #define M_PI 3.14159265358979323846
 #endif
 
-namespace edmo::ocr {
+namespace ocr {
 
 double Deskew::detectSkewAngle(
     const cv::Mat& grayMat,
@@ -168,4 +168,4 @@ Result<DeskewResult> Deskew::process(
     return Result<DeskewResult>::success(std::move(result));
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

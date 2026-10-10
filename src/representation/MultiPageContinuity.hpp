@@ -1,11 +1,11 @@
 #pragma once
 
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
-#include <edmo/ocr/representation/SemanticTable.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
+#include <ocr/representation/SemanticTable.hpp>
 
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class MultiPageContinuity {
 public:
@@ -20,4 +20,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

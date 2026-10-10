@@ -1,10 +1,10 @@
 #pragma once
 
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/OcrConfig.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/OcrConfig.hpp>
+#include <ocr/Result.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 class Binarization {
 public:
@@ -22,4 +22,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

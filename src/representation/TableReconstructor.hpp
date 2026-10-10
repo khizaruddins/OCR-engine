@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/OcrLine.hpp>
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
-#include <edmo/ocr/representation/SemanticTable.hpp>
+#include <ocr/OcrLine.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
+#include <ocr/representation/SemanticTable.hpp>
 #include "TableDetector.hpp"
 
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class TableReconstructor {
 public:
@@ -31,4 +31,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

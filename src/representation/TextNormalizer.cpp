@@ -4,7 +4,7 @@
 #include <cctype>
 #include <sstream>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 std::string TextNormalizer::trim(std::string_view str) {
     size_t first = 0;
@@ -168,4 +168,4 @@ std::string TextNormalizer::normalize(
     return processed;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

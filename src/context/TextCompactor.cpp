@@ -3,7 +3,7 @@
 
 #include <set>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 TextCompactionResult TextCompactor::compact(
     const representation::SemanticDocument& doc,
@@ -107,4 +107,4 @@ TextCompactionResult TextCompactor::compact(
     return res;
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

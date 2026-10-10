@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/OcrResult.hpp>
-#include <edmo/ocr/representation/DocumentRepresentation.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/OcrResult.hpp>
+#include <ocr/representation/DocumentRepresentation.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 
 #include <string>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class SemanticCompressor {
 public:
@@ -23,4 +23,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

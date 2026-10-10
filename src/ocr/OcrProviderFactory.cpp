@@ -1,9 +1,9 @@
-#include <edmo/ocr/IOcrProvider.hpp>
-#include <edmo/ocr/OcrConfig.hpp>
+#include <ocr/IOcrProvider.hpp>
+#include <ocr/OcrConfig.hpp>
 #include "TesseractOcrProvider.hpp"
 #include "../logging/Logger.hpp"
 
-namespace edmo::ocr {
+namespace ocr {
 
 std::unique_ptr<IOcrProvider> createOcrProvider(const OcrConfig& config) {
     if (config.ocr.provider.empty() || config.ocr.provider == "tesseract") {
@@ -14,4 +14,4 @@ std::unique_ptr<IOcrProvider> createOcrProvider(const OcrConfig& config) {
     return nullptr;
 }
 
-} // namespace edmo::ocr
+} // namespace ocr

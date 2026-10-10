@@ -3,7 +3,7 @@
 
 #include <map>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 DeduplicationResult SafeDeduplicator::deduplicate(
     const representation::SemanticDocument& doc,
@@ -82,4 +82,4 @@ DeduplicationResult SafeDeduplicator::deduplicate(
     return res;
 }
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

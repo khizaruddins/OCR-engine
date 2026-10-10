@@ -1,15 +1,15 @@
 #pragma once
 
-#include <edmo/ocr/BoundingBox.hpp>
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
-#include <edmo/ocr/representation/SourceReference.hpp>
+#include <ocr/BoundingBox.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/SourceReference.hpp>
 
 #include <string>
 #include <string_view>
 #include <vector>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 /**
  * @brief Categorization of document type.
@@ -248,4 +248,4 @@ struct SemanticChunk {
     }
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

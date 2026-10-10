@@ -1,10 +1,10 @@
-# EDMO DI-OCR Architecture Overview
+# OCR-DI Architecture Overview
 
 ## 1. System Context & Vision
 
-EDMO DI-OCR is an education-focused Document Intelligence platform designed to ingest complex academic credentials (transcripts, marksheets, degree certificates, syllabi, transfer credit forms) and extract structured, actionable data for downstream evaluation, course matching, and analytics.
+OCR-DI is an education-focused Document Intelligence platform designed to ingest complex academic credentials (transcripts, marksheets, degree certificates, syllabi, transfer credit forms) and extract structured, actionable data for downstream evaluation, course matching, and analytics.
 
-The **C++ OCR Engine v0.1** represents the foundational processing core of EDMO DI-OCR.
+The **C++ OCR Engine v0.1** represents the foundational processing core of OCR-DI.
 
 ```text
 External Applications / Webhooks / Batch Pipelines
@@ -13,7 +13,7 @@ External Applications / Webhooks / Batch Pipelines
                EDMO Ingestion API
                       │
                       ▼
-          EDMO DI-OCR Engine (C++20)
+          OCR-DI Engine (C++20)
                       │
                       ▼
              Normalized OCR JSON

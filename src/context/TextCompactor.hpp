@@ -1,14 +1,14 @@
 #pragma once
 
-#include <edmo/ocr/context/LlmContextConfig.hpp>
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/context/LlmContextConfig.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 #include "SafeDeduplicator.hpp"
 #include "SemanticInventoryBuilder.hpp"
 
 #include <vector>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 struct TextCompactionResult {
     std::vector<LlmContextSection> sections;
@@ -25,4 +25,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

@@ -1,12 +1,12 @@
 #pragma once
 
-#include <edmo/ocr/context/LlmContextModels.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
+#include <ocr/context/LlmContextModels.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
 
 #include <set>
 #include <vector>
 
-namespace edmo::ocr::context {
+namespace ocr::context {
 
 struct SemanticInventory {
     int pageCount = 0;
@@ -38,4 +38,4 @@ public:
     static SemanticInventory build(const representation::SemanticDocument& doc);
 };
 
-} // namespace edmo::ocr::context
+} // namespace ocr::context

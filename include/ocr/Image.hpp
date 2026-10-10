@@ -4,7 +4,7 @@
 #include <memory>
 #include <opencv2/core.hpp>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief High-level RAII image abstraction wrapping underlying OpenCV cv::Mat.
@@ -53,4 +53,4 @@ private:
     cv::Mat mat_;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

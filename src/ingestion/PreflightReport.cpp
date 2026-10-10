@@ -1,8 +1,8 @@
-#include <edmo/ocr/ingestion/PreflightReport.hpp>
+#include <ocr/ingestion/PreflightReport.hpp>
 
 #include <fstream>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 nlohmann::json PreflightReport::toJson(const PreflightSummary& summary) {
     return summary.toJson();
@@ -33,4 +33,4 @@ bool PreflightReport::saveToFile(
     return out.good();
 }
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

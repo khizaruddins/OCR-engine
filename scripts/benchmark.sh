@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 BUILD_DIR="${ROOT_DIR}/build"
-BENCHMARK_BIN="${BUILD_DIR}/bin/edmo_ocr_benchmark"
+BENCHMARK_BIN="${BUILD_DIR}/bin/ocr_benchmark"
 FIXTURE_PATH="${1:-${ROOT_DIR}/tests/fixtures/transcript-like.pdf}"
 ITERATIONS="${2:-5}"
 

@@ -6,7 +6,7 @@
 #include <optional>
 #include <nlohmann/json.hpp>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief Document-level classification enumeration.
@@ -335,7 +335,7 @@ struct DocumentPerformance {
  * @brief Overall document preflight inspection summary.
  */
 struct PreflightSummary {
-    std::string schemaVersion = "edmo-preflight-0.2";
+    std::string schemaVersion = "ocr-preflight-0.2";
     std::string fileName;
     std::string format = "PDF";
     int pageCount = 0;
@@ -368,4 +368,4 @@ struct PreflightSummary {
     }
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

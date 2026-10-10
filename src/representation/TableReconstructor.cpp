@@ -4,7 +4,7 @@
 
 #include <algorithm>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 SemanticRow TableReconstructor::parseCourseRow(
     const OcrLine& line,
@@ -303,4 +303,4 @@ SemanticTable TableReconstructor::reconstructTable(
     return table;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

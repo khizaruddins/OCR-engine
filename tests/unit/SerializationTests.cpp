@@ -1,14 +1,14 @@
 #include <gtest/gtest.h>
-#include <edmo/ocr/OcrResult.hpp>
+#include <ocr/OcrResult.hpp>
 #include "../../src/output/JsonSerializer.hpp"
 
-using namespace edmo::ocr;
+using namespace ocr;
 
 TEST(SerializationTests, FullJsonSchemaCompliance) {
     OcrResult res;
     res.id = "proc_123456";
     res.schemaVersion = "0.1";
-    res.engine.name = "edmo-ocr";
+    res.engine.name = "ocr-engine";
     res.engine.version = "0.1.0";
     res.engine.provider = "tesseract";
 
@@ -67,7 +67,7 @@ TEST(SerializationTests, FullJsonSchemaCompliance) {
     nlohmann::json j = nlohmann::json::parse(jsonStr);
 
     EXPECT_EQ(j["schema_version"], "0.1");
-    EXPECT_EQ(j["engine"]["name"], "edmo-ocr");
+    EXPECT_EQ(j["engine"]["name"], "ocr-engine");
     EXPECT_EQ(j["engine"]["provider"], "tesseract");
     EXPECT_EQ(j["document"]["id"], "doc_789");
     EXPECT_EQ(j["document"]["type"], "pdf");
@@ -81,7 +81,7 @@ TEST(SerializationTests, CompactJsonFormat) {
     OcrResult res;
     res.id = "proc_compact";
     res.schemaVersion = "0.1";
-    res.engine.name = "edmo-ocr";
+    res.engine.name = "ocr-engine";
     res.document.source = "test.png";
 
     OcrPageResult p;

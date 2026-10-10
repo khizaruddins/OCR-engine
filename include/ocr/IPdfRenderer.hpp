@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/OcrConfig.hpp>
-#include <edmo/ocr/Page.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/OcrConfig.hpp>
+#include <ocr/Page.hpp>
+#include <ocr/Result.hpp>
 
 #include <filesystem>
 #include <vector>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Abstract interface for rendering PDF pages into high-resolution images.
@@ -32,4 +32,4 @@ public:
     ) = 0;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

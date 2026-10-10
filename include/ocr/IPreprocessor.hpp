@@ -1,13 +1,13 @@
 #pragma once
 
-#include <edmo/ocr/Image.hpp>
-#include <edmo/ocr/OcrConfig.hpp>
-#include <edmo/ocr/Result.hpp>
+#include <ocr/Image.hpp>
+#include <ocr/OcrConfig.hpp>
+#include <ocr/Result.hpp>
 
 #include <filesystem>
 #include <memory>
 
-namespace edmo::ocr {
+namespace ocr {
 
 /**
  * @brief Context passed to preprocessing stages when saving debug artifacts.
@@ -49,4 +49,4 @@ public:
     ) = 0;
 };
 
-} // namespace edmo::ocr
+} // namespace ocr

@@ -1,16 +1,16 @@
 #pragma once
 
-#include <edmo/ocr/Result.hpp>
-#include <edmo/ocr/ingestion/IngestionConfig.hpp>
-#include <edmo/ocr/ingestion/IngestionTypes.hpp>
-#include <edmo/ocr/ingestion/PageClassifier.hpp>
-#include <edmo/ocr/ingestion/PdfInspector.hpp>
-#include <edmo/ocr/ingestion/ProcessingStrategy.hpp>
+#include <ocr/Result.hpp>
+#include <ocr/ingestion/IngestionConfig.hpp>
+#include <ocr/ingestion/IngestionTypes.hpp>
+#include <ocr/ingestion/PageClassifier.hpp>
+#include <ocr/ingestion/PdfInspector.hpp>
+#include <ocr/ingestion/ProcessingStrategy.hpp>
 
 #include <filesystem>
 #include <memory>
 
-namespace edmo::ocr::ingestion {
+namespace ocr::ingestion {
 
 /**
  * @brief High-level document ingestion and preflight orchestrator.
@@ -35,4 +35,4 @@ private:
     ProcessingStrategy strategyEngine_;
 };
 
-} // namespace edmo::ocr::ingestion
+} // namespace ocr::ingestion

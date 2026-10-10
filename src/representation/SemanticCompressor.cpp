@@ -5,7 +5,7 @@
 #include <sstream>
 #include <unordered_set>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 double SemanticCompressor::computeTextPreservation(
     const OcrResult& rawResult,
@@ -78,4 +78,4 @@ CompressionMetrics SemanticCompressor::computeMetrics(
     return metrics;
 }
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation

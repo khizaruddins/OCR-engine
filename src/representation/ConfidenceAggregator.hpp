@@ -1,16 +1,16 @@
 #pragma once
 
-#include <edmo/ocr/representation/ConfidenceSummary.hpp>
-#include <edmo/ocr/representation/DocumentRepresentation.hpp>
-#include <edmo/ocr/representation/RepresentationBlock.hpp>
-#include <edmo/ocr/representation/RepresentationConfig.hpp>
-#include <edmo/ocr/representation/SemanticDocument.hpp>
-#include <edmo/ocr/representation/SemanticSection.hpp>
-#include <edmo/ocr/representation/SemanticTable.hpp>
+#include <ocr/representation/ConfidenceSummary.hpp>
+#include <ocr/representation/DocumentRepresentation.hpp>
+#include <ocr/representation/RepresentationBlock.hpp>
+#include <ocr/representation/RepresentationConfig.hpp>
+#include <ocr/representation/SemanticDocument.hpp>
+#include <ocr/representation/SemanticSection.hpp>
+#include <ocr/representation/SemanticTable.hpp>
 
 #include <vector>
 
-namespace edmo::ocr::representation {
+namespace ocr::representation {
 
 class ConfidenceAggregator {
 public:
@@ -24,4 +24,4 @@ public:
     );
 };
 
-} // namespace edmo::ocr::representation
+} // namespace ocr::representation
