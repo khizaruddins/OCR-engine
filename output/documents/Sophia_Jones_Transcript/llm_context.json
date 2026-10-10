@@ -11,7 +11,7 @@
     ],
     "type": "transcript"
   },
-  "estimated_tokens": 681,
+  "estimated_tokens": 760,
   "institution": {
     "name": "University of Oxford"
   },
@@ -90,6 +90,29 @@
         "credits",
         "grade"
       ],
+      "low_confidence_cells": [
+        {
+          "col": 3,
+          "confidence": 0.5725988149642944,
+          "row": 6,
+          "text": "C",
+          "warning": "critical_low_confidence"
+        },
+        {
+          "col": 3,
+          "confidence": 0.555906355381012,
+          "row": 13,
+          "text": "C",
+          "warning": "critical_low_confidence"
+        },
+        {
+          "col": 3,
+          "confidence": 0.5149005651473999,
+          "row": 14,
+          "text": "C",
+          "warning": "critical_low_confidence"
+        }
+      ],
       "page_range": [
         1,
         1
@@ -133,7 +156,9 @@
         ],
         [
           "ACCT 401",
-          "Financial Accounting and Reporting 3 Cc"
+          "Financial Accounting and Reporting",
+          "3",
+          "C"
         ],
         [
           "ACCT 402",
@@ -161,13 +186,9 @@
         ],
         [
           "AUDT 301",
-          "Introduction to Auditing Theory and",
+          "Introduction to Auditing Theory and Practice",
           "3",
           "B"
-        ],
-        [
-          "Practice",
-          ""
         ],
         [
           "MIS 301",
@@ -177,11 +198,15 @@
         ],
         [
           "LAW 301",
-          "Corporate and Business Law 2 Cc"
+          "Corporate and Business Law",
+          "2",
+          "C"
         ],
         [
           "TAX 301",
-          "Personal Taxation 3 Cc"
+          "Personal Taxation",
+          "3",
+          "C"
         ]
       ],
       "table_id": "table_p1_1",

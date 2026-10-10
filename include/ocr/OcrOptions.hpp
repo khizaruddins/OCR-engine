@@ -15,6 +15,7 @@ struct OcrOptions {
     std::string charBlacklist;
     std::string tessdataDir;
     float confidenceThreshold = 0.0f;
+    int dpi = 300;
 };
 
 } // namespace ocr

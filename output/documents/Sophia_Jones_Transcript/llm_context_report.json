@@ -1,37 +1,37 @@
 {
   "chunk_count": 1,
   "compression": {
-    "edr_full_bytes": 40401,
-    "estimated_full_tokens": 10100,
-    "estimated_llm_tokens": 681,
-    "estimated_raw_tokens": 10877,
-    "full_to_llm_ratio": 14.820616287600881,
-    "llm_context_bytes": 2726,
+    "edr_full_bytes": 41400,
+    "estimated_full_tokens": 10350,
+    "estimated_llm_tokens": 761,
+    "estimated_raw_tokens": 10880,
+    "full_to_llm_ratio": 13.596059113300493,
+    "llm_context_bytes": 3045,
     "meaningful_text_coverage_percentage": 100.0,
-    "raw_bytes": 43508,
-    "raw_to_full_ratio": 1.0769040370287863,
-    "raw_to_llm_ratio": 15.960381511371974
+    "raw_bytes": 43521,
+    "raw_to_full_ratio": 1.051231884057971,
+    "raw_to_llm_ratio": 14.292610837438424
   },
   "confidence_preservation": {
-    "output_confidence_annotations": 0,
+    "output_confidence_annotations": 3,
     "preservation_percentage": 100.0,
-    "source_items_with_preserved_evidence": 6,
-    "source_low_confidence_items": 6
+    "source_items_with_preserved_evidence": 9,
+    "source_low_confidence_items": 9
   },
   "context_quality_score": 100.0,
-  "document_id": "sophia_auto",
+  "document_id": "doc_1791617758486_2741c4",
   "document_type": "transcript",
-  "execution_time_ms": 0.457778,
+  "execution_time_ms": 0.47418,
   "is_chunked": false,
   "loss_analysis": {
     "chunked_items": 0,
-    "compacted_items": 75,
+    "compacted_items": 79,
     "deduplicated_items": 0,
     "metadata_items": 0,
     "noise_items": 0,
     "preserved_items": 0,
-    "structured_items": 23,
-    "total_source_items": 98,
+    "structured_items": 22,
+    "total_source_items": 101,
     "unaccounted_loss": 0
   },
   "page_coverage": {
@@ -80,19 +80,19 @@
   "status": "VERIFIED_ZERO_UNACCOUNTED_LOSS",
   "table_coverage": {
     "cell_coverage_percentage": 100.0,
-    "cells_detected": 56,
-    "cells_represented": 56,
+    "cells_detected": 60,
+    "cells_represented": 60,
     "row_coverage_percentage": 100.0,
-    "rows_detected": 16,
-    "rows_represented": 16,
+    "rows_detected": 15,
+    "rows_represented": 15,
     "table_coverage_percentage": 100.0,
     "tables_detected": 1,
     "tables_represented": 1
   },
   "text_coverage": {
     "coverage_percentage": 100.0,
-    "represented_meaningful_text": 2459,
-    "source_meaningful_text": 2371,
+    "represented_meaningful_text": 2458,
+    "source_meaningful_text": 2363,
     "unit": "characters",
     "unrepresented_text": {
       "deduplicated": 0,

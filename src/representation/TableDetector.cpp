@@ -75,24 +75,49 @@ bool TableDetector::isCourseCode(std::string_view token) {
     return false;
 }
 
+std::string TableDetector::normalizeGrade(std::string_view token) {
+    std::string trimmed = TextNormalizer::trim(token);
+    if (trimmed.empty()) return "";
+
+    // 1 char: e.g. "A", "b" -> "A", "B"
+    if (trimmed.size() == 1) {
+        return std::string(1, static_cast<char>(std::toupper(static_cast<unsigned char>(trimmed[0]))));
+    }
+
+    // 2 chars:
+    if (trimmed.size() == 2) {
+        char c0 = static_cast<char>(std::toupper(static_cast<unsigned char>(trimmed[0])));
+        char c1 = trimmed[1];
+        // e.g. "A+", "B-"
+        if (c1 == '+' || c1 == '-') {
+            return std::string(1, c0) + c1;
+        }
+        // e.g. "Cc" -> "C", "Ww" -> "W", "AA" -> "A", "CC" -> "C", "WW" -> "W"
+        if (std::isalpha(static_cast<unsigned char>(c1))) {
+            char c1Upper = static_cast<char>(std::toupper(static_cast<unsigned char>(c1)));
+            if (std::islower(static_cast<unsigned char>(c1)) || c1Upper == c0) {
+                return std::string(1, c0);
+            }
+        }
+    }
+
+    return TextNormalizer::toUpper(trimmed);
+}
+
 bool TableDetector::isGradeToken(
     std::string_view token,
     const std::vector<std::string>& gradeVocab
 ) {
-    std::string trimmed = TextNormalizer::trim(token);
-    if (trimmed.empty()) return false;
-
-    std::string upper = TextNormalizer::toUpper(trimmed);
-
-    // Boston transcript OCR has 'Ww' for 'W'
-    if (upper == "WW") upper = "W";
+    std::string norm = normalizeGrade(token);
+    if (norm.empty()) return false;
 
     for (const auto& g : gradeVocab) {
-        if (upper == g) return true;
+        if (norm == g) return true;
     }
 
     // Additional common academic grade indicators
-    if (upper == "PASS" || upper == "FAIL" || upper == "HONORS" || upper == "SATISFACTORY" || upper == "P" || upper == "F") {
+    if (norm == "PASS" || norm == "FAIL" || norm == "HONORS" || norm == "SATISFACTORY" ||
+        norm == "P" || norm == "F" || norm == "AUDIT" || norm == "IP" || norm == "IN PROGRESS") {
         return true;
     }
 
@@ -125,20 +150,47 @@ bool TableDetector::isNumericCreditToken(std::string_view token) {
     return hasDigit;
 }
 
+bool TableDetector::isHeaderToken(std::string_view token) {
+    std::string upper = TextNormalizer::toUpper(TextNormalizer::trim(token));
+    if (upper == "COURSE" || upper == "CRSE" || upper == "SUBJ" || upper == "SUBJECT" ||
+        upper == "TITLE" || upper == "DESCRIPTION" || upper == "NAME" ||
+        upper == "CREDIT" || upper == "CREDITS" || upper == "CREDS" ||
+        upper == "GRADE" || upper == "GRADES" || upper == "GR" || upper == "GRD" ||
+        upper == "ATT" || upper == "EARN" || upper == "UNITS" || upper == "HOURS" ||
+        upper == "QPTS" || upper == "MARKS" || upper == "TEACH" || upper == "CRS" ||
+        upper == "FINAL" || upper == "CODE") {
+        return true;
+    }
+    return false;
+}
+
 bool TableDetector::isTableHeaderLine(const OcrLine& line) {
     std::string upper = TextNormalizer::toUpper(line.text);
 
     int matches = 0;
-    if (TextNormalizer::icontains(upper, "COURSE") || TextNormalizer::icontains(upper, "SUBJECT")) matches++;
-    if (TextNormalizer::icontains(upper, "TITLE") || TextNormalizer::icontains(upper, "NAME")) matches++;
+    if (TextNormalizer::icontains(upper, "COURSE") || TextNormalizer::icontains(upper, "SUBJECT") || TextNormalizer::icontains(upper, "SUBJ") || TextNormalizer::icontains(upper, "CRSE") || TextNormalizer::icontains(upper, "CRS")) matches++;
+    if (TextNormalizer::icontains(upper, "TITLE") || TextNormalizer::icontains(upper, "NAME") || TextNormalizer::icontains(upper, "DESCRIPTION")) matches++;
     if (TextNormalizer::icontains(upper, "CREDIT") || TextNormalizer::icontains(upper, "CREDS") || TextNormalizer::icontains(upper, "CREDITS")) matches++;
-    if (TextNormalizer::icontains(upper, "GRADE") || TextNormalizer::icontains(upper, " GR ") || TextNormalizer::endsWith(upper, " GR") || TextNormalizer::endsWith(upper, " GR.")) matches++;
+    if (TextNormalizer::icontains(upper, "GRADE") || TextNormalizer::icontains(upper, " GR ") || TextNormalizer::endsWith(upper, " GR") || TextNormalizer::endsWith(upper, " GR.") || TextNormalizer::icontains(upper, "GRD")) matches++;
     if (TextNormalizer::icontains(upper, "ATT") || TextNormalizer::icontains(upper, "EARN") || TextNormalizer::icontains(upper, "EHRS") || TextNormalizer::icontains(upper, "AHRS")) matches++;
     if (TextNormalizer::icontains(upper, "UNITS") || TextNormalizer::icontains(upper, "HOURS") || TextNormalizer::icontains(upper, "QPTS")) matches++;
-    if (TextNormalizer::icontains(upper, "SUBJ") || TextNormalizer::icontains(upper, "CRSE") || TextNormalizer::icontains(upper, "SUB CODE")) matches++;
     if (TextNormalizer::icontains(upper, "S.NO") || TextNormalizer::icontains(upper, "SL.NO") || TextNormalizer::icontains(upper, "STATUS") || TextNormalizer::icontains(upper, "MARKS")) matches++;
 
-    return matches >= 2;
+    if (matches >= 2) return true;
+
+    // Check if line consists solely of header tokens (e.g. split header like "CREDITS GRADE" or "GRADE")
+    if (!line.tokens.empty()) {
+        bool allHeaderTokens = true;
+        for (const auto& tok : line.tokens) {
+            if (!isHeaderToken(tok.text)) {
+                allHeaderTokens = false;
+                break;
+            }
+        }
+        if (allHeaderTokens) return true;
+    }
+
+    return false;
 }
 
 bool TableDetector::isCourseRowLine(
@@ -146,6 +198,7 @@ bool TableDetector::isCourseRowLine(
     const TableConfig& config
 ) {
     if (line.tokens.empty()) return false;
+    if (isTableHeaderLine(line)) return false;
 
     // Check if the line begins with or contains a course code
     bool hasCourseCode = false;
@@ -164,6 +217,10 @@ bool TableDetector::isCourseRowLine(
     if (!hasCourseCode && line.tokens.size() >= 2) {
         std::string combined = line.tokens[0].text + line.tokens[1].text;
         if (isCourseCode(combined)) {
+            hasCourseCode = true;
+        }
+        std::string combinedSp = line.tokens[0].text + " " + line.tokens[1].text;
+        if (isCourseCode(combinedSp)) {
             hasCourseCode = true;
         }
     }

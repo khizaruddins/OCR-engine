@@ -2,7 +2,7 @@
   "confidence": 0.9217764139175415,
   "document": {
     "file_size_bytes": 51705,
-    "id": "sophia_auto",
+    "id": "doc_1791617758486_2741c4",
     "page_count": 1,
     "source": "/home/khizaruddin/Downloads/Sophia Jones Transcript.pdf",
     "type": "pdf"
@@ -12,7 +12,7 @@
     "provider": "tesseract",
     "version": "0.2.0"
   },
-  "id": "proc_1791449528267_953ab0",
+  "id": "proc_1791617758486_adeb64",
   "pages": [
     {
       "blocks": [
@@ -3945,10 +3945,10 @@
         "timing": {
           "edr_ms": 0.0,
           "layout_ms": 0.0,
-          "native_extraction_ms": 2.259508,
-          "ocr_ms": 889.354508,
-          "preflight_ms": 4.004334,
-          "total_ms": 1509.580384
+          "native_extraction_ms": 2.186981,
+          "ocr_ms": 819.269092,
+          "preflight_ms": 2.51537,
+          "total_ms": 1285.875961
         }
       },
       "raw_text": "si =6UNIVERSITY OF OXFORD                      01/28/2019\n\n \n\nSTUDENT INFORMATION\n\nNAME                          : Sophia Jones\nSTUDENT ID                   > 2291829\n\nBIRTHDATE                    : Jun 26 1997\nDEPARTMENT               : Accounting\nBACHELORS MAJOR        : Accounting & Finance\n\n \n\nDEGREES AWARDED - BACHELORS IN ACCOUNTING & FINANCE\n\n \n\nTEACH      CRS       COURSE DESCRIPTION                   CREDITS     GRADE\nACCT            101           Intro to Accounting |                                   3                    A\nACCT         102        Introduction to Accounting II                  3                A\nFINC         201        Raising Individual Financial Awareness     3               A\nBUSI          203       Essential Information Skills                   3               A\nBUSI            101          Foundations of Business                           3                   A\nACCT           301          Business Accounting Systems                    3                    B\nACCT         401        Financial Accounting and Reporting        3                Cc\nACCT           402         Management Accounting                          3                    A\nFINC          301         Corporate Finance                               3                 B\nACCT          601         Research in Accounting                          3                  B\nBUSI         499       Personal and Professional Development 3               B\nAUDT          301          Introduction to Auditing Theory and          3                   B\nPractice\nMIS            301         Management Information Systems           3                 A\nLAW          301        Corporate and Business Law                  2                 Cc\n\nTAX              301          Personal Taxation                                      3                    Cc\n",
@@ -3956,24 +3956,24 @@
       "skew_angle": 0.0,
       "text": "si =6UNIVERSITY OF OXFORD                      01/28/2019\n\n\n\nSTUDENT INFORMATION\n\nNAME                          : Sophia Jones\nSTUDENT ID                   > 2291829\n\nBIRTHDATE                    : Jun 26 1997\nDEPARTMENT               : Accounting\nBACHELORS MAJOR        : Accounting & Finance\n\n\n\nDEGREES AWARDED - BACHELORS IN ACCOUNTING & FINANCE\n\n\n\nTEACH      CRS       COURSE DESCRIPTION                   CREDITS     GRADE\nACCT            101           Intro to Accounting |                                   3                    A\nACCT         102        Introduction to Accounting II                  3                A\nFINC         201        Raising Individual Financial Awareness     3               A\nBUSI          203       Essential Information Skills                   3               A\nBUSI            101          Foundations of Business                           3                   A\nACCT           301          Business Accounting Systems                    3                    B\nACCT         401        Financial Accounting and Reporting        3                Cc\nACCT           402         Management Accounting                          3                    A\nFINC          301         Corporate Finance                               3                 B\nACCT          601         Research in Accounting                          3                  B\nBUSI         499       Personal and Professional Development 3               B\nAUDT          301          Introduction to Auditing Theory and          3                   B\nPractice\nMIS            301         Management Information Systems           3                 A\nLAW          301        Corporate and Business Law                  2                 Cc\n\nTAX              301          Personal Taxation                                      3                    Cc",
       "timing": {
-        "native_extraction_ms": 2.259508,
-        "ocr_time_ms": 889.354508,
-        "preflight_ms": 4.004334,
-        "preprocess_time_ms": 470.240431,
-        "render_time_ms": 147.703112,
-        "total_ms": 1509.580384
+        "native_extraction_ms": 2.186981,
+        "ocr_time_ms": 819.269092,
+        "preflight_ms": 2.51537,
+        "preprocess_time_ms": 348.119742,
+        "render_time_ms": 116.281193,
+        "total_ms": 1285.875961
       },
       "width": 2550
     }
   ],
   "processing": {
-    "native_extraction_time_ms": 2.259508,
-    "ocr_time_ms": 889.354508,
-    "pdf_render_time_ms": 147.703112,
-    "preflight_time_ms": 5.753953,
-    "preprocess_time_ms": 470.240431,
+    "native_extraction_time_ms": 2.186981,
+    "ocr_time_ms": 819.269092,
+    "pdf_render_time_ms": 116.281193,
+    "preflight_time_ms": 3.775627,
+    "preprocess_time_ms": 348.119742,
     "serialization_time_ms": 0.0,
-    "total_time_ms": 1518.560369
+    "total_time_ms": 1293.497378
   },
   "schema_version": "0.1"
 }

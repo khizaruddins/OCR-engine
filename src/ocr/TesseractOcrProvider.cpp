@@ -165,7 +165,7 @@ Result<OcrPageResult> TesseractOcrProvider::process(
     }
 
     api_->SetImage(pix);
-    api_->SetSourceResolution(300);
+    api_->SetSourceResolution(options.dpi > 0 ? options.dpi : 300);
 
     int recogRes = api_->Recognize(nullptr);
     if (recogRes != 0) {

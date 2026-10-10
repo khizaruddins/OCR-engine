@@ -27,6 +27,10 @@ public:
         const OcrLine& line
     );
 
+    static bool isHeaderToken(
+        std::string_view token
+    );
+
     static bool isCourseRowLine(
         const OcrLine& line,
         const TableConfig& config = {}
@@ -39,6 +43,10 @@ public:
     static bool isGradeToken(
         std::string_view token,
         const std::vector<std::string>& gradeVocab
+    );
+
+    static std::string normalizeGrade(
+        std::string_view token
     );
 
     static bool isNumericCreditToken(

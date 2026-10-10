@@ -308,6 +308,7 @@ OcrOptions OcrConfig::toOcrOptions() const {
     opt.charWhitelist = ocr.charWhitelist;
     opt.charBlacklist = ocr.charBlacklist;
     opt.confidenceThreshold = ocr.confidenceThreshold;
+    opt.dpi = pdf.dpi > 0 ? pdf.dpi : 300;
     return opt;
 }
 

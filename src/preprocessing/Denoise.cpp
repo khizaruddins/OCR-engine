@@ -52,11 +52,16 @@ Result<Image> Denoise::process(
         return Result<Image>::success(input.clone());
     }
 
+    double effectiveSigma = config.denoiseSigma;
+    if (input.height() > 0 && input.height() < 2800) {
+        effectiveSigma = config.denoiseSigma * (static_cast<double>(input.height()) / 3300.0);
+    }
+
     cv::Mat denoised = applyDenoise(
         input.mat(),
         config.denoiseMethod,
         config.denoiseKernelSize,
-        config.denoiseSigma
+        effectiveSigma
     );
 
     return Result<Image>::success(Image(std::move(denoised)));

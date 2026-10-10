@@ -1,8 +1,10 @@
 #include "TableReconstructor.hpp"
 #include "TableDetector.hpp"
 #include "TextNormalizer.hpp"
+#include "ReadingOrder.hpp"
 
 #include <algorithm>
+#include <iostream>
 
 namespace ocr::representation {
 
@@ -21,6 +23,7 @@ SemanticRow TableReconstructor::parseCourseRow(
     const auto& tokens = line.tokens;
 
     // 1. Identify Course Code (check for optional serial number prefix like "1", "2", etc.)
+    bool hasValidCode = false;
     size_t titleStartIdx = 1;
     std::string courseCode;
     BoundingBox codeBox;
@@ -33,27 +36,30 @@ SemanticRow TableReconstructor::parseCourseRow(
         codeConf = tokens[1].confidence;
         titleStartIdx = 2;
         row.canonicalFields["s_no"] = tokens[0].text;
+        hasValidCode = true;
     } else if (TableDetector::isCourseCode(tokens[0].text)) {
         courseCode = tokens[0].text;
         codeBox = tokens[0].bbox;
         codeConf = tokens[0].confidence;
         titleStartIdx = 1;
+        hasValidCode = true;
     } else if (tokens.size() >= 2 && TableDetector::isCourseCode(tokens[0].text + " " + tokens[1].text)) {
         courseCode = tokens[0].text + " " + tokens[1].text;
         codeBox = tokens[0].bbox.unionWith(tokens[1].bbox);
         codeConf = (tokens[0].confidence + tokens[1].confidence) / 2.0f;
         titleStartIdx = 2;
+        hasValidCode = true;
     } else if (tokens.size() >= 2 && TableDetector::isCourseCode(tokens[0].text + tokens[1].text)) {
         courseCode = tokens[0].text + tokens[1].text;
         codeBox = tokens[0].bbox.unionWith(tokens[1].bbox);
         codeConf = (tokens[0].confidence + tokens[1].confidence) / 2.0f;
         titleStartIdx = 2;
-    } else {
-        // Fallback: use first token
-        courseCode = tokens[0].text;
-        codeBox = tokens[0].bbox;
-        codeConf = tokens[0].confidence;
-        titleStartIdx = 1;
+        hasValidCode = true;
+    }
+
+    if (!hasValidCode) {
+        // Not a course row line
+        return row;
     }
 
     // 2. Scan from the right end for Grade and Credits
@@ -64,10 +70,7 @@ SemanticRow TableReconstructor::parseCourseRow(
     int rightScan = static_cast<int>(tokens.size()) - 1;
     if (rightScan >= static_cast<int>(titleStartIdx) &&
         TableDetector::isGradeToken(tokens[rightScan].text, config.gradeVocabulary)) {
-        gradeVal = TextNormalizer::trim(tokens[rightScan].text);
-        if (TextNormalizer::toUpper(gradeVal) == "WW") {
-            gradeVal = "W";
-        }
+        gradeVal = TableDetector::normalizeGrade(tokens[rightScan].text);
         gradeBox = tokens[rightScan].bbox;
         gradeConf = tokens[rightScan].confidence;
         rightScan--;
@@ -126,13 +129,18 @@ SemanticRow TableReconstructor::parseCourseRow(
     int titleTokCount = 0;
 
     for (int t = static_cast<int>(titleStartIdx); t <= titleEndIdx; ++t) {
+        std::string tokText = tokens[t].text;
+        // Normalize OCR pipe '|' to roman numeral 'I' if it occurs in course title (e.g. Accounting | -> Accounting I)
+        if (tokText == "|" || tokText == "!") {
+            tokText = "I";
+        }
         if (titleTokCount > 0) {
             courseTitle.push_back(' ');
             titleBox = titleBox.unionWith(tokens[t].bbox);
         } else {
             titleBox = tokens[t].bbox;
         }
-        courseTitle.append(tokens[t].text);
+        courseTitle.append(tokText);
         sumTitleConf += tokens[t].confidence;
         titleTokCount++;
     }
@@ -193,7 +201,6 @@ std::vector<SemanticColumn> TableReconstructor::buildCanonicalColumns(
     const std::vector<SemanticRow>& rows,
     const OcrLine* headerLine
 ) {
-    (void)headerLine;
     std::vector<SemanticColumn> cols;
 
     bool hasAttempted = false;
@@ -206,6 +213,26 @@ std::vector<SemanticColumn> TableReconstructor::buildCanonicalColumns(
         if (r.canonicalFields.count("earned_credits")) hasEarned = true;
         if (r.canonicalFields.count("credits")) hasCredits = true;
         if (r.canonicalFields.count("grade")) hasGrade = true;
+    }
+
+    bool headerHasCredits = false;
+    bool headerHasGrade = false;
+    if (headerLine) {
+        std::string upperHeader = TextNormalizer::toUpper(headerLine->text);
+        if (TextNormalizer::icontains(upperHeader, "CREDIT") ||
+            TextNormalizer::icontains(upperHeader, "CREDS") ||
+            TextNormalizer::icontains(upperHeader, "HRS") ||
+            TextNormalizer::icontains(upperHeader, "UNITS")) {
+            headerHasCredits = true;
+        }
+        if (TextNormalizer::icontains(upperHeader, "GRADE") ||
+            TextNormalizer::icontains(upperHeader, "GRD") ||
+            TextNormalizer::icontains(upperHeader, " GR ") ||
+            TextNormalizer::endsWith(upperHeader, " GR") ||
+            TextNormalizer::endsWith(upperHeader, " GR.") ||
+            TextNormalizer::icontains(upperHeader, "MARK")) {
+            headerHasGrade = true;
+        }
     }
 
     int colIdx = 0;
@@ -233,7 +260,7 @@ std::vector<SemanticColumn> TableReconstructor::buildCanonicalColumns(
         colEarn.canonicalName = "earned_credits";
         colEarn.columnIndex = colIdx++;
         cols.push_back(std::move(colEarn));
-    } else if (hasCredits) {
+    } else if (hasCredits || headerHasCredits) {
         SemanticColumn colCr;
         colCr.name = "credits";
         colCr.canonicalName = "credits";
@@ -241,12 +268,42 @@ std::vector<SemanticColumn> TableReconstructor::buildCanonicalColumns(
         cols.push_back(std::move(colCr));
     }
 
-    if (hasGrade) {
+    if (hasGrade || headerHasGrade) {
         SemanticColumn colGr;
         colGr.name = "grade";
         colGr.canonicalName = "grade";
         colGr.columnIndex = colIdx++;
         cols.push_back(std::move(colGr));
+    }
+
+    // Set spatial bboxes from header line tokens if available
+    if (headerLine && !headerLine->tokens.empty()) {
+        for (const auto& tok : headerLine->tokens) {
+            std::string upperTok = TextNormalizer::toUpper(tok.text);
+            for (auto& col : cols) {
+                if (col.canonicalName == "grade" && (upperTok == "GRADE" || upperTok == "GR" || upperTok == "GRD" || upperTok == "MARK" || upperTok == "MARKS")) {
+                    col.minX = tok.bbox.x;
+                    col.maxX = tok.bbox.right();
+                    col.confidence = tok.confidence;
+                    col.source.bbox = tok.bbox;
+                } else if (col.canonicalName == "credits" && (upperTok == "CREDITS" || upperTok == "CREDIT" || upperTok == "CREDS" || upperTok == "HRS" || upperTok == "UNITS")) {
+                    col.minX = tok.bbox.x;
+                    col.maxX = tok.bbox.right();
+                    col.confidence = tok.confidence;
+                    col.source.bbox = tok.bbox;
+                } else if (col.canonicalName == "course_title" && (upperTok == "TITLE" || upperTok == "DESCRIPTION" || upperTok == "NAME")) {
+                    if (col.minX == 0 || tok.bbox.x < col.minX) col.minX = tok.bbox.x;
+                    if (tok.bbox.right() > col.maxX) col.maxX = tok.bbox.right();
+                    col.confidence = tok.confidence;
+                    col.source.bbox = tok.bbox;
+                } else if (col.canonicalName == "course_code" && (upperTok == "COURSE" || upperTok == "CRS" || upperTok == "SUBJ" || upperTok == "CODE" || upperTok == "TEACH")) {
+                    if (col.minX == 0 || tok.bbox.x < col.minX) col.minX = tok.bbox.x;
+                    if (tok.bbox.right() > col.maxX) col.maxX = tok.bbox.right();
+                    col.confidence = tok.confidence;
+                    col.source.bbox = tok.bbox;
+                }
+            }
+        }
     }
 
     return cols;
@@ -266,39 +323,125 @@ SemanticTable TableReconstructor::reconstructTable(
     table.tableType = candidate.tableType;
     table.hasHeader = candidate.hasHeader;
 
+    // 1. Collect candidate lines and identify header line(s)
     const OcrLine* headerLinePtr = nullptr;
     if (candidate.hasHeader && candidate.headerLineIndex >= 0 &&
         candidate.headerLineIndex < static_cast<int>(lines.size())) {
         headerLinePtr = &lines[candidate.headerLineIndex];
     }
 
+    std::vector<OcrLine> dataLines;
+    for (int i = candidate.startLineIndex; i <= candidate.endLineIndex; ++i) {
+        if (i < 0 || i >= static_cast<int>(lines.size())) continue;
+        const auto& line = lines[i];
+
+        if (i == candidate.headerLineIndex || TableDetector::isTableHeaderLine(line)) {
+            if (!headerLinePtr || line.tokens.size() > headerLinePtr->tokens.size()) {
+                headerLinePtr = &line;
+            }
+            continue; // Header lines must NOT become course rows
+        }
+        dataLines.push_back(line);
+    }
+
+    // 2. Group horizontally overlapping / split lines on the same physical row (Row Grouping by Vertical Overlap)
+    // Grade tokens (like narrow "A" or "B") that overlap vertically with the course row MUST belong to the same physical row.
+    std::vector<OcrLine> physicalLines;
+    for (const auto& dLine : dataLines) {
+        if (dLine.tokens.empty()) continue;
+
+        bool merged = false;
+        for (auto& pLine : physicalLines) {
+            int overlapY = std::max(0, std::min(pLine.bbox.bottom(), dLine.bbox.bottom()) - std::max(pLine.bbox.top(), dLine.bbox.top()));
+            int minH = std::min(std::max(1, pLine.bbox.height), std::max(1, dLine.bbox.height));
+            int pCenterY = pLine.bbox.y + pLine.bbox.height / 2;
+            int dCenterY = dLine.bbox.y + dLine.bbox.height / 2;
+            if (overlapY >= minH / 3 || std::abs(pCenterY - dCenterY) <= minH / 2) {
+                // Same physical row: merge tokens and union bbox
+                pLine.bbox = pLine.bbox.unionWith(dLine.bbox);
+                pLine.tokens.insert(pLine.tokens.end(), dLine.tokens.begin(), dLine.tokens.end());
+                ReadingOrder::sortTokensInLine(pLine);
+
+                std::string fullText;
+                for (size_t ti = 0; ti < pLine.tokens.size(); ++ti) {
+                    if (ti > 0) fullText.push_back(' ');
+                    fullText.append(pLine.tokens[ti].text);
+                }
+                pLine.text = std::move(fullText);
+                merged = true;
+                break;
+            }
+        }
+        if (!merged) {
+            physicalLines.push_back(dLine);
+        }
+    }
+
+    // Sort physical lines top-to-bottom
+    std::sort(physicalLines.begin(), physicalLines.end(), [](const OcrLine& a, const OcrLine& b) {
+        return a.bbox.y < b.bbox.y;
+    });
+
+    // 3. Parse physical rows and handle continuation lines (e.g. AUDT 301 second title line "Practice")
     BoundingBox unionBox;
     bool firstBox = true;
 
-    for (int i = candidate.startLineIndex; i <= candidate.endLineIndex; ++i) {
-        if (i < 0 || i >= static_cast<int>(lines.size())) continue;
-        if (i == candidate.headerLineIndex) continue; // Skip header line from data rows
-
-        const auto& line = lines[i];
-        if (firstBox) {
-            unionBox = line.bbox;
-            firstBox = false;
-        } else {
-            unionBox = unionBox.unionWith(line.bbox);
-        }
-
-        SemanticRow row = parseCourseRow(line, pageNumber, config);
+    for (const auto& pLine : physicalLines) {
+        SemanticRow row = parseCourseRow(pLine, pageNumber, config);
         if (!row.empty()) {
+            if (firstBox) {
+                unionBox = pLine.bbox;
+                firstBox = false;
+            } else {
+                unionBox = unionBox.unionWith(pLine.bbox);
+            }
             for (const auto& cell : row.cells) {
                 table.confidence.addScore(cell.confidence);
             }
             table.rows.push_back(std::move(row));
+        } else if (!table.rows.empty()) {
+            // Check if pLine is a continuation of the preceding course row's title
+            auto& prevRow = table.rows.back();
+            bool hasCodeOrGrades = TableDetector::isCourseRowLine(pLine, config);
+            int verticalGap = pLine.bbox.y - prevRow.source.bbox.bottom();
+            int maxAllowedGap = std::max(prevRow.source.bbox.height, pLine.bbox.height) * 2;
+
+            if (!hasCodeOrGrades && verticalGap <= maxAllowedGap) {
+                // Continuation line: append to preceding row's title
+                prevRow.canonicalFields["course_title"] += " " + pLine.text;
+                if (prevRow.cells.size() >= 2) {
+                    prevRow.cells[1].rawText += " " + pLine.text;
+                    prevRow.cells[1].normalizedText += " " + pLine.text;
+                    prevRow.cells[1].source.bbox = prevRow.cells[1].source.bbox.unionWith(pLine.bbox);
+                }
+                prevRow.source.bbox = prevRow.source.bbox.unionWith(pLine.bbox);
+                unionBox = unionBox.unionWith(pLine.bbox);
+            }
         }
     }
 
     table.source.pageNumber = pageNumber;
     table.source.bbox = unionBox;
     table.columns = buildCanonicalColumns(table.rows, headerLinePtr);
+
+    // Requirement 15: Log / print the normalized table before final projection
+    std::cout << "==================================================\n";
+    std::cout << "NORMALIZED TABLE: " << table.id << "\n";
+    std::cout << "COLUMNS:\n";
+    for (size_t ci = 0; ci < table.columns.size(); ++ci) {
+        if (ci > 0) std::cout << " | ";
+        std::cout << table.columns[ci].canonicalName;
+    }
+    std::cout << "\nROWS (count: " << table.rows.size() << "):\n";
+    for (size_t ri = 0; ri < table.rows.size(); ++ri) {
+        const auto& r = table.rows[ri];
+        std::cout << (ri + 1) << " "
+                  << (r.canonicalFields.count("course_code") ? r.canonicalFields.at("course_code") : "") << " | "
+                  << (r.canonicalFields.count("course_title") ? r.canonicalFields.at("course_title") : "") << " | "
+                  << (r.canonicalFields.count("credits") ? r.canonicalFields.at("credits") : "") << " | "
+                  << (r.canonicalFields.count("grade") ? r.canonicalFields.at("grade") : "") << "\n";
+    }
+    std::cout << "==================================================" << std::endl;
 
     return table;
 }
