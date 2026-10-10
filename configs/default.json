@@ -1,0 +1,48 @@
+{
+  "ocr": {
+    "provider": "tesseract",
+    "language": "eng",
+    "psm": 3,
+    "oem": 1,
+    "device": "cpu"
+  },
+  "pdf": {
+    "dpi": 300,
+    "max_pages": 100
+  },
+  "preprocessing": {
+    "enabled": true,
+    "grayscale": true,
+    "denoise": true,
+    "denoise_method": "gaussian",
+    "contrast": true,
+    "contrast_method": "clahe",
+    "clahe_clip_limit": 2.0,
+    "binarization": false,
+    "deskew": true,
+    "max_skew_angle_degrees": 10.0,
+    "orientation": true,
+    "sharpen": false
+  },
+  "output": {
+    "format": "full-json",
+    "include_tokens": true,
+    "include_lines": true,
+    "include_blocks": true,
+    "include_raw_text": true,
+    "include_normalized_text": true,
+    "include_geometry": true,
+    "include_timings": true,
+    "pretty_print": true
+  },
+  "limits": {
+    "max_file_size_mb": 50,
+    "max_pages": 100,
+    "max_image_dimension": 20000
+  },
+  "debug": {
+    "enabled": false,
+    "output_dir": "debug",
+    "save_intermediate_images": true
+  }
+}

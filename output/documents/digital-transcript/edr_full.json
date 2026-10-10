@@ -1,0 +1,3039 @@
+{
+  "academic": {
+    "degree": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+  },
+  "compression": {
+    "edr_full_bytes": 34732,
+    "edr_full_characters": 34732,
+    "edr_llm_bytes": 1503,
+    "edr_llm_characters": 1503,
+    "estimated_full_tokens": 8683,
+    "estimated_llm_tokens": 375,
+    "estimated_raw_tokens": 7665,
+    "raw_bytes": 30661,
+    "raw_characters": 30661,
+    "raw_to_full_ratio": 0.8827882068409536,
+    "raw_to_llm_ratio": 20.399866932801064,
+    "text_preservation_percentage": 100.0
+  },
+  "confidence": {
+    "low_confidence_token_count": 1,
+    "maximum": 1.0,
+    "mean": 0.9769006967544556,
+    "minimum": 0.1696447730064392,
+    "token_count": 151
+  },
+  "document": {
+    "id": "doc_1791450318282_ca7a16",
+    "page_count": 2,
+    "source": "tests/fixtures/digital-transcript.pdf",
+    "type": "transcript"
+  },
+  "engine": {
+    "name": "edmo-ocr",
+    "provider": "tesseract",
+    "version": "0.2.0"
+  },
+  "identity": {
+    "student_name": "Sophia Alexander Jones Student ID: SU-2024-8841"
+  },
+  "pages": [
+    {
+      "blocks": [
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 6
+          },
+          "id": "block_p1_1",
+          "source": {
+            "bbox": {
+              "height": 69,
+              "width": 2229,
+              "x": 208,
+              "y": 154
+            },
+            "page": 1
+          },
+          "text": "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT",
+          "type": "header"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_2",
+          "label": "Student Name",
+          "source": {
+            "bbox": {
+              "height": 42,
+              "width": 1790,
+              "x": 208,
+              "y": 300
+            },
+            "page": 1
+          },
+          "text": "Student Name: Sophia Alexander Jones Student ID: SU-2024-8841",
+          "type": "label_value",
+          "value": "Sophia Alexander Jones Student ID: SU-2024-8841"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 12
+          },
+          "id": "block_p1_3",
+          "label": "Degree",
+          "source": {
+            "bbox": {
+              "height": 42,
+              "width": 1864,
+              "x": 208,
+              "y": 384
+            },
+            "page": 1
+          },
+          "text": "Degree: Bachelor of Science in Computer Science Conferral Date: June 15, 2024",
+          "type": "label_value",
+          "value": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 5
+          },
+          "id": "block_p1_4",
+          "source": {
+            "bbox": {
+              "height": 46,
+              "width": 873,
+              "x": 208,
+              "y": 547
+            },
+            "page": 1
+          },
+          "text": "Course History & Academic Records",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 7
+          },
+          "id": "block_p1_5",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1919,
+              "x": 208,
+              "y": 658
+            },
+            "page": 1
+          },
+          "text": "Course Code Course Title Credits Grade Points",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 6
+          },
+          "id": "block_p1_6",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 762
+            },
+            "page": 1
+          },
+          "text": "CS-106A Programming Methodologies 4.0 A 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 6
+          },
+          "id": "block_p1_7",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 866
+            },
+            "page": 1
+          },
+          "text": "CS-106B Programming Abstractions 4.0 A+ 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 9
+          },
+          "id": "block_p1_8",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 970
+            },
+            "page": 1
+          },
+          "text": "MATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_9",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1074
+            },
+            "page": 1
+          },
+          "text": "CS-103 Mathematical Foundations of Computing 4.0 A- 14.8",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_10",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1178
+            },
+            "page": 1
+          },
+          "text": "CS-107 Computer Organization and Systems 4.0 A 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_11",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1283
+            },
+            "page": 1
+          },
+          "text": "CS-110 Principles of Computer Systems 4.0 A 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 9
+          },
+          "id": "block_p1_12",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1387
+            },
+            "page": 1
+          },
+          "text": "CS-161 Design and Analysis of Algorithms 4.0 A+ 16.0",
+          "type": "paragraph"
+        }
+      ],
+      "confidence": {
+        "low_confidence_token_count": 0,
+        "maximum": 1.0,
+        "mean": 1.0,
+        "minimum": 1.0,
+        "token_count": 92
+      },
+      "height": 3300,
+      "page_number": 1,
+      "processing": {
+        "complexity": {
+          "level": "SIMPLE",
+          "score": 0.10266196078431372
+        },
+        "page_classification": "DIGITAL_TEXT",
+        "processing_strategy": "NATIVE_TEXT",
+        "source_type": "NATIVE_TEXT",
+        "timing": {
+          "edr_ms": 0.0,
+          "layout_ms": 0.0,
+          "native_extraction_ms": 0.865226,
+          "ocr_ms": 0.0,
+          "preflight_ms": 1.346686,
+          "total_ms": 0.86558
+        }
+      },
+      "rotation": 0,
+      "width": 2550
+    },
+    {
+      "blocks": [
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.965812623500824,
+            "mean": 0.9527447819709778,
+            "minimum": 0.9310247898101807,
+            "token_count": 7
+          },
+          "id": "block_p2_1",
+          "source": {
+            "bbox": {
+              "height": 55,
+              "width": 1638,
+              "x": 210,
+              "y": 165
+            },
+            "page": 2
+          },
+          "text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)",
+          "type": "header"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9692987203598022,
+            "mean": 0.964982271194458,
+            "minimum": 0.9558460116386414,
+            "token_count": 6
+          },
+          "id": "block_p2_2",
+          "source": {
+            "bbox": {
+              "height": 50,
+              "width": 1659,
+              "x": 210,
+              "y": 340
+            },
+            "page": 2
+          },
+          "text": "Course Code Course Title Credits Grade",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.96467125415802,
+            "mean": 0.96467125415802,
+            "minimum": 0.96467125415802,
+            "token_count": 1
+          },
+          "id": "block_p2_3",
+          "source": {
+            "bbox": {
+              "height": 32,
+              "width": 123,
+              "x": 2003,
+              "y": 344
+            },
+            "page": 2
+          },
+          "text": "Points",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9699797034263611,
+            "mean": 0.9380061030387878,
+            "minimum": 0.9038845300674438,
+            "token_count": 7
+          },
+          "id": "block_p2_4",
+          "source": {
+            "bbox": {
+              "height": 49,
+              "width": 1567,
+              "x": 210,
+              "y": 444
+            },
+            "page": 2
+          },
+          "text": "CS-221 Artificial Intelligence: Principles & Techniques4.0 A",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9680826663970947,
+            "mean": 0.9680826663970947,
+            "minimum": 0.9680826663970947,
+            "token_count": 1
+          },
+          "id": "block_p2_5",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 449
+            },
+            "page": 2
+          },
+          "text": "16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 1,
+            "maximum": 0.9614222049713135,
+            "mean": 0.8516210317611694,
+            "minimum": 0.1696447730064392,
+            "token_count": 8
+          },
+          "id": "block_p2_6",
+          "source": {
+            "bbox": {
+              "height": 48,
+              "width": 1589,
+              "x": 210,
+              "y": 548
+            },
+            "page": 2
+          },
+          "text": "CS-224N Natural Language Processing with Deep Learhifig A+",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9678643941879272,
+            "mean": 0.9678643941879272,
+            "minimum": 0.9678643941879272,
+            "token_count": 1
+          },
+          "id": "block_p2_7",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 553
+            },
+            "page": 2
+          },
+          "text": "16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9691355228424072,
+            "mean": 0.956559419631958,
+            "minimum": 0.9024271965026855,
+            "token_count": 6
+          },
+          "id": "block_p2_8",
+          "source": {
+            "bbox": {
+              "height": 48,
+              "width": 1567,
+              "x": 210,
+              "y": 652
+            },
+            "page": 2
+          },
+          "text": "CS-229 Machine Learning Foundations 4.0 A",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9678643941879272,
+            "mean": 0.9678643941879272,
+            "minimum": 0.9678643941879272,
+            "token_count": 1
+          },
+          "id": "block_p2_9",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 657
+            },
+            "page": 2
+          },
+          "text": "16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9676247239112854,
+            "mean": 0.9509322047233582,
+            "minimum": 0.9063562154769897,
+            "token_count": 7
+          },
+          "id": "block_p2_10",
+          "source": {
+            "bbox": {
+              "height": 49,
+              "width": 1579,
+              "x": 210,
+              "y": 756
+            },
+            "page": 2
+          },
+          "text": "CS-244 Advanced Topics in Networking 4.0 A-",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9550127387046814,
+            "mean": 0.9550127387046814,
+            "minimum": 0.9550127387046814,
+            "token_count": 1
+          },
+          "id": "block_p2_11",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 75,
+              "x": 2004,
+              "y": 761
+            },
+            "page": 2
+          },
+          "text": "14.8",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.964015781879425,
+            "mean": 0.962671160697937,
+            "minimum": 0.9613265991210938,
+            "token_count": 2
+          },
+          "id": "block_p2_12",
+          "source": {
+            "bbox": {
+              "height": 44,
+              "width": 478,
+              "x": 210,
+              "y": 986
+            },
+            "page": 2
+          },
+          "text": "Cumulative Summary:",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9691528081893921,
+            "mean": 0.9571976065635681,
+            "minimum": 0.9236058592796326,
+            "token_count": 11
+          },
+          "id": "block_p2_13",
+          "label": "Total Units Earned",
+          "source": {
+            "bbox": {
+              "height": 40,
+              "width": 1392,
+              "x": 209,
+              "y": 1073
+            },
+            "page": 2
+          },
+          "text": "Total Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction",
+          "type": "label_value",
+          "value": "46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction"
+        }
+      ],
+      "confidence": {
+        "low_confidence_token_count": 1,
+        "maximum": 0.9699797034263611,
+        "mean": 0.9408815503120422,
+        "minimum": 0.1696447730064392,
+        "token_count": 59
+      },
+      "height": 3300,
+      "page_number": 2,
+      "processing": {
+        "complexity": {
+          "level": "SIMPLE",
+          "score": 0.1722985561497326
+        },
+        "page_classification": "TEXT_AND_IMAGE",
+        "processing_strategy": "OCR",
+        "source_type": "OCR",
+        "timing": {
+          "edr_ms": 0.0,
+          "layout_ms": 0.0,
+          "native_extraction_ms": 0.664708,
+          "ocr_ms": 521.86562,
+          "preflight_ms": 0.455455,
+          "total_ms": 1007.117336
+        }
+      },
+      "rotation": 0,
+      "width": 2550
+    }
+  ],
+  "processing_manifest": {
+    "document": {
+      "pages": 2,
+      "type": "MIXED"
+    },
+    "engine": "edmo-ocr",
+    "pages": {
+      "failed": 0,
+      "native_text": 1,
+      "ocr": 1,
+      "ocr_enhanced": 0,
+      "skipped": 0
+    },
+    "strategy": "ADAPTIVE",
+    "version": "0.2.0"
+  },
+  "schema_version": "edr-0.2",
+  "sections": [
+    {
+      "blocks": [
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_2",
+          "label": "Student Name",
+          "source": {
+            "bbox": {
+              "height": 42,
+              "width": 1790,
+              "x": 208,
+              "y": 300
+            },
+            "page": 1
+          },
+          "text": "Student Name: Sophia Alexander Jones Student ID: SU-2024-8841",
+          "type": "label_value",
+          "value": "Sophia Alexander Jones Student ID: SU-2024-8841"
+        }
+      ],
+      "confidence": 1.0,
+      "fields": {
+        "student_name": "Sophia Alexander Jones Student ID: SU-2024-8841"
+      },
+      "id": "section_student_info",
+      "page_end": 1,
+      "page_start": 1,
+      "source": {
+        "bbox": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "page": 1
+      },
+      "title": "Student Information",
+      "type": "student_information"
+    },
+    {
+      "blocks": [
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 12
+          },
+          "id": "block_p1_3",
+          "label": "Degree",
+          "source": {
+            "bbox": {
+              "height": 42,
+              "width": 1864,
+              "x": 208,
+              "y": 384
+            },
+            "page": 1
+          },
+          "text": "Degree: Bachelor of Science in Computer Science Conferral Date: June 15, 2024",
+          "type": "label_value",
+          "value": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+        }
+      ],
+      "confidence": 1.0,
+      "fields": {
+        "degree": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+      },
+      "id": "section_academic_info",
+      "page_end": 1,
+      "page_start": 1,
+      "source": {
+        "bbox": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "page": 1
+      },
+      "title": "Academic Information",
+      "type": "academic_information"
+    },
+    {
+      "confidence": 0.8824067115783691,
+      "id": "section_course_history",
+      "page_end": 1,
+      "page_start": 1,
+      "source": {
+        "bbox": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "page": 1
+      },
+      "tables": [
+        {
+          "columns": [
+            {
+              "canonical_name": "course_code",
+              "column_index": 0,
+              "confidence": 0.0,
+              "name": "course_code",
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 1
+              }
+            },
+            {
+              "canonical_name": "course_title",
+              "column_index": 1,
+              "confidence": 0.0,
+              "name": "course_title",
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 1
+              }
+            },
+            {
+              "canonical_name": "credits",
+              "column_index": 2,
+              "confidence": 0.0,
+              "name": "credits",
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 1
+              }
+            }
+          ],
+          "confidence": {
+            "low_confidence_token_count": 4,
+            "maximum": 1.0,
+            "mean": 0.8824067115783691,
+            "minimum": 0.0,
+            "token_count": 43
+          },
+          "has_header": true,
+          "id": "table_p1_1",
+          "page_end": 2,
+          "page_start": 1,
+          "rows": [
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 169,
+                      "x": 208,
+                      "y": 762
+                    },
+                    "page": 1
+                  },
+                  "text": "CS-106A"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1153,
+                      "x": 625,
+                      "y": 762
+                    },
+                    "page": 1
+                  },
+                  "text": "Programming Methodologies 4.0 A"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 762
+                    },
+                    "page": 1
+                  },
+                  "text": "16.0"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "CS-106A",
+              "course_title": "Programming Methodologies 4.0 A",
+              "credits": "16.0",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 762
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 169,
+                      "x": 208,
+                      "y": 866
+                    },
+                    "page": 1
+                  },
+                  "text": "CS-106B"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1177,
+                      "x": 625,
+                      "y": 866
+                    },
+                    "page": 1
+                  },
+                  "text": "Programming Abstractions 4.0 A+"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 866
+                    },
+                    "page": 1
+                  },
+                  "text": "16.0"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "CS-106B",
+              "course_title": "Programming Abstractions 4.0 A+",
+              "credits": "16.0",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 866
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 178,
+                      "x": 208,
+                      "y": 970
+                    },
+                    "page": 1
+                  },
+                  "text": "MATH-51"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1153,
+                      "x": 625,
+                      "y": 970
+                    },
+                    "page": 1
+                  },
+                  "text": "Linear Algebra and Differential Calculus 5.0 A"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 970
+                    },
+                    "page": 1
+                  },
+                  "text": "20.0"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "MATH-51",
+              "course_title": "Linear Algebra and Differential Calculus 5.0 A",
+              "credits": "20.0",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 970
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 141,
+                      "x": 208,
+                      "y": 1074
+                    },
+                    "page": 1
+                  },
+                  "text": "CS-103"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1167,
+                      "x": 625,
+                      "y": 1074
+                    },
+                    "page": 1
+                  },
+                  "text": "Mathematical Foundations of Computing 4.0 A-"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 1074
+                    },
+                    "page": 1
+                  },
+                  "text": "14.8"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "CS-103",
+              "course_title": "Mathematical Foundations of Computing 4.0 A-",
+              "credits": "14.8",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 1074
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 141,
+                      "x": 208,
+                      "y": 1178
+                    },
+                    "page": 1
+                  },
+                  "text": "CS-107"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1153,
+                      "x": 625,
+                      "y": 1178
+                    },
+                    "page": 1
+                  },
+                  "text": "Computer Organization and Systems 4.0 A"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 1178
+                    },
+                    "page": 1
+                  },
+                  "text": "16.0"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "CS-107",
+              "course_title": "Computer Organization and Systems 4.0 A",
+              "credits": "16.0",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 1178
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 141,
+                      "x": 208,
+                      "y": 1283
+                    },
+                    "page": 1
+                  },
+                  "text": "CS-110"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1153,
+                      "x": 625,
+                      "y": 1283
+                    },
+                    "page": 1
+                  },
+                  "text": "Principles of Computer Systems 4.0 A"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 1283
+                    },
+                    "page": 1
+                  },
+                  "text": "16.0"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "CS-110",
+              "course_title": "Principles of Computer Systems 4.0 A",
+              "credits": "16.0",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 1283
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 141,
+                      "x": 208,
+                      "y": 1387
+                    },
+                    "page": 1
+                  },
+                  "text": "CS-161"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 1177,
+                      "x": 625,
+                      "y": 1387
+                    },
+                    "page": 1
+                  },
+                  "text": "Design and Analysis of Algorithms 4.0 A+"
+                },
+                {
+                  "confidence": 1.0,
+                  "source": {
+                    "bbox": {
+                      "height": 39,
+                      "width": 81,
+                      "x": 2000,
+                      "y": 1387
+                    },
+                    "page": 1
+                  },
+                  "text": "16.0"
+                }
+              ],
+              "confidence": 1.0,
+              "course_code": "CS-161",
+              "course_title": "Design and Analysis of Algorithms 4.0 A+",
+              "credits": "16.0",
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1873,
+                  "x": 208,
+                  "y": 1387
+                },
+                "page": 1
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.96467125415802,
+                  "source": {
+                    "bbox": {
+                      "height": 32,
+                      "width": 123,
+                      "x": 2003,
+                      "y": 344
+                    },
+                    "page": 2
+                  },
+                  "text": "Points"
+                },
+                {
+                  "confidence": 0.0,
+                  "source": {
+                    "bbox": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0,
+                      "y": 0
+                    },
+                    "page": 2
+                  },
+                  "text": ""
+                }
+              ],
+              "confidence": 0.96467125415802,
+              "course_code": "Points",
+              "course_title": "",
+              "source": {
+                "bbox": {
+                  "height": 32,
+                  "width": 123,
+                  "x": 2003,
+                  "y": 344
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.9116972088813782,
+                  "source": {
+                    "bbox": {
+                      "height": 49,
+                      "width": 131,
+                      "x": 210,
+                      "y": 444
+                    },
+                    "page": 2
+                  },
+                  "text": "CS-221"
+                },
+                {
+                  "confidence": 0.9381435513496399,
+                  "source": {
+                    "bbox": {
+                      "height": 40,
+                      "width": 888,
+                      "x": 626,
+                      "y": 448
+                    },
+                    "page": 2
+                  },
+                  "text": "Artificial Intelligence: Principles & Techniques4.0"
+                },
+                {
+                  "confidence": 0.9636280536651611,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 26,
+                      "x": 1751,
+                      "y": 448
+                    },
+                    "page": 2
+                  },
+                  "text": "A"
+                }
+              ],
+              "confidence": 0.9380061626434326,
+              "course_code": "CS-221",
+              "course_title": "Artificial Intelligence: Principles & Techniques4.0",
+              "grade": "A",
+              "source": {
+                "bbox": {
+                  "height": 49,
+                  "width": 1567,
+                  "x": 210,
+                  "y": 444
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.9680826663970947,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 74,
+                      "x": 2004,
+                      "y": 449
+                    },
+                    "page": 2
+                  },
+                  "text": "16.0"
+                },
+                {
+                  "confidence": 0.0,
+                  "source": {
+                    "bbox": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0,
+                      "y": 0
+                    },
+                    "page": 2
+                  },
+                  "text": ""
+                }
+              ],
+              "confidence": 0.9680826663970947,
+              "course_code": "16.0",
+              "course_title": "",
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 74,
+                  "x": 2004,
+                  "y": 449
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.910076916217804,
+                  "source": {
+                    "bbox": {
+                      "height": 48,
+                      "width": 166,
+                      "x": 210,
+                      "y": 548
+                    },
+                    "page": 2
+                  },
+                  "text": "CS-224N"
+                },
+                {
+                  "confidence": 0.8240923285484314,
+                  "source": {
+                    "bbox": {
+                      "height": 40,
+                      "width": 913,
+                      "x": 628,
+                      "y": 552
+                    },
+                    "page": 2
+                  },
+                  "text": "Natural Language Processing with Deep Learhifig"
+                },
+                {
+                  "confidence": 0.9583370685577393,
+                  "source": {
+                    "bbox": {
+                      "height": 32,
+                      "width": 48,
+                      "x": 1751,
+                      "y": 552
+                    },
+                    "page": 2
+                  },
+                  "text": "A+"
+                }
+              ],
+              "confidence": 0.8516209125518799,
+              "course_code": "CS-224N",
+              "course_title": "Natural Language Processing with Deep Learhifig",
+              "grade": "A+",
+              "source": {
+                "bbox": {
+                  "height": 48,
+                  "width": 1589,
+                  "x": 210,
+                  "y": 548
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.9678643941879272,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 74,
+                      "x": 2004,
+                      "y": 553
+                    },
+                    "page": 2
+                  },
+                  "text": "16.0"
+                },
+                {
+                  "confidence": 0.0,
+                  "source": {
+                    "bbox": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0,
+                      "y": 0
+                    },
+                    "page": 2
+                  },
+                  "text": ""
+                }
+              ],
+              "confidence": 0.9678643941879272,
+              "course_code": "16.0",
+              "course_title": "",
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 74,
+                  "x": 2004,
+                  "y": 553
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.9024271965026855,
+                  "source": {
+                    "bbox": {
+                      "height": 48,
+                      "width": 136,
+                      "x": 210,
+                      "y": 652
+                    },
+                    "page": 2
+                  },
+                  "text": "CS-229"
+                },
+                {
+                  "confidence": 0.9675877094268799,
+                  "source": {
+                    "bbox": {
+                      "height": 40,
+                      "width": 567,
+                      "x": 628,
+                      "y": 656
+                    },
+                    "page": 2
+                  },
+                  "text": "Machine Learning Foundations"
+                },
+                {
+                  "confidence": 0.9682328701019287,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 52,
+                      "x": 1459,
+                      "y": 657
+                    },
+                    "page": 2
+                  },
+                  "text": "4.0"
+                },
+                {
+                  "confidence": 0.9659333229064941,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 26,
+                      "x": 1751,
+                      "y": 656
+                    },
+                    "page": 2
+                  },
+                  "text": "A"
+                }
+              ],
+              "confidence": 0.9565593600273132,
+              "course_code": "CS-229",
+              "course_title": "Machine Learning Foundations",
+              "credits": "4.0",
+              "grade": "A",
+              "source": {
+                "bbox": {
+                  "height": 48,
+                  "width": 1567,
+                  "x": 210,
+                  "y": 652
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.9678643941879272,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 74,
+                      "x": 2004,
+                      "y": 657
+                    },
+                    "page": 2
+                  },
+                  "text": "16.0"
+                },
+                {
+                  "confidence": 0.0,
+                  "source": {
+                    "bbox": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0,
+                      "y": 0
+                    },
+                    "page": 2
+                  },
+                  "text": ""
+                }
+              ],
+              "confidence": 0.9678643941879272,
+              "course_code": "16.0",
+              "course_title": "",
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 74,
+                  "x": 2004,
+                  "y": 657
+                },
+                "page": 2
+              }
+            },
+            {
+              "cells": [
+                {
+                  "confidence": 0.9063562154769897,
+                  "source": {
+                    "bbox": {
+                      "height": 49,
+                      "width": 138,
+                      "x": 210,
+                      "y": 756
+                    },
+                    "page": 2
+                  },
+                  "text": "CS-244"
+                },
+                {
+                  "confidence": 0.9638915061950684,
+                  "source": {
+                    "bbox": {
+                      "height": 40,
+                      "width": 579,
+                      "x": 626,
+                      "y": 760
+                    },
+                    "page": 2
+                  },
+                  "text": "Advanced Topics in Networking"
+                },
+                {
+                  "confidence": 0.9676204919815063,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 54,
+                      "x": 1459,
+                      "y": 761
+                    },
+                    "page": 2
+                  },
+                  "text": "4.0"
+                },
+                {
+                  "confidence": 0.9269829392433167,
+                  "source": {
+                    "bbox": {
+                      "height": 31,
+                      "width": 38,
+                      "x": 1751,
+                      "y": 760
+                    },
+                    "page": 2
+                  },
+                  "text": "A-"
+                }
+              ],
+              "confidence": 0.9509322643280029,
+              "course_code": "CS-244",
+              "course_title": "Advanced Topics in Networking",
+              "credits": "4.0",
+              "grade": "A-",
+              "source": {
+                "bbox": {
+                  "height": 49,
+                  "width": 1579,
+                  "x": 210,
+                  "y": 756
+                },
+                "page": 2
+              }
+            }
+          ],
+          "source": {
+            "bbox": {
+              "height": 1082,
+              "width": 1918,
+              "x": 208,
+              "y": 344
+            },
+            "page": 1
+          },
+          "table_type": "course_records"
+        }
+      ],
+      "title": "Course History",
+      "type": "course_history"
+    },
+    {
+      "blocks": [
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 6
+          },
+          "id": "block_p1_1",
+          "source": {
+            "bbox": {
+              "height": 69,
+              "width": 2229,
+              "x": 208,
+              "y": 154
+            },
+            "page": 1
+          },
+          "text": "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT",
+          "type": "header"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 5
+          },
+          "id": "block_p1_4",
+          "source": {
+            "bbox": {
+              "height": 46,
+              "width": 873,
+              "x": 208,
+              "y": 547
+            },
+            "page": 1
+          },
+          "text": "Course History & Academic Records",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 7
+          },
+          "id": "block_p1_5",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1919,
+              "x": 208,
+              "y": 658
+            },
+            "page": 1
+          },
+          "text": "Course Code Course Title Credits Grade Points",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 6
+          },
+          "id": "block_p1_6",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 762
+            },
+            "page": 1
+          },
+          "text": "CS-106A Programming Methodologies 4.0 A 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 6
+          },
+          "id": "block_p1_7",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 866
+            },
+            "page": 1
+          },
+          "text": "CS-106B Programming Abstractions 4.0 A+ 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 9
+          },
+          "id": "block_p1_8",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 970
+            },
+            "page": 1
+          },
+          "text": "MATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_9",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1074
+            },
+            "page": 1
+          },
+          "text": "CS-103 Mathematical Foundations of Computing 4.0 A- 14.8",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_10",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1178
+            },
+            "page": 1
+          },
+          "text": "CS-107 Computer Organization and Systems 4.0 A 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 8
+          },
+          "id": "block_p1_11",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1283
+            },
+            "page": 1
+          },
+          "text": "CS-110 Principles of Computer Systems 4.0 A 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "token_count": 9
+          },
+          "id": "block_p1_12",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1387
+            },
+            "page": 1
+          },
+          "text": "CS-161 Design and Analysis of Algorithms 4.0 A+ 16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.965812623500824,
+            "mean": 0.9527447819709778,
+            "minimum": 0.9310247898101807,
+            "token_count": 7
+          },
+          "id": "block_p2_1",
+          "source": {
+            "bbox": {
+              "height": 55,
+              "width": 1638,
+              "x": 210,
+              "y": 165
+            },
+            "page": 2
+          },
+          "text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)",
+          "type": "header"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9692987203598022,
+            "mean": 0.964982271194458,
+            "minimum": 0.9558460116386414,
+            "token_count": 6
+          },
+          "id": "block_p2_2",
+          "source": {
+            "bbox": {
+              "height": 50,
+              "width": 1659,
+              "x": 210,
+              "y": 340
+            },
+            "page": 2
+          },
+          "text": "Course Code Course Title Credits Grade",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.96467125415802,
+            "mean": 0.96467125415802,
+            "minimum": 0.96467125415802,
+            "token_count": 1
+          },
+          "id": "block_p2_3",
+          "source": {
+            "bbox": {
+              "height": 32,
+              "width": 123,
+              "x": 2003,
+              "y": 344
+            },
+            "page": 2
+          },
+          "text": "Points",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9699797034263611,
+            "mean": 0.9380061030387878,
+            "minimum": 0.9038845300674438,
+            "token_count": 7
+          },
+          "id": "block_p2_4",
+          "source": {
+            "bbox": {
+              "height": 49,
+              "width": 1567,
+              "x": 210,
+              "y": 444
+            },
+            "page": 2
+          },
+          "text": "CS-221 Artificial Intelligence: Principles & Techniques4.0 A",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9680826663970947,
+            "mean": 0.9680826663970947,
+            "minimum": 0.9680826663970947,
+            "token_count": 1
+          },
+          "id": "block_p2_5",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 449
+            },
+            "page": 2
+          },
+          "text": "16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 1,
+            "maximum": 0.9614222049713135,
+            "mean": 0.8516210317611694,
+            "minimum": 0.1696447730064392,
+            "token_count": 8
+          },
+          "id": "block_p2_6",
+          "source": {
+            "bbox": {
+              "height": 48,
+              "width": 1589,
+              "x": 210,
+              "y": 548
+            },
+            "page": 2
+          },
+          "text": "CS-224N Natural Language Processing with Deep Learhifig A+",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9678643941879272,
+            "mean": 0.9678643941879272,
+            "minimum": 0.9678643941879272,
+            "token_count": 1
+          },
+          "id": "block_p2_7",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 553
+            },
+            "page": 2
+          },
+          "text": "16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9691355228424072,
+            "mean": 0.956559419631958,
+            "minimum": 0.9024271965026855,
+            "token_count": 6
+          },
+          "id": "block_p2_8",
+          "source": {
+            "bbox": {
+              "height": 48,
+              "width": 1567,
+              "x": 210,
+              "y": 652
+            },
+            "page": 2
+          },
+          "text": "CS-229 Machine Learning Foundations 4.0 A",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9678643941879272,
+            "mean": 0.9678643941879272,
+            "minimum": 0.9678643941879272,
+            "token_count": 1
+          },
+          "id": "block_p2_9",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 657
+            },
+            "page": 2
+          },
+          "text": "16.0",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9676247239112854,
+            "mean": 0.9509322047233582,
+            "minimum": 0.9063562154769897,
+            "token_count": 7
+          },
+          "id": "block_p2_10",
+          "source": {
+            "bbox": {
+              "height": 49,
+              "width": 1579,
+              "x": 210,
+              "y": 756
+            },
+            "page": 2
+          },
+          "text": "CS-244 Advanced Topics in Networking 4.0 A-",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9550127387046814,
+            "mean": 0.9550127387046814,
+            "minimum": 0.9550127387046814,
+            "token_count": 1
+          },
+          "id": "block_p2_11",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 75,
+              "x": 2004,
+              "y": 761
+            },
+            "page": 2
+          },
+          "text": "14.8",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.964015781879425,
+            "mean": 0.962671160697937,
+            "minimum": 0.9613265991210938,
+            "token_count": 2
+          },
+          "id": "block_p2_12",
+          "source": {
+            "bbox": {
+              "height": 44,
+              "width": 478,
+              "x": 210,
+              "y": 986
+            },
+            "page": 2
+          },
+          "text": "Cumulative Summary:",
+          "type": "paragraph"
+        },
+        {
+          "confidence": {
+            "low_confidence_token_count": 0,
+            "maximum": 0.9691528081893921,
+            "mean": 0.9571976065635681,
+            "minimum": 0.9236058592796326,
+            "token_count": 11
+          },
+          "id": "block_p2_13",
+          "label": "Total Units Earned",
+          "source": {
+            "bbox": {
+              "height": 40,
+              "width": 1392,
+              "x": 209,
+              "y": 1073
+            },
+            "page": 2
+          },
+          "text": "Total Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction",
+          "type": "label_value",
+          "value": "46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction"
+        }
+      ],
+      "confidence": 0.97337406873703,
+      "id": "section_other",
+      "page_end": 1,
+      "page_start": 1,
+      "source": {
+        "bbox": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "page": 1
+      },
+      "title": "General Content",
+      "type": "other"
+    }
+  ],
+  "tables": [
+    {
+      "columns": [
+        {
+          "canonical_name": "course_code",
+          "column_index": 0,
+          "confidence": 0.0,
+          "name": "course_code",
+          "source": {
+            "bbox": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "page": 1
+          }
+        },
+        {
+          "canonical_name": "course_title",
+          "column_index": 1,
+          "confidence": 0.0,
+          "name": "course_title",
+          "source": {
+            "bbox": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "page": 1
+          }
+        },
+        {
+          "canonical_name": "credits",
+          "column_index": 2,
+          "confidence": 0.0,
+          "name": "credits",
+          "source": {
+            "bbox": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            },
+            "page": 1
+          }
+        }
+      ],
+      "confidence": {
+        "low_confidence_token_count": 4,
+        "maximum": 1.0,
+        "mean": 0.8824067115783691,
+        "minimum": 0.0,
+        "token_count": 43
+      },
+      "has_header": true,
+      "id": "table_p1_1",
+      "page_end": 2,
+      "page_start": 1,
+      "rows": [
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 169,
+                  "x": 208,
+                  "y": 762
+                },
+                "page": 1
+              },
+              "text": "CS-106A"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1153,
+                  "x": 625,
+                  "y": 762
+                },
+                "page": 1
+              },
+              "text": "Programming Methodologies 4.0 A"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 762
+                },
+                "page": 1
+              },
+              "text": "16.0"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "CS-106A",
+          "course_title": "Programming Methodologies 4.0 A",
+          "credits": "16.0",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 762
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 169,
+                  "x": 208,
+                  "y": 866
+                },
+                "page": 1
+              },
+              "text": "CS-106B"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1177,
+                  "x": 625,
+                  "y": 866
+                },
+                "page": 1
+              },
+              "text": "Programming Abstractions 4.0 A+"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 866
+                },
+                "page": 1
+              },
+              "text": "16.0"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "CS-106B",
+          "course_title": "Programming Abstractions 4.0 A+",
+          "credits": "16.0",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 866
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 178,
+                  "x": 208,
+                  "y": 970
+                },
+                "page": 1
+              },
+              "text": "MATH-51"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1153,
+                  "x": 625,
+                  "y": 970
+                },
+                "page": 1
+              },
+              "text": "Linear Algebra and Differential Calculus 5.0 A"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 970
+                },
+                "page": 1
+              },
+              "text": "20.0"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "MATH-51",
+          "course_title": "Linear Algebra and Differential Calculus 5.0 A",
+          "credits": "20.0",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 970
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 141,
+                  "x": 208,
+                  "y": 1074
+                },
+                "page": 1
+              },
+              "text": "CS-103"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1167,
+                  "x": 625,
+                  "y": 1074
+                },
+                "page": 1
+              },
+              "text": "Mathematical Foundations of Computing 4.0 A-"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 1074
+                },
+                "page": 1
+              },
+              "text": "14.8"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "CS-103",
+          "course_title": "Mathematical Foundations of Computing 4.0 A-",
+          "credits": "14.8",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1074
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 141,
+                  "x": 208,
+                  "y": 1178
+                },
+                "page": 1
+              },
+              "text": "CS-107"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1153,
+                  "x": 625,
+                  "y": 1178
+                },
+                "page": 1
+              },
+              "text": "Computer Organization and Systems 4.0 A"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 1178
+                },
+                "page": 1
+              },
+              "text": "16.0"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "CS-107",
+          "course_title": "Computer Organization and Systems 4.0 A",
+          "credits": "16.0",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1178
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 141,
+                  "x": 208,
+                  "y": 1283
+                },
+                "page": 1
+              },
+              "text": "CS-110"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1153,
+                  "x": 625,
+                  "y": 1283
+                },
+                "page": 1
+              },
+              "text": "Principles of Computer Systems 4.0 A"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 1283
+                },
+                "page": 1
+              },
+              "text": "16.0"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "CS-110",
+          "course_title": "Principles of Computer Systems 4.0 A",
+          "credits": "16.0",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1283
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 141,
+                  "x": 208,
+                  "y": 1387
+                },
+                "page": 1
+              },
+              "text": "CS-161"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 1177,
+                  "x": 625,
+                  "y": 1387
+                },
+                "page": 1
+              },
+              "text": "Design and Analysis of Algorithms 4.0 A+"
+            },
+            {
+              "confidence": 1.0,
+              "source": {
+                "bbox": {
+                  "height": 39,
+                  "width": 81,
+                  "x": 2000,
+                  "y": 1387
+                },
+                "page": 1
+              },
+              "text": "16.0"
+            }
+          ],
+          "confidence": 1.0,
+          "course_code": "CS-161",
+          "course_title": "Design and Analysis of Algorithms 4.0 A+",
+          "credits": "16.0",
+          "source": {
+            "bbox": {
+              "height": 39,
+              "width": 1873,
+              "x": 208,
+              "y": 1387
+            },
+            "page": 1
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.96467125415802,
+              "source": {
+                "bbox": {
+                  "height": 32,
+                  "width": 123,
+                  "x": 2003,
+                  "y": 344
+                },
+                "page": 2
+              },
+              "text": "Points"
+            },
+            {
+              "confidence": 0.0,
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 2
+              },
+              "text": ""
+            }
+          ],
+          "confidence": 0.96467125415802,
+          "course_code": "Points",
+          "course_title": "",
+          "source": {
+            "bbox": {
+              "height": 32,
+              "width": 123,
+              "x": 2003,
+              "y": 344
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.9116972088813782,
+              "source": {
+                "bbox": {
+                  "height": 49,
+                  "width": 131,
+                  "x": 210,
+                  "y": 444
+                },
+                "page": 2
+              },
+              "text": "CS-221"
+            },
+            {
+              "confidence": 0.9381435513496399,
+              "source": {
+                "bbox": {
+                  "height": 40,
+                  "width": 888,
+                  "x": 626,
+                  "y": 448
+                },
+                "page": 2
+              },
+              "text": "Artificial Intelligence: Principles & Techniques4.0"
+            },
+            {
+              "confidence": 0.9636280536651611,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 26,
+                  "x": 1751,
+                  "y": 448
+                },
+                "page": 2
+              },
+              "text": "A"
+            }
+          ],
+          "confidence": 0.9380061626434326,
+          "course_code": "CS-221",
+          "course_title": "Artificial Intelligence: Principles & Techniques4.0",
+          "grade": "A",
+          "source": {
+            "bbox": {
+              "height": 49,
+              "width": 1567,
+              "x": 210,
+              "y": 444
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.9680826663970947,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 74,
+                  "x": 2004,
+                  "y": 449
+                },
+                "page": 2
+              },
+              "text": "16.0"
+            },
+            {
+              "confidence": 0.0,
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 2
+              },
+              "text": ""
+            }
+          ],
+          "confidence": 0.9680826663970947,
+          "course_code": "16.0",
+          "course_title": "",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 449
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.910076916217804,
+              "source": {
+                "bbox": {
+                  "height": 48,
+                  "width": 166,
+                  "x": 210,
+                  "y": 548
+                },
+                "page": 2
+              },
+              "text": "CS-224N"
+            },
+            {
+              "confidence": 0.8240923285484314,
+              "source": {
+                "bbox": {
+                  "height": 40,
+                  "width": 913,
+                  "x": 628,
+                  "y": 552
+                },
+                "page": 2
+              },
+              "text": "Natural Language Processing with Deep Learhifig"
+            },
+            {
+              "confidence": 0.9583370685577393,
+              "source": {
+                "bbox": {
+                  "height": 32,
+                  "width": 48,
+                  "x": 1751,
+                  "y": 552
+                },
+                "page": 2
+              },
+              "text": "A+"
+            }
+          ],
+          "confidence": 0.8516209125518799,
+          "course_code": "CS-224N",
+          "course_title": "Natural Language Processing with Deep Learhifig",
+          "grade": "A+",
+          "source": {
+            "bbox": {
+              "height": 48,
+              "width": 1589,
+              "x": 210,
+              "y": 548
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.9678643941879272,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 74,
+                  "x": 2004,
+                  "y": 553
+                },
+                "page": 2
+              },
+              "text": "16.0"
+            },
+            {
+              "confidence": 0.0,
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 2
+              },
+              "text": ""
+            }
+          ],
+          "confidence": 0.9678643941879272,
+          "course_code": "16.0",
+          "course_title": "",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 553
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.9024271965026855,
+              "source": {
+                "bbox": {
+                  "height": 48,
+                  "width": 136,
+                  "x": 210,
+                  "y": 652
+                },
+                "page": 2
+              },
+              "text": "CS-229"
+            },
+            {
+              "confidence": 0.9675877094268799,
+              "source": {
+                "bbox": {
+                  "height": 40,
+                  "width": 567,
+                  "x": 628,
+                  "y": 656
+                },
+                "page": 2
+              },
+              "text": "Machine Learning Foundations"
+            },
+            {
+              "confidence": 0.9682328701019287,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 52,
+                  "x": 1459,
+                  "y": 657
+                },
+                "page": 2
+              },
+              "text": "4.0"
+            },
+            {
+              "confidence": 0.9659333229064941,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 26,
+                  "x": 1751,
+                  "y": 656
+                },
+                "page": 2
+              },
+              "text": "A"
+            }
+          ],
+          "confidence": 0.9565593600273132,
+          "course_code": "CS-229",
+          "course_title": "Machine Learning Foundations",
+          "credits": "4.0",
+          "grade": "A",
+          "source": {
+            "bbox": {
+              "height": 48,
+              "width": 1567,
+              "x": 210,
+              "y": 652
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.9678643941879272,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 74,
+                  "x": 2004,
+                  "y": 657
+                },
+                "page": 2
+              },
+              "text": "16.0"
+            },
+            {
+              "confidence": 0.0,
+              "source": {
+                "bbox": {
+                  "height": 0,
+                  "width": 0,
+                  "x": 0,
+                  "y": 0
+                },
+                "page": 2
+              },
+              "text": ""
+            }
+          ],
+          "confidence": 0.9678643941879272,
+          "course_code": "16.0",
+          "course_title": "",
+          "source": {
+            "bbox": {
+              "height": 31,
+              "width": 74,
+              "x": 2004,
+              "y": 657
+            },
+            "page": 2
+          }
+        },
+        {
+          "cells": [
+            {
+              "confidence": 0.9063562154769897,
+              "source": {
+                "bbox": {
+                  "height": 49,
+                  "width": 138,
+                  "x": 210,
+                  "y": 756
+                },
+                "page": 2
+              },
+              "text": "CS-244"
+            },
+            {
+              "confidence": 0.9638915061950684,
+              "source": {
+                "bbox": {
+                  "height": 40,
+                  "width": 579,
+                  "x": 626,
+                  "y": 760
+                },
+                "page": 2
+              },
+              "text": "Advanced Topics in Networking"
+            },
+            {
+              "confidence": 0.9676204919815063,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 54,
+                  "x": 1459,
+                  "y": 761
+                },
+                "page": 2
+              },
+              "text": "4.0"
+            },
+            {
+              "confidence": 0.9269829392433167,
+              "source": {
+                "bbox": {
+                  "height": 31,
+                  "width": 38,
+                  "x": 1751,
+                  "y": 760
+                },
+                "page": 2
+              },
+              "text": "A-"
+            }
+          ],
+          "confidence": 0.9509322643280029,
+          "course_code": "CS-244",
+          "course_title": "Advanced Topics in Networking",
+          "credits": "4.0",
+          "grade": "A-",
+          "source": {
+            "bbox": {
+              "height": 49,
+              "width": 1579,
+              "x": 210,
+              "y": 756
+            },
+            "page": 2
+          }
+        }
+      ],
+      "source": {
+        "bbox": {
+          "height": 1082,
+          "width": 1918,
+          "x": 208,
+          "y": 344
+        },
+        "page": 1
+      },
+      "table_type": "course_records"
+    }
+  ]
+}

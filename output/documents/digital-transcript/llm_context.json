@@ -1,0 +1,160 @@
+{
+  "academic": {
+    "degree": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+  },
+  "document": {
+    "language": "eng",
+    "page_count": 2,
+    "pages_present": [
+      1,
+      2
+    ],
+    "type": "transcript"
+  },
+  "document_header": "16.0",
+  "estimated_tokens": 669,
+  "schema_version": "llm-context-0.1",
+  "sections": [
+    {
+      "fields": {
+        "Student Name": "Sophia Alexander Jones Student ID: SU-2024-8841",
+        "student_name": "Sophia Alexander Jones Student ID: SU-2024-8841"
+      },
+      "page": 1,
+      "title": "Student Information",
+      "type": "student_information"
+    },
+    {
+      "fields": {
+        "Degree": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024",
+        "degree": "Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+      },
+      "page": 1,
+      "title": "Academic Information",
+      "type": "academic_information"
+    },
+    {
+      "fields": {
+        "Total Units Earned": "46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction"
+      },
+      "page": 1,
+      "paragraphs": [
+        "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT",
+        "Course History & Academic Records",
+        "Course Code Course Title Credits Grade Points",
+        "CS-106A Programming Methodologies 4.0 A 16.0",
+        "CS-106B Programming Abstractions 4.0 A+ 16.0",
+        "MATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0",
+        "CS-103 Mathematical Foundations of Computing 4.0 A- 14.8",
+        "CS-107 Computer Organization and Systems 4.0 A 16.0",
+        "CS-110 Principles of Computer Systems 4.0 A 16.0",
+        "CS-161 Design and Analysis of Algorithms 4.0 A+ 16.0",
+        "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)",
+        "Course Code Course Title Credits Grade",
+        "Points",
+        "CS-221 Artificial Intelligence: Principles & Techniques4.0 A",
+        "CS-224N Natural Language Processing with Deep Learhifig A+",
+        "CS-229 Machine Learning Foundations 4.0 A",
+        "16.0",
+        "CS-244 Advanced Topics in Networking 4.0 A-",
+        "14.8",
+        "Cumulative Summary:"
+      ],
+      "title": "General Content",
+      "type": "other"
+    }
+  ],
+  "student": {
+    "student_name": "Sophia Alexander Jones Student ID: SU-2024-8841"
+  },
+  "tables": [
+    {
+      "headers": [
+        "course_code",
+        "course_title",
+        "credits"
+      ],
+      "page_range": [
+        1,
+        2
+      ],
+      "rows": [
+        [
+          "CS-106A",
+          "Programming Methodologies 4.0 A",
+          "16.0"
+        ],
+        [
+          "CS-106B",
+          "Programming Abstractions 4.0 A+",
+          "16.0"
+        ],
+        [
+          "MATH-51",
+          "Linear Algebra and Differential Calculus 5.0 A",
+          "20.0"
+        ],
+        [
+          "CS-103",
+          "Mathematical Foundations of Computing 4.0 A-",
+          "14.8"
+        ],
+        [
+          "CS-107",
+          "Computer Organization and Systems 4.0 A",
+          "16.0"
+        ],
+        [
+          "CS-110",
+          "Principles of Computer Systems 4.0 A",
+          "16.0"
+        ],
+        [
+          "CS-161",
+          "Design and Analysis of Algorithms 4.0 A+",
+          "16.0"
+        ],
+        [
+          "Points",
+          ""
+        ],
+        [
+          "CS-221",
+          "Artificial Intelligence: Principles & Techniques4.0",
+          "A"
+        ],
+        [
+          "16.0",
+          ""
+        ],
+        [
+          "CS-224N",
+          "Natural Language Processing with Deep Learhifig",
+          "A+"
+        ],
+        [
+          "16.0",
+          ""
+        ],
+        [
+          "CS-229",
+          "Machine Learning Foundations",
+          "4.0",
+          "A"
+        ],
+        [
+          "16.0",
+          ""
+        ],
+        [
+          "CS-244",
+          "Advanced Topics in Networking",
+          "4.0",
+          "A-"
+        ]
+      ],
+      "table_id": "table_p1_1",
+      "type": "course_records"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++20
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AccessModifierOffset: -2
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: Align
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBraces: Attach
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<edmo/.*'
+    Priority: 1
+  - Regex: '^<opencv2/.*'
+    Priority: 2
+  - Regex: '^<tesseract/.*'
+    Priority: 3
+  - Regex: '^<leptonica/.*'
+    Priority: 4
+  - Regex: '^<poppler/.*'
+    Priority: 5
+  - Regex: '^<nlohmann/.*'
+    Priority: 6
+  - Regex: '^<spdlog/.*'
+    Priority: 7
+  - Regex: '^<gtest/.*'
+    Priority: 8
+  - Regex: '^<[a-z_0-9]+>'
+    Priority: 9
+  - Regex: '.*'
+    Priority: 10
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+PointerAlignment: Left
+ReferenceAlignment: Left
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInContainerLiterals: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false

@@ -1,0 +1,2820 @@
+{
+  "confidence": 0.970869243144989,
+  "document": {
+    "file_size_bytes": 3199,
+    "id": "doc_1791450318282_ca7a16",
+    "page_count": 2,
+    "source": "tests/fixtures/digital-transcript.pdf",
+    "type": "pdf"
+  },
+  "engine": {
+    "name": "edmo-ocr",
+    "provider": "tesseract",
+    "version": "0.2.0"
+  },
+  "id": "proc_1791450318282_1133db",
+  "pages": [
+    {
+      "blocks": [
+        {
+          "bbox": {
+            "height": 272,
+            "width": 2229,
+            "x": 208,
+            "y": 154
+          },
+          "confidence": 1.0,
+          "lines": [
+            {
+              "bbox": {
+                "height": 69,
+                "width": 2229,
+                "x": 208,
+                "y": 154
+              },
+              "confidence": 1.0,
+              "text": "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 69,
+                    "width": 417,
+                    "x": 208,
+                    "y": 154
+                  },
+                  "confidence": 1.0,
+                  "text": "STANFORD"
+                },
+                {
+                  "bbox": {
+                    "height": 69,
+                    "width": 450,
+                    "x": 646,
+                    "y": 154
+                  },
+                  "confidence": 1.0,
+                  "text": "UNIVERSITY"
+                },
+                {
+                  "bbox": {
+                    "height": 69,
+                    "width": 25,
+                    "x": 1117,
+                    "y": 154
+                  },
+                  "confidence": 1.0,
+                  "text": "-"
+                },
+                {
+                  "bbox": {
+                    "height": 69,
+                    "width": 346,
+                    "x": 1163,
+                    "y": 154
+                  },
+                  "confidence": 1.0,
+                  "text": "OFFICIAL"
+                },
+                {
+                  "bbox": {
+                    "height": 69,
+                    "width": 404,
+                    "x": 1529,
+                    "y": 154
+                  },
+                  "confidence": 1.0,
+                  "text": "ACADEMIC"
+                },
+                {
+                  "bbox": {
+                    "height": 69,
+                    "width": 483,
+                    "x": 1954,
+                    "y": 154
+                  },
+                  "confidence": 1.0,
+                  "text": "TRANSCRIPT"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 42,
+                "width": 1790,
+                "x": 208,
+                "y": 300
+              },
+              "confidence": 1.0,
+              "text": "Student Name: Sophia Alexander Jones Student ID: SU-2024-8841",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 158,
+                    "x": 208,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "Student"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 135,
+                    "x": 379,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "Name:"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 143,
+                    "x": 527,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "Sophia"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 206,
+                    "x": 682,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "Alexander"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 122,
+                    "x": 901,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "Jones"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 158,
+                    "x": 1458,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "Student"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 59,
+                    "x": 1629,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "ID:"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 298,
+                    "x": 1700,
+                    "y": 300
+                  },
+                  "confidence": 1.0,
+                  "text": "SU-2024-8841"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 42,
+                "width": 1864,
+                "x": 208,
+                "y": 384
+              },
+              "confidence": 1.0,
+              "text": "Degree: Bachelor of Science in Computer Science Conferral Date: June 15, 2024",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 163,
+                    "x": 208,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Degree:"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 181,
+                    "x": 384,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Bachelor"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 38,
+                    "x": 578,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "of"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 163,
+                    "x": 629,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Science"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 36,
+                    "x": 804,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "in"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 201,
+                    "x": 853,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Computer"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 163,
+                    "x": 1067,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Science"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 188,
+                    "x": 1458,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Conferral"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 110,
+                    "x": 1660,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "Date:"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 99,
+                    "x": 1782,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "June"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 64,
+                    "x": 1894,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "15,"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 102,
+                    "x": 1970,
+                    "y": 384
+                  },
+                  "confidence": 1.0,
+                  "text": "2024"
+                }
+              ]
+            }
+          ],
+          "text": "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT\nStudent Name: Sophia Alexander Jones Student ID: SU-2024-8841\nDegree: Bachelor of Science in Computer Science Conferral Date: June 15, 2024"
+        },
+        {
+          "bbox": {
+            "height": 879,
+            "width": 1919,
+            "x": 208,
+            "y": 547
+          },
+          "confidence": 1.0,
+          "lines": [
+            {
+              "bbox": {
+                "height": 46,
+                "width": 873,
+                "x": 208,
+                "y": 547
+              },
+              "confidence": 1.0,
+              "text": "Course History & Academic Records",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 46,
+                    "width": 172,
+                    "x": 208,
+                    "y": 547
+                  },
+                  "confidence": 1.0,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 46,
+                    "width": 172,
+                    "x": 394,
+                    "y": 547
+                  },
+                  "confidence": 1.0,
+                  "text": "History"
+                },
+                {
+                  "bbox": {
+                    "height": 46,
+                    "width": 36,
+                    "x": 581,
+                    "y": 547
+                  },
+                  "confidence": 1.0,
+                  "text": "&"
+                },
+                {
+                  "bbox": {
+                    "height": 46,
+                    "width": 236,
+                    "x": 631,
+                    "y": 547
+                  },
+                  "confidence": 1.0,
+                  "text": "Academic"
+                },
+                {
+                  "bbox": {
+                    "height": 46,
+                    "width": 200,
+                    "x": 881,
+                    "y": 547
+                  },
+                  "confidence": 1.0,
+                  "text": "Records"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1919,
+                "x": 208,
+                "y": 658
+              },
+              "confidence": 1.0,
+              "text": "Course Code Course Title Credits Grade Points",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 208,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 104,
+                    "x": 363,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Code"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 625,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 86,
+                    "x": 780,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Title"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 1458,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Credits"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 120,
+                    "x": 1750,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Grade"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 127,
+                    "x": 2000,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Points"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 762
+              },
+              "confidence": 1.0,
+              "text": "CS-106A Programming Methodologies 4.0 A 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 169,
+                    "x": 208,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-106A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 250,
+                    "x": 625,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "Programming"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 271,
+                    "x": 887,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "Methodologies"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1750,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 866
+              },
+              "confidence": 1.0,
+              "text": "CS-106B Programming Abstractions 4.0 A+ 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 169,
+                    "x": 208,
+                    "y": 866
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-106B"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 250,
+                    "x": 625,
+                    "y": 866
+                  },
+                  "confidence": 1.0,
+                  "text": "Programming"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 229,
+                    "x": 887,
+                    "y": 866
+                  },
+                  "confidence": 1.0,
+                  "text": "Abstractions"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 866
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 52,
+                    "x": 1750,
+                    "y": 866
+                  },
+                  "confidence": 1.0,
+                  "text": "A+"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 866
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 970
+              },
+              "confidence": 1.0,
+              "text": "MATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 178,
+                    "x": 208,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "MATH-51"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 116,
+                    "x": 625,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "Linear"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 752,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "Algebra"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 70,
+                    "x": 908,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "and"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 199,
+                    "x": 989,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "Differential"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 160,
+                    "x": 1199,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "Calculus"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "5.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1750,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 970
+                  },
+                  "confidence": 1.0,
+                  "text": "20.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 1074
+              },
+              "confidence": 1.0,
+              "text": "CS-103 Mathematical Foundations of Computing 4.0 A- 14.8",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-103"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 248,
+                    "x": 625,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Mathematical"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 229,
+                    "x": 884,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Foundations"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 35,
+                    "x": 1125,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "of"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 201,
+                    "x": 1172,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Computing"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 42,
+                    "x": 1750,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "A-"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "14.8"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 1178
+              },
+              "confidence": 1.0,
+              "text": "CS-107 Computer Organization and Systems 4.0 A 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-107"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 183,
+                    "x": 625,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "Computer"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 236,
+                    "x": 820,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "Organization"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 70,
+                    "x": 1067,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "and"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 160,
+                    "x": 1148,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "Systems"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1750,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 1178
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 1283
+              },
+              "confidence": 1.0,
+              "text": "CS-110 Principles of Computer Systems 4.0 A 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-110"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 181,
+                    "x": 625,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "Principles"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 35,
+                    "x": 817,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "of"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 183,
+                    "x": 864,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "Computer"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 160,
+                    "x": 1058,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "Systems"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1750,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 1283
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 1387
+              },
+              "confidence": 1.0,
+              "text": "CS-161 Design and Analysis of Algorithms 4.0 A+ 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-161"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 130,
+                    "x": 625,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "Design"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 70,
+                    "x": 766,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "and"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 155,
+                    "x": 847,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "Analysis"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 35,
+                    "x": 1014,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "of"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 197,
+                    "x": 1060,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "Algorithms"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 52,
+                    "x": 1750,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "A+"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 1387
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            }
+          ],
+          "text": "Course History & Academic Records\nCourse Code Course Title Credits Grade Points\nCS-106A Programming Methodologies 4.0 A 16.0\nCS-106B Programming Abstractions 4.0 A+ 16.0\nMATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0\nCS-103 Mathematical Foundations of Computing 4.0 A- 14.8\nCS-107 Computer Organization and Systems 4.0 A 16.0\nCS-110 Principles of Computer Systems 4.0 A 16.0\nCS-161 Design and Analysis of Algorithms 4.0 A+ 16.0"
+        }
+      ],
+      "confidence": 1.0,
+      "height": 3300,
+      "page_number": 1,
+      "processing": {
+        "complexity": {
+          "level": "SIMPLE",
+          "score": 0.10266196078431372
+        },
+        "page_classification": "DIGITAL_TEXT",
+        "processing_strategy": "NATIVE_TEXT",
+        "source_type": "NATIVE_TEXT",
+        "timing": {
+          "edr_ms": 0.0,
+          "layout_ms": 0.0,
+          "native_extraction_ms": 0.865226,
+          "ocr_ms": 0.0,
+          "preflight_ms": 1.346686,
+          "total_ms": 0.86558
+        }
+      },
+      "raw_text": "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT\nStudent Name: Sophia Alexander Jones Student ID: SU-2024-8841\nDegree: Bachelor of Science in Computer Science Conferral Date: June 15, 2024\n\nCourse History & Academic Records\nCourse Code Course Title Credits Grade Points\nCS-106A Programming Methodologies 4.0 A 16.0\nCS-106B Programming Abstractions 4.0 A+ 16.0\nMATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0\nCS-103 Mathematical Foundations of Computing 4.0 A- 14.8\nCS-107 Computer Organization and Systems 4.0 A 16.0\nCS-110 Principles of Computer Systems 4.0 A 16.0\nCS-161 Design and Analysis of Algorithms 4.0 A+ 16.0",
+      "rotation": 0,
+      "skew_angle": 0.0,
+      "text": "STANFORD UNIVERSITY - OFFICIAL ACADEMIC TRANSCRIPT\nStudent Name: Sophia Alexander Jones Student ID: SU-2024-8841\nDegree: Bachelor of Science in Computer Science Conferral Date: June 15, 2024\n\nCourse History & Academic Records\nCourse Code Course Title Credits Grade Points\nCS-106A Programming Methodologies 4.0 A 16.0\nCS-106B Programming Abstractions 4.0 A+ 16.0\nMATH-51 Linear Algebra and Differential Calculus 5.0 A 20.0\nCS-103 Mathematical Foundations of Computing 4.0 A- 14.8\nCS-107 Computer Organization and Systems 4.0 A 16.0\nCS-110 Principles of Computer Systems 4.0 A 16.0\nCS-161 Design and Analysis of Algorithms 4.0 A+ 16.0",
+      "timing": {
+        "native_extraction_ms": 0.865226,
+        "ocr_time_ms": 0.0,
+        "preflight_ms": 1.346686,
+        "preprocess_time_ms": 0.0,
+        "render_time_ms": 0.845806,
+        "total_ms": 0.86558
+      },
+      "width": 2550
+    },
+    {
+      "blocks": [
+        {
+          "bbox": {
+            "height": 55,
+            "width": 1638,
+            "x": 210,
+            "y": 165
+          },
+          "confidence": 0.952744722366333,
+          "lines": [
+            {
+              "bbox": {
+                "height": 55,
+                "width": 1638,
+                "x": 210,
+                "y": 165
+              },
+              "confidence": 0.952744722366333,
+              "text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 44,
+                    "width": 320,
+                    "x": 210,
+                    "y": 165
+                  },
+                  "confidence": 0.965812623500824,
+                  "text": "STANFORD"
+                },
+                {
+                  "bbox": {
+                    "height": 45,
+                    "width": 344,
+                    "x": 552,
+                    "y": 165
+                  },
+                  "confidence": 0.9310247898101807,
+                  "text": "UNIVERSITY"
+                },
+                {
+                  "bbox": {
+                    "height": 8,
+                    "width": 17,
+                    "x": 915,
+                    "y": 188
+                  },
+                  "confidence": 0.9310247898101807,
+                  "text": "-"
+                },
+                {
+                  "bbox": {
+                    "height": 44,
+                    "width": 310,
+                    "x": 952,
+                    "y": 165
+                  },
+                  "confidence": 0.9580562710762024,
+                  "text": "ACADEMIC"
+                },
+                {
+                  "bbox": {
+                    "height": 45,
+                    "width": 297,
+                    "x": 1283,
+                    "y": 165
+                  },
+                  "confidence": 0.9530042409896851,
+                  "text": "SUMMARY"
+                },
+                {
+                  "bbox": {
+                    "height": 55,
+                    "width": 181,
+                    "x": 1600,
+                    "y": 165
+                  },
+                  "confidence": 0.9648451805114746,
+                  "text": "(PAGE"
+                },
+                {
+                  "bbox": {
+                    "height": 55,
+                    "width": 47,
+                    "x": 1801,
+                    "y": 165
+                  },
+                  "confidence": 0.9654452800750732,
+                  "text": "2)"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 465,
+            "width": 1659,
+            "x": 210,
+            "y": 340
+          },
+          "confidence": 0.9283760786056519,
+          "lines": [
+            {
+              "bbox": {
+                "height": 50,
+                "width": 1659,
+                "x": 210,
+                "y": 340
+              },
+              "confidence": 0.964982271194458,
+              "text": "Course Code            Course Title                                           Credits           Grade",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 140,
+                    "x": 210,
+                    "y": 344
+                  },
+                  "confidence": 0.9656503200531006,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 101,
+                    "x": 365,
+                    "y": 344
+                  },
+                  "confidence": 0.9652630686759949,
+                  "text": "Code"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 140,
+                    "x": 627,
+                    "y": 344
+                  },
+                  "confidence": 0.9558460116386414,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 84,
+                    "x": 780,
+                    "y": 344
+                  },
+                  "confidence": 0.9674156904220581,
+                  "text": "Title"
+                },
+                {
+                  "bbox": {
+                    "height": 50,
+                    "width": 138,
+                    "x": 1460,
+                    "y": 340
+                  },
+                  "confidence": 0.9664197564125061,
+                  "text": "Credits"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 117,
+                    "x": 1752,
+                    "y": 344
+                  },
+                  "confidence": 0.9692987203598022,
+                  "text": "Grade"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 49,
+                "width": 1567,
+                "x": 210,
+                "y": 444
+              },
+              "confidence": 0.9380061626434326,
+              "text": "CS-221                 Artificial Intelligence: Principles & Techniques4.0              A",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 49,
+                    "width": 131,
+                    "x": 210,
+                    "y": 444
+                  },
+                  "confidence": 0.9116972088813782,
+                  "text": "CS-221"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 142,
+                    "x": 626,
+                    "y": 448
+                  },
+                  "confidence": 0.9699797034263611,
+                  "text": "Artificial"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 216,
+                    "x": 786,
+                    "y": 448
+                  },
+                  "confidence": 0.9671756029129028,
+                  "text": "Intelligence:"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 175,
+                    "x": 1020,
+                    "y": 448
+                  },
+                  "confidence": 0.9298760294914246,
+                  "text": "Principles"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 24,
+                    "x": 1210,
+                    "y": 449
+                  },
+                  "confidence": 0.9198017716407776,
+                  "text": "&"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 266,
+                    "x": 1248,
+                    "y": 448
+                  },
+                  "confidence": 0.9038845300674438,
+                  "text": "Techniques4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 26,
+                    "x": 1751,
+                    "y": 448
+                  },
+                  "confidence": 0.9636280536651611,
+                  "text": "A"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 48,
+                "width": 1589,
+                "x": 210,
+                "y": 548
+              },
+              "confidence": 0.8516209125518799,
+              "text": "CS-224N               Natural Language Processing with Deep Learhifig             A+",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 48,
+                    "width": 166,
+                    "x": 210,
+                    "y": 548
+                  },
+                  "confidence": 0.910076916217804,
+                  "text": "CS-224N"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 129,
+                    "x": 628,
+                    "y": 552
+                  },
+                  "confidence": 0.961367130279541,
+                  "text": "Natural"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 182,
+                    "x": 773,
+                    "y": 552
+                  },
+                  "confidence": 0.961367130279541,
+                  "text": "Language"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 199,
+                    "x": 971,
+                    "y": 552
+                  },
+                  "confidence": 0.9614222049713135,
+                  "text": "Processing"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 71,
+                    "x": 1185,
+                    "y": 552
+                  },
+                  "confidence": 0.9612767100334167,
+                  "text": "with"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 95,
+                    "x": 1274,
+                    "y": 552
+                  },
+                  "confidence": 0.9294760227203369,
+                  "text": "Deep"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 156,
+                    "x": 1385,
+                    "y": 552
+                  },
+                  "confidence": 0.1696447730064392,
+                  "text": "Learhifig"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 48,
+                    "x": 1751,
+                    "y": 552
+                  },
+                  "confidence": 0.9583370685577393,
+                  "text": "A+"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 48,
+                "width": 1567,
+                "x": 210,
+                "y": 652
+              },
+              "confidence": 0.9565593600273132,
+              "text": "CS-229                 Machine Learning Foundations                4.0              A",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 48,
+                    "width": 136,
+                    "x": 210,
+                    "y": 652
+                  },
+                  "confidence": 0.9024271965026855,
+                  "text": "CS-229"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 153,
+                    "x": 628,
+                    "y": 656
+                  },
+                  "confidence": 0.966195285320282,
+                  "text": "Machine"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 156,
+                    "x": 797,
+                    "y": 656
+                  },
+                  "confidence": 0.9691355228424072,
+                  "text": "Learning"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 224,
+                    "x": 971,
+                    "y": 656
+                  },
+                  "confidence": 0.9674322605133057,
+                  "text": "Foundations"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 52,
+                    "x": 1459,
+                    "y": 657
+                  },
+                  "confidence": 0.9682328701019287,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 26,
+                    "x": 1751,
+                    "y": 656
+                  },
+                  "confidence": 0.9659333229064941,
+                  "text": "A"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 49,
+                "width": 1579,
+                "x": 210,
+                "y": 756
+              },
+              "confidence": 0.9509322643280029,
+              "text": "CS-244                Advanced Topics in Networking               4.0              A-",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 49,
+                    "width": 138,
+                    "x": 210,
+                    "y": 756
+                  },
+                  "confidence": 0.9063562154769897,
+                  "text": "CS-244"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 182,
+                    "x": 626,
+                    "y": 760
+                  },
+                  "confidence": 0.9673473834991455,
+                  "text": "Advanced"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 120,
+                    "x": 822,
+                    "y": 760
+                  },
+                  "confidence": 0.9549141526222229,
+                  "text": "Topics"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 27,
+                    "x": 959,
+                    "y": 760
+                  },
+                  "confidence": 0.9676247239112854,
+                  "text": "in"
+                },
+                {
+                  "bbox": {
+                    "height": 40,
+                    "width": 202,
+                    "x": 1003,
+                    "y": 760
+                  },
+                  "confidence": 0.9656797647476196,
+                  "text": "Networking"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 54,
+                    "x": 1459,
+                    "y": 761
+                  },
+                  "confidence": 0.9676204919815063,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 38,
+                    "x": 1751,
+                    "y": 760
+                  },
+                  "confidence": 0.9269829392433167,
+                  "text": "A-"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 44,
+            "width": 478,
+            "x": 210,
+            "y": 986
+          },
+          "confidence": 0.9626712203025818,
+          "lines": [
+            {
+              "bbox": {
+                "height": 44,
+                "width": 478,
+                "x": 210,
+                "y": 986
+              },
+              "confidence": 0.9626712203025818,
+              "text": "Cumulative Summary:",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 35,
+                    "width": 243,
+                    "x": 210,
+                    "y": 986
+                  },
+                  "confidence": 0.964015781879425,
+                  "text": "Cumulative"
+                },
+                {
+                  "bbox": {
+                    "height": 44,
+                    "width": 219,
+                    "x": 469,
+                    "y": 986
+                  },
+                  "confidence": 0.9613265991210938,
+                  "text": "Summary:"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 40,
+            "width": 1392,
+            "x": 209,
+            "y": 1073
+          },
+          "confidence": 0.9587085843086243,
+          "lines": [
+            {
+              "bbox": {
+                "height": 40,
+                "width": 1392,
+                "x": 209,
+                "y": 1073
+              },
+              "confidence": 0.9587085843086243,
+              "text": "Total Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 89,
+                    "x": 209,
+                    "y": 1073
+                  },
+                  "confidence": 0.9680399894714355,
+                  "text": "Total"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 90,
+                    "x": 315,
+                    "y": 1073
+                  },
+                  "confidence": 0.9640551805496216,
+                  "text": "Units"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 139,
+                    "x": 423,
+                    "y": 1073
+                  },
+                  "confidence": 0.963266909122467,
+                  "text": "Earned:"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 78,
+                    "x": 577,
+                    "y": 1074
+                  },
+                  "confidence": 0.9622239470481873,
+                  "text": "46.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 3,
+                    "x": 673,
+                    "y": 1074
+                  },
+                  "confidence": 0.9685139656066895,
+                  "text": "|"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 205,
+                    "x": 693,
+                    "y": 1073
+                  },
+                  "confidence": 0.9573619961738586,
+                  "text": "Cumulative"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 95,
+                    "x": 913,
+                    "y": 1073
+                  },
+                  "confidence": 0.966844379901886,
+                  "text": "GPA:"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 79,
+                    "x": 1023,
+                    "y": 1074
+                  },
+                  "confidence": 0.9236058592796326,
+                  "text": "3.94"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 12,
+                    "x": 1115,
+                    "y": 1074
+                  },
+                  "confidence": 0.9236058592796326,
+                  "text": "/"
+                },
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 78,
+                    "x": 1139,
+                    "y": 1074
+                  },
+                  "confidence": 0.9691528081893921,
+                  "text": "4.00"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 3,
+                    "x": 1235,
+                    "y": 1074
+                  },
+                  "confidence": 0.9655241966247559,
+                  "text": "|"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 140,
+                    "x": 1256,
+                    "y": 1073
+                  },
+                  "confidence": 0.9637524485588074,
+                  "text": "Honors:"
+                },
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 187,
+                    "x": 1414,
+                    "y": 1073
+                  },
+                  "confidence": 0.9672638773918152,
+                  "text": "Distinction"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 32,
+            "width": 123,
+            "x": 2003,
+            "y": 344
+          },
+          "confidence": 0.96467125415802,
+          "lines": [
+            {
+              "bbox": {
+                "height": 32,
+                "width": 123,
+                "x": 2003,
+                "y": 344
+              },
+              "confidence": 0.96467125415802,
+              "text": "Points",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 32,
+                    "width": 123,
+                    "x": 2003,
+                    "y": 344
+                  },
+                  "confidence": 0.96467125415802,
+                  "text": "Points"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 31,
+            "width": 74,
+            "x": 2004,
+            "y": 449
+          },
+          "confidence": 0.9680826663970947,
+          "lines": [
+            {
+              "bbox": {
+                "height": 31,
+                "width": 74,
+                "x": 2004,
+                "y": 449
+              },
+              "confidence": 0.9680826663970947,
+              "text": "16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 74,
+                    "x": 2004,
+                    "y": 449
+                  },
+                  "confidence": 0.9680826663970947,
+                  "text": "16.0"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 31,
+            "width": 74,
+            "x": 2004,
+            "y": 553
+          },
+          "confidence": 0.9678643941879272,
+          "lines": [
+            {
+              "bbox": {
+                "height": 31,
+                "width": 74,
+                "x": 2004,
+                "y": 553
+              },
+              "confidence": 0.9678643941879272,
+              "text": "16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 74,
+                    "x": 2004,
+                    "y": 553
+                  },
+                  "confidence": 0.9678643941879272,
+                  "text": "16.0"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 31,
+            "width": 74,
+            "x": 2004,
+            "y": 657
+          },
+          "confidence": 0.9678643941879272,
+          "lines": [
+            {
+              "bbox": {
+                "height": 31,
+                "width": 74,
+                "x": 2004,
+                "y": 657
+              },
+              "confidence": 0.9678643941879272,
+              "text": "16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 74,
+                    "x": 2004,
+                    "y": 657
+                  },
+                  "confidence": 0.9678643941879272,
+                  "text": "16.0"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        },
+        {
+          "bbox": {
+            "height": 31,
+            "width": 75,
+            "x": 2004,
+            "y": 761
+          },
+          "confidence": 0.9550127387046814,
+          "lines": [
+            {
+              "bbox": {
+                "height": 31,
+                "width": 75,
+                "x": 2004,
+                "y": 761
+              },
+              "confidence": 0.9550127387046814,
+              "text": "14.8",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 31,
+                    "width": 75,
+                    "x": 2004,
+                    "y": 761
+                  },
+                  "confidence": 0.9550127387046814,
+                  "text": "14.8"
+                }
+              ]
+            }
+          ],
+          "text": ""
+        }
+      ],
+      "confidence": 0.941738486289978,
+      "conflict_reason": "NATIVE_TEXT_SPATIAL_COLLISION_DETECTED",
+      "has_conflict": true,
+      "height": 3300,
+      "native_blocks": [
+        {
+          "bbox": {
+            "height": 54,
+            "width": 1644,
+            "x": 208,
+            "y": 166
+          },
+          "confidence": 1.0,
+          "lines": [
+            {
+              "bbox": {
+                "height": 54,
+                "width": 1644,
+                "x": 208,
+                "y": 166
+              },
+              "confidence": 1.0,
+              "text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 324,
+                    "x": 208,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "STANFORD"
+                },
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 350,
+                    "x": 549,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "UNIVERSITY"
+                },
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 19,
+                    "x": 915,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "-"
+                },
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 314,
+                    "x": 951,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "ACADEMIC"
+                },
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 301,
+                    "x": 1281,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "SUMMARY"
+                },
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 185,
+                    "x": 1599,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "(PAGE"
+                },
+                {
+                  "bbox": {
+                    "height": 54,
+                    "width": 52,
+                    "x": 1800,
+                    "y": 166
+                  },
+                  "confidence": 1.0,
+                  "text": "2)"
+                }
+              ]
+            }
+          ],
+          "text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)"
+        },
+        {
+          "bbox": {
+            "height": 456,
+            "width": 1919,
+            "x": 208,
+            "y": 345
+          },
+          "confidence": 1.0,
+          "lines": [
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1919,
+                "x": 208,
+                "y": 345
+              },
+              "confidence": 1.0,
+              "text": "Course Code Course Title Credits Grade Points",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 208,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 104,
+                    "x": 363,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Code"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 625,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Course"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 86,
+                    "x": 780,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Title"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 144,
+                    "x": 1458,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Credits"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 120,
+                    "x": 1750,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Grade"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 127,
+                    "x": 2000,
+                    "y": 345
+                  },
+                  "confidence": 1.0,
+                  "text": "Points"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 449
+              },
+              "confidence": 1.0,
+              "text": "CS-221 Artificial Intelligence: Principles & Techniques4.0 A 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-221"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 146,
+                    "x": 625,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "Artificial"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 222,
+                    "x": 782,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "Intelligence:"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 181,
+                    "x": 1016,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "Principles"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1209,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "&"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 268,
+                    "x": 1248,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "Techniques4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1750,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 449
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 553
+              },
+              "confidence": 1.0,
+              "text": "CS-224N Natural Language Processing with Deep Learning 4.0 A+ 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 171,
+                    "x": 208,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-224N"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 134,
+                    "x": 625,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "Natural"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 185,
+                    "x": 771,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "Language"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 206,
+                    "x": 968,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "Processing"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 74,
+                    "x": 1185,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "with"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 100,
+                    "x": 1271,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "Deep"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 162,
+                    "x": 1382,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "Learning"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 52,
+                    "x": 1750,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "A+"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 553
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 658
+              },
+              "confidence": 1.0,
+              "text": "CS-229 Machine Learning Foundations 4.0 A 16.0",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-229"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 157,
+                    "x": 625,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Machine"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 162,
+                    "x": 794,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Learning"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 229,
+                    "x": 968,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "Foundations"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 28,
+                    "x": 1750,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "A"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 658
+                  },
+                  "confidence": 1.0,
+                  "text": "16.0"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1873,
+                "x": 208,
+                "y": 762
+              },
+              "confidence": 1.0,
+              "text": "CS-244 Advanced Topics in Networking 4.0 A- 14.8",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 141,
+                    "x": 208,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "CS-244"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 185,
+                    "x": 625,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "Advanced"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 123,
+                    "x": 822,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "Topics"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 32,
+                    "x": 956,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "in"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 208,
+                    "x": 1000,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "Networking"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 58,
+                    "x": 1458,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "4.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 42,
+                    "x": 1750,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "A-"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 2000,
+                    "y": 762
+                  },
+                  "confidence": 1.0,
+                  "text": "14.8"
+                }
+              ]
+            }
+          ],
+          "text": "Course Code Course Title Credits Grade Points\nCS-221 Artificial Intelligence: Principles & Techniques4.0 A 16.0\nCS-224N Natural Language Processing with Deep Learning 4.0 A+ 16.0\nCS-229 Machine Learning Foundations 4.0 A 16.0\nCS-244 Advanced Topics in Networking 4.0 A- 14.8"
+        },
+        {
+          "bbox": {
+            "height": 125,
+            "width": 1395,
+            "x": 208,
+            "y": 988
+          },
+          "confidence": 1.0,
+          "lines": [
+            {
+              "bbox": {
+                "height": 42,
+                "width": 484,
+                "x": 208,
+                "y": 988
+              },
+              "confidence": 1.0,
+              "text": "Cumulative Summary:",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 247,
+                    "x": 208,
+                    "y": 988
+                  },
+                  "confidence": 1.0,
+                  "text": "Cumulative"
+                },
+                {
+                  "bbox": {
+                    "height": 42,
+                    "width": 224,
+                    "x": 468,
+                    "y": 988
+                  },
+                  "confidence": 1.0,
+                  "text": "Summary:"
+                }
+              ]
+            },
+            {
+              "bbox": {
+                "height": 39,
+                "width": 1395,
+                "x": 208,
+                "y": 1074
+              },
+              "confidence": 1.0,
+              "text": "Total Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction",
+              "tokens": [
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 93,
+                    "x": 208,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Total"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 95,
+                    "x": 313,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Units"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 146,
+                    "x": 419,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Earned:"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 577,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "46.0"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 11,
+                    "x": 669,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "|"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 208,
+                    "x": 692,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Cumulative"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 100,
+                    "x": 912,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "GPA:"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 1023,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "3.94"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 12,
+                    "x": 1115,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "/"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 81,
+                    "x": 1139,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "4.00"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 11,
+                    "x": 1231,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "|"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 146,
+                    "x": 1254,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Honors:"
+                },
+                {
+                  "bbox": {
+                    "height": 39,
+                    "width": 192,
+                    "x": 1411,
+                    "y": 1074
+                  },
+                  "confidence": 1.0,
+                  "text": "Distinction"
+                }
+              ]
+            }
+          ],
+          "text": "Cumulative Summary:\nTotal Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction"
+        }
+      ],
+      "page_number": 2,
+      "processing": {
+        "complexity": {
+          "level": "SIMPLE",
+          "score": 0.1722985561497326
+        },
+        "page_classification": "TEXT_AND_IMAGE",
+        "processing_strategy": "OCR",
+        "source_type": "OCR",
+        "timing": {
+          "edr_ms": 0.0,
+          "layout_ms": 0.0,
+          "native_extraction_ms": 0.664708,
+          "ocr_ms": 521.86562,
+          "preflight_ms": 0.455455,
+          "total_ms": 1007.117336
+        }
+      },
+      "raw_text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)\n\nCourse Code            Course Title                                           Credits           Grade\nCS-221                 Artificial Intelligence: Principles & Techniques4.0              A\nCS-224N               Natural Language Processing with Deep Learhifig             A+\nCS-229                 Machine Learning Foundations                4.0              A\nCS-244                Advanced Topics in Networking               4.0              A-\n\nCumulative Summary:\n\nTotal Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction\n\nPoints\n\n16.0\n\n16.0\n\n16.0\n\n14.8\n",
+      "rotation": 0,
+      "skew_angle": 0.0,
+      "text": "STANFORD UNIVERSITY - ACADEMIC SUMMARY (PAGE 2)\n\nCourse Code            Course Title                                           Credits           Grade\nCS-221                 Artificial Intelligence: Principles & Techniques4.0              A\nCS-224N               Natural Language Processing with Deep Learhifig             A+\nCS-229                 Machine Learning Foundations                4.0              A\nCS-244                Advanced Topics in Networking               4.0              A-\n\nCumulative Summary:\n\nTotal Units Earned: 46.0 | Cumulative GPA: 3.94 / 4.00 | Honors: Distinction\n\nPoints\n\n16.0\n\n16.0\n\n16.0\n\n14.8",
+      "timing": {
+        "native_extraction_ms": 0.664708,
+        "ocr_time_ms": 521.86562,
+        "preflight_ms": 0.455455,
+        "preprocess_time_ms": 410.202396,
+        "render_time_ms": 74.36467,
+        "total_ms": 1007.117336
+      },
+      "width": 2550
+    }
+  ],
+  "processing": {
+    "native_extraction_time_ms": 1.529934,
+    "ocr_time_ms": 521.86562,
+    "pdf_render_time_ms": 74.36467,
+    "preflight_time_ms": 3.196761,
+    "preprocess_time_ms": 410.202396,
+    "serialization_time_ms": 0.0,
+    "total_time_ms": 1016.128259
+  },
+  "schema_version": "0.1"
+}

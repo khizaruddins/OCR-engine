@@ -1,0 +1,92 @@
+{
+  "chunk_count": 1,
+  "compression": {
+    "edr_full_bytes": 218426,
+    "estimated_full_tokens": 54606,
+    "estimated_llm_tokens": 3545,
+    "estimated_raw_tokens": 62300,
+    "full_to_llm_ratio": 15.401635876463123,
+    "llm_context_bytes": 14182,
+    "meaningful_text_coverage_percentage": 100.0,
+    "raw_bytes": 249203,
+    "raw_to_full_ratio": 1.1409035554375395,
+    "raw_to_llm_ratio": 17.57178113101114
+  },
+  "confidence_preservation": {
+    "output_confidence_annotations": 11,
+    "preservation_percentage": 100.0,
+    "source_items_with_preserved_evidence": 79,
+    "source_low_confidence_items": 79
+  },
+  "context_quality_score": 100.0,
+  "document_id": "doc_1787211369209_a7a6e1",
+  "document_type": "transcript",
+  "execution_time_ms": 3.522144,
+  "is_chunked": false,
+  "loss_analysis": {
+    "chunked_items": 0,
+    "compacted_items": 230,
+    "deduplicated_items": 44,
+    "metadata_items": 0,
+    "noise_items": 0,
+    "preserved_items": 0,
+    "structured_items": 103,
+    "total_source_items": 377,
+    "unaccounted_loss": 0
+  },
+  "page_coverage": {
+    "coverage_percentage": 100.0,
+    "pages_detected": 4,
+    "pages_represented": 4
+  },
+  "schema_version": "llm-context-report-0.1",
+  "section_coverage": {
+    "coverage_percentage": 100.0,
+    "sections": [
+      {
+        "fate": "STRUCTURED",
+        "represented": true,
+        "source_id": "section_student_info",
+        "type": "student_information"
+      },
+      {
+        "fate": "STRUCTURED",
+        "represented": true,
+        "source_id": "section_course_history",
+        "type": "course_history"
+      },
+      {
+        "fate": "STRUCTURED",
+        "represented": true,
+        "source_id": "section_other",
+        "type": "other"
+      }
+    ],
+    "sections_detected": 3,
+    "sections_represented": 3
+  },
+  "status": "VERIFIED_ZERO_UNACCOUNTED_LOSS",
+  "table_coverage": {
+    "cell_coverage_percentage": 100.0,
+    "cells_detected": 56,
+    "cells_represented": 56,
+    "row_coverage_percentage": 100.0,
+    "rows_detected": 24,
+    "rows_represented": 24,
+    "table_coverage_percentage": 100.0,
+    "tables_detected": 10,
+    "tables_represented": 10
+  },
+  "text_coverage": {
+    "coverage_percentage": 100.0,
+    "represented_meaningful_text": 14578,
+    "source_meaningful_text": 14472,
+    "unit": "characters",
+    "unrepresented_text": {
+      "deduplicated": 0,
+      "metadata": 0,
+      "noise": 0,
+      "unaccounted": 0
+    }
+  }
+}
